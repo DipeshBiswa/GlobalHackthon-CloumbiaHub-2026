@@ -60,6 +60,9 @@ data so the Noor screens use the backend store.
 Open `http://127.0.0.1:8000/docs` for local API documentation.
 
 Translated reviews are saved in `backend/translated_reviews.json`.
+Each new saved review keeps both the Kiswahili translation and the original
+English text. Insights classify the original English text, avoiding the
+language mismatch between translated review content and English topic labels.
 
 ## Example request
 

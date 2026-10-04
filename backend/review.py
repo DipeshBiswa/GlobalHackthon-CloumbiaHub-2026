@@ -35,13 +35,15 @@ class Review:
 
 @dataclass(frozen=True)
 class TranslatedReview:
-    """A review with its free-text fields translated to Kiswahili."""
+    """A review with Kiswahili text and the original English text for analysis."""
 
     rating: float
     language: str
     date: date
     favorite: str
     improvement: str
+    original_favorite: str = ""
+    original_improvement: str = ""
 
     def __post_init__(self) -> None:
         if self.language != "sw":

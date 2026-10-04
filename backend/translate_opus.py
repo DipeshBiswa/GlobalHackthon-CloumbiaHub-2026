@@ -74,6 +74,8 @@ def translate_review(review: Review) -> TranslatedReview:
         date=review.date,
         favorite=translate(review.favorite),
         improvement=translate(review.improvement),
+        original_favorite=review.favorite,
+        original_improvement=review.improvement,
     )
 
 

@@ -52,4 +52,6 @@ def review_to_dict(review: TranslatedReview) -> dict[str, Any]:
         "date": review.date.isoformat(),
         "favorite": review.favorite,
         "improvement": review.improvement,
+        "original_favorite": review.original_favorite,
+        "original_improvement": review.original_improvement,
     }

@@ -38,8 +38,12 @@ def build_insights(
 ) -> dict[str, Any]:
     classified: list[ClassifiedReview] = []
     for review in reviews:
-        favorite = str(review.get("favorite", "")).strip()
-        improvement = str(review.get("improvement", "")).strip()
+        favorite = str(
+            review.get("original_favorite", review.get("favorite", ""))
+        ).strip()
+        improvement = str(
+            review.get("original_improvement", review.get("improvement", ""))
+        ).strip()
         text = f"{favorite} {improvement}".strip()
         prediction = model.classify(text)
         rating = float(review["rating"])

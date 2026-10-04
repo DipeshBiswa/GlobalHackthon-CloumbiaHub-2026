@@ -124,5 +124,21 @@
     "date": "2026-09-30",
     "favorite": "Mlo wa mahali hapo na pia kusimulia hadithi kulikuwa bora sana.",
     "improvement": "Tafadhali eleza jinsi unavyoweza kutumia njia mbalimbali kabla ya matembezi."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Kiongozi huyo mwenye urafiki alieleza vizuri historia ya eneo hilo.",
+    "improvement": "Tumia wakati mwingi zaidi pamoja na hadithi za kitamaduni."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Kiongozi huyo mwenye urafiki alieleza vizuri historia ya eneo hilo.",
+    "improvement": "Tumia wakati mwingi zaidi pamoja na hadithi za kitamaduni.",
+    "original_favorite": "The friendly guide explained local history clearly.",
+    "original_improvement": "Give the cultural stories more time."
   }
 ]

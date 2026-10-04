@@ -12,22 +12,23 @@ git clone <repository-url>
 cd GlobalHackthon-CloumbiaHub-2026
 ```
 
-### 2. Create a virtual environment
+### 2. Create the virtual environment
 
 macOS/Linux:
 
 ```bash
-python3 -m venv myenv
-myenv/bin/python -m pip install --upgrade pip
-myenv/bin/python -m pip install -r requirements.txt
+./setup.sh
 ```
+
+This creates `.venv/` locally. The environment is not committed to Git because
+virtual environments are machine-specific.
 
 Windows PowerShell:
 
 ```powershell
-py -m venv myenv
-myenv\Scripts\python -m pip install --upgrade pip
-myenv\Scripts\python -m pip install -r requirements.txt
+py -m venv .venv
+.venv\Scripts\python -m pip install --upgrade pip
+.venv\Scripts\python -m pip install -r requirements.txt
 ```
 
 ### 3. Download the model once while online
@@ -38,13 +39,13 @@ while the computer has Wi-Fi:
 macOS/Linux:
 
 ```bash
-myenv/bin/python download_opus.py
+./download_model.sh
 ```
 
 Windows PowerShell:
 
 ```powershell
-myenv\Scripts\python download_opus.py
+.venv\Scripts\python download_opus.py
 ```
 
 This creates `models/opus-en-sw/`. Keep that directory on the computer; it is
@@ -63,7 +64,7 @@ Windows PowerShell:
 ```powershell
 $env:HF_HUB_OFFLINE="1"
 $env:TRANSFORMERS_OFFLINE="1"
-myenv\Scripts\uvicorn.exe --app-dir . api:app --host 127.0.0.1 --port 8000
+.venv\Scripts\uvicorn.exe --app-dir . api:app --host 127.0.0.1 --port 8000
 ```
 
 The API is available at `http://127.0.0.1:8000`. Open

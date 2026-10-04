@@ -67,6 +67,8 @@ The Noor frontend also loads those original fields for its local topic
 labels, while displaying the Kiswahili fields as translations.
 Monthly performance uses the current calendar year, so reviews submitted in
 the current year appear in the month picker and review table.
+The frontend topic vocabulary covers the same major tourism themes as the
+backend insights classifier, reducing unnecessary "Not sure" results.
 
 To reset the local test store, replace `backend/translated_reviews.json` with
 an empty JSON array (`[]`) and submit new reviews through the frontend or the

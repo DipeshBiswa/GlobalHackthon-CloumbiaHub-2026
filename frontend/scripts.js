@@ -225,11 +225,23 @@ const KEYWORDS = {
   price: ["price", "pricey", "expensive", "preis", "prix", "ghali"],
   guide: ["guide", "führer", "mwongozo"],
   tasting: ["tast", "kost", "dégust", "kuonja"],
+  scenery: ["view", "views", "scenery", "sunrise", "sunset", "waterfall", "river", "beach", "valley", "nature", "wildlife", "mandhari", "maporomoko"],
+  culture: ["history", "historical", "culture", "cultural", "tradition", "community", "village", "architecture", "music", "dancing", "historia", "utamaduni"],
+  food: ["food", "meal", "cooking", "fruit", "vegetarian", "recipe", "chakula", "mlo"],
+  transport: ["pickup", "parking", "bus", "transport", "directions", "meeting point", "route", "gari", "maegesho"],
+  accessibility: ["accessible", "accessibility", "mobility", "seating", "shade", "benches", "railings", "rest area", "kivuli"],
+  timing: ["rushed", "time", "longer", "stops", "slow down", "pace", "waiting", "wakati", "haraka"],
+  group: ["group", "crowded", "under ten", "kikundi"],
+  souvenirs: ["souvenir", "crafts", "shop", "buy", "handmade", "ukumbusho"],
 };
 const TOPIC_NAME = {
   roasting: { en: "Coffee roasting", sw: "Kuchoma kahawa" }, path: { en: "The hill path", sw: "Njia ya mlima" },
   buy_coffee: { en: "Buying coffee", sw: "Kununua kahawa" }, price: { en: "Price", sw: "Bei" }, guide: { en: "The guide", sw: "Mwongozo" },
-  tasting: { en: "Coffee tasting", sw: "Kuonja kahawa" }, tour_length: { en: "Tour length", sw: "Urefu wa ziara" }, other: { en: "General experience", sw: "Uzoefu wa jumla" },
+  tasting: { en: "Coffee tasting", sw: "Kuonja kahawa" }, scenery: { en: "Scenery", sw: "Mandhari" },
+  culture: { en: "Culture and history", sw: "Utamaduni na historia" }, food: { en: "Food", sw: "Chakula" },
+  transport: { en: "Transportation", sw: "Usafiri" }, accessibility: { en: "Accessibility", sw: "Ufikikaji" },
+  timing: { en: "Tour timing", sw: "Muda wa ziara" }, group: { en: "Group size", sw: "Ukubwa wa kikundi" },
+  souvenirs: { en: "Souvenirs", sw: "Vitu vya ukumbusho" }, tour_length: { en: "Tour length", sw: "Urefu wa ziara" }, other: { en: "General experience", sw: "Uzoefu wa jumla" },
 };
 const KEY_TITLE = {
   "path:negative": { en: "Hill path too hard", sw: "Njia ya mlima ni ngumu" },

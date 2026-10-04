@@ -410,7 +410,47 @@ function Inner({ title, sub, back, onBack, children, bar, barH = 0, scrollRef })
 /* =================== APP =================== */
 function App() {
   const [db, setDb] = useState(loadDb);
+  const [backendInsights, setBackendInsights] = useState(null);
+  const [backendError, setBackendError] = useState(null);
   useEffect(() => { try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); } catch (e) {} }, [db]);
+  const refreshBackendData = async () => {
+    try {
+      await checkBackendHealth();
+      const [translatedResult, insightsResult] = await Promise.allSettled([
+        getTranslatedReviewsFromBackend(),
+        getInsightsFromBackend(),
+      ]);
+      if (translatedResult.status === "rejected") throw translatedResult.reason;
+      if (insightsResult.status === "fulfilled") {
+        setBackendInsights(insightsResult.value);
+      } else {
+        setBackendInsights(null);
+      }
+      setBackendError(null);
+      setDb((current) => {
+        const reviews = translatedResult.value.map((review, index) => ({
+          id: `backend-${index + 1}`,
+          seq: index + 1,
+          date: review.date,
+          lang: "sw",
+          stars: review.rating,
+          favorite: review.favorite,
+          better: review.improvement,
+          shareConsent: false,
+          translationEn: null,
+          translationSw: {
+            favorite: review.favorite,
+            improvement: review.improvement,
+          },
+        }));
+        return { ...current, reviews, seq: reviews.length, pending: 0 };
+      });
+    } catch (error) {
+      console.error(error);
+      setBackendError(error);
+    }
+  };
+  useEffect(() => { refreshBackendData(); }, []);
   const reviews = useMemo(() => db.reviews.filter((r) => !r.deleted).map(classify), [db.reviews]);
   const L = db.dashLang; const t = (k, v) => fmt(N[L][k], v);
 
@@ -501,6 +541,7 @@ function App() {
       d.pending += 1;
       return d;
     });
+    await refreshBackendData();
   }
   function planDecision(key, status) {
     const g = weekGroups[key] || [];
@@ -512,7 +553,7 @@ function App() {
     });
   }
 
-  const ctx = { db, setDb, upd, reviews, L, t, go, route, showToast, withUndo, setSheet, week, weekGroups, groupsOf, notSure, planFor, planDecision, form, setForm, setKb, unlocked, setUnlocked, loggedIn, setLoggedIn, monthIdx, setMonthIdx, thanksLang, setThanksLang, addReview, toVisitor };
+  const ctx = { db, setDb, upd, reviews, L, t, go, route, showToast, withUndo, setSheet, week, weekGroups, groupsOf, notSure, planFor, planDecision, form, setForm, setKb, unlocked, setUnlocked, loggedIn, setLoggedIn, monthIdx, setMonthIdx, thanksLang, setThanksLang, addReview, toVisitor, backendInsights, backendError, refreshBackendData };
 
   const screens = { splash: Splash, welcome: Welcome, language: Language, form: Form, thanks: Thanks, pin: Pin, home: Home, summary: Summary, topic: Topic, reviews: Reviews, notsure: NotSure, plans: Plans, perf: Perf };
   const S = screens[route.name];

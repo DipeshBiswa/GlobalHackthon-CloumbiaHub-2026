@@ -1,9 +1,24 @@
 const BACKEND_URL = "http://127.0.0.1:8000";
 
+async function requestBackend(path, options = {}) {
+  const response = await fetch(`${BACKEND_URL}${path}`, {
+    headers: { "Content-Type": "application/json", ...(options.headers || {}) },
+    ...options,
+  });
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error(`Backend request failed (${response.status}): ${detail}`);
+  }
+  return response.json();
+}
+
+async function checkBackendHealth() {
+  return requestBackend("/health");
+}
+
 async function translateReviewWithBackend(review) {
-  const response = await fetch(`${BACKEND_URL}/reviews/translate`, {
+  return requestBackend("/reviews/translate", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       rating: review.stars,
       language: "en",
@@ -12,10 +27,27 @@ async function translateReviewWithBackend(review) {
       improvement: review.better || "No improvement provided.",
     }),
   });
+}
 
-  if (!response.ok) {
-    const detail = await response.text();
-    throw new Error(`Backend translation failed (${response.status}): ${detail}`);
-  }
-  return response.json();
+async function translateReviewsBatchWithBackend(reviews) {
+  return requestBackend("/reviews/translate/batch", {
+    method: "POST",
+    body: JSON.stringify({
+      reviews: reviews.map((review) => ({
+        rating: review.stars,
+        language: "en",
+        date: review.date,
+        favorite: review.favorite || "No favorite provided.",
+        improvement: review.better || "No improvement provided.",
+      })),
+    }),
+  });
+}
+
+async function getTranslatedReviewsFromBackend() {
+  return requestBackend("/reviews/translated");
+}
+
+async function getInsightsFromBackend() {
+  return requestBackend("/reviews/insights");
 }

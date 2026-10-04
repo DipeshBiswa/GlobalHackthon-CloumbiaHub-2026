@@ -43,6 +43,11 @@ Open `frontend/index.html` in a browser while the backend is running. The
 visitor review form sends submissions to the local translation API, and the
 backend saves the translated result in `backend/translated_reviews.json`.
 The frontend includes a local API helper in `frontend/api.js`.
+That helper supports every backend endpoint: health checks, single review
+translation, batch translation, translated-review retrieval, and insights.
+When the app starts, it checks the backend and loads the saved translated
+reviews and insights. After a new review is submitted, it refreshes that live
+data so the Noor screens use the backend store.
 
 ## API endpoints
 

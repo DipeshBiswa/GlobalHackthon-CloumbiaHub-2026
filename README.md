@@ -371,3 +371,5 @@ store. Echo's frontend uses the SQLite `/api/` routes.
 See [the offline implementation report](docs/OFFLINE_IMPLEMENTATION.md) for rules,
 thresholds, provenance and limitations, and [the demo documentation](docs/SYNTHETIC_DEMO.md)
 for the fictional full-year data.
+
+FOr testing purposes 

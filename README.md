@@ -1,171 +1,357 @@
 # Echo — offline visitor feedback
 
-Echo preserves the frontend's phone layout and runs through a local FastAPI server.
-SQLite stores English and generated Kiswahili together. Local OPUS translates;
-local MiniLM and topic phrases classify English. Python counts distinct Echo
-reviews and selects advice from a fixed, approved local library.
+Echo helps Noor understand feedback about her coffee farm. Visitors submit a rating,
+their favorite part, and what could improve. Local OPUS translates English into
+Kiswahili, and local MiniLM classifies the original English into coffee-farm topics.
+Echo counts recurring feedback and selects suggestions from a fixed, reviewed
+advice library. It includes bilingual reviews, manual corrections, monthly
+performance, and plans with before/after tracking.
 
-## Install once while online
+A local FastAPI server serves the frontend and API. SQLite saves each account's
+reviews and plans. **Normal use works offline after the one-time online setup.**
 
-Windows PowerShell, from the repository root:
+## One-time online setup
 
-```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
-.\.venv\Scripts\python.exe backend/tools/prepare_offline.py
+Complete these steps on **each computer** that will run Echo. Stay connected to
+the internet until setup finishes with **Echo ready**. Run commands in order; if
+one fails, resolve its error before continuing.
+
+### 1. Install the prerequisites
+
+You need Git, Python 3.10 or newer, and a browser. Make Git and Python available in Terminal or
+PowerShell. The setup script creates its own Python environment; there is no
+Node/npm installation or cloud account to configure.
+
+On macOS/Linux, check:
+
+```sh
+git --version
+python3 --version
 ```
 
-Alternatively, `./backend/setup.ps1` creates `backend/.venv` and prepares models.
-On macOS/Linux, from the repository root:
+On Windows PowerShell, check:
+
+```powershell
+git --version
+py -3 --version
+```
+
+Windows setup also accepts `python` if the `py` launcher is unavailable.
+
+### 2. Clone the correct branch
+
+The offline app and automatic demo import are on **Backend-frontend-test1**.
+Run these Git commands in Terminal or PowerShell:
+
+```sh
+git clone --branch Backend-frontend-test1 https://github.com/DipeshBiswa/GlobalHackthon-CloumbiaHub-2026.git
+cd GlobalHackthon-CloumbiaHub-2026
+git branch --show-current
+```
+
+The last command should print `Backend-frontend-test1`.
+
+You are now at the **repository root**: the folder containing `README.md`,
+`backend`, and `frontend`. The following setup commands start from this folder.
+For a clone you already have, use [the update instructions](#update-an-existing-clone).
+
+### 3. Run setup while online
+
+**macOS/Linux — Terminal, from the repository root:**
 
 ```sh
 sh backend/setup.sh
-sh backend/run_offline.sh
 ```
 
-If Terminal is already inside `backend`, use `sh setup.sh` and then
-`sh run_offline.sh`. The browser libraries, fonts and licenses are included in
-`frontend/vendor/`. Setup downloads missing models for live translation and
-classification, then verifies both using local-only loading.
-
-OPUS: `backend/models/opus-en-sw/`; the existing root `models/opus-en-sw/` is also
-supported. MiniLM: `backend/models/insight-model/`. Model weights and SQLite
-databases are excluded from Git. Prepare each demonstration machine while online.
-
-## Start offline
+**Windows — PowerShell, from the repository root:**
 
 ```powershell
-.\backend\run_offline.ps1
+powershell -ExecutionPolicy Bypass -File .\backend\setup.ps1
 ```
 
-Open **http://127.0.0.1:8000/**. This serves both the API and the existing
-`frontend/` directory; no separate frontend process is required.
+Setup automatically:
 
-Equivalent backend command with the root environment:
+1. Creates the Python environment in `backend/.venv`.
+2. Installs the packages in `backend/requirements.txt`.
+3. Downloads missing OPUS English-to-Kiswahili and MiniLM models.
+4. Checks translation and classification using local model files.
+5. Prints **Echo ready** when preparation succeeds.
 
-```powershell
-.\.venv\Scripts\python.exe -m uvicorn api:app --app-dir backend --host 127.0.0.1 --port 8000
-```
+The first model download can take several minutes. `Requirement already satisfied`
+only describes installed Python packages; wait for the model checks and
+**Echo ready** before proceeding.
 
-Optional separate frontend, in another terminal:
+Model weights are excluded from Git, so cloning alone does not install them.
+Browser libraries and fonts are bundled in `frontend/vendor/`. Demo reviews are
+also bundled and require no generation command.
 
-```powershell
-.\.venv\Scripts\python.exe frontend/serve.py
-```
+### 4. Start Echo
 
-Open **http://127.0.0.1:5500/**. This local server proxies `/api/` to port 8000
-so HttpOnly account cookies work without browser storage of passwords or tokens.
-Avoid opening `index.html` directly or using a plain static server in the
-separate-port configuration. Both servers bind to loopback.
+Once setup succeeds, you can disconnect the internet.
 
-Demo login: **noor / coffee2025**. Dashboard PIN: **0000**. Sign up creates a
-separate local owner with PIN 0000. `PATCH /api/pin` changes that PIN after unlock.
-Restart logs out without deleting reviews or plans.
-
-## Noor's full-year synthetic demo
-
-The branch includes 225 synthetic coffee-farm reviews for all twelve months of
-2026 and a directions improvement plan. The checked-in JSON already contains real
-model translations and classifications. Starting the backend automatically imports
-it into a fresh database, or an existing empty `noor` account. No generation,
-extra download or model inference is needed to load the demo.
-
-Existing reviews and plans are left untouched. A persistent import marker keeps
-restarts from restoring reviews you deleted. Set `ECHO_SEED_DEMO=0` before starting
-to opt out of automatic import. The dashboard and review cards label the synthetic data;
-future months are deliberate simulation data, and normal visitor submissions still
-reject future dates.
-
-For an existing Mac clone, from the repository root:
+**macOS/Linux — from the repository root:**
 
 ```sh
-git pull --ff-only
 sh backend/run_offline.sh
 ```
 
-If Terminal is already inside `backend`, run `git pull --ff-only` and then
-`sh run_offline.sh`. Restart any running backend after pulling, then log in with
-**noor / coffee2025**, PIN **0000**.
-
-Optional developer regeneration, from the repository root with the root Windows
-environment:
+**Windows — from the repository root:**
 
 ```powershell
-.\.venv\Scripts\python.exe backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
+powershell -ExecutionPolicy Bypass -File .\backend\run_offline.ps1
 ```
 
-With the setup script's Mac environment, the equivalent root command is:
+Keep the Terminal or PowerShell window running. In a browser on the **same
+computer**, open **http://127.0.0.1:8000/**. This server supplies both the frontend
+and backend. Its health check is **http://127.0.0.1:8000/health**.
+
+### 5. Log in and use the demo
+
+| Setting | Value |
+|---|---|
+| Username | `noor` |
+| Password | `coffee2025` |
+| Dashboard PIN | `0000` |
+
+Open **Noor's Dashboard** and enter the PIN. On first startup, an untouched Noor
+account receives **225 synthetic reviews for all twelve months of 2026**, including
+English, Kiswahili, predictions, and a directions improvement plan. Tasting
+complaints show High confidence, group-size complaints show Medium confidence,
+and the directions plan shows Better.
+
+Use **Visitor Feedback** to submit a new English review. The backend translates,
+classifies, and saves it locally. Visitors can submit while the dashboard is PIN
+locked. Signing up creates a separate account with its own data and initial PIN
+`0000`.
+
+Press **Control+C** on Mac/Linux or **Ctrl+C** on Windows to stop the server.
+Stopping preserves the database. The frontend's **Restart** button logs out and
+returns to the welcome screen; it also preserves reviews and plans.
+
+## Every later start: offline
+
+Return to the cloned repository and run the start command. You do not need to
+rerun setup or generate demo reviews for daily use. The start scripts set the
+model libraries to offline mode.
+
+Choose the command matching your **current folder**:
+
+| System | Current folder | Start command |
+|---|---|---|
+| macOS/Linux | Repository root | `sh backend/run_offline.sh` |
+| macOS/Linux | Inside `backend` | `sh run_offline.sh` |
+| Windows PowerShell | Repository root | `powershell -ExecutionPolicy Bypass -File .\backend\run_offline.ps1` |
+| Windows PowerShell | Inside `backend` | `powershell -ExecutionPolicy Bypass -File .\run_offline.ps1` |
+
+Open **http://127.0.0.1:8000/** and keep the server window running. Reviews,
+translations, classification, suggestions, plans, and monthly statistics work
+locally. Installing dependencies, downloading models, and fetching Git updates
+require internet.
+
+## Update an existing clone
+
+Stop the backend with Control+C/Ctrl+C and connect to the internet. These Git
+commands work from either the repository root or its `backend` folder:
+
+```sh
+git fetch origin
+git switch Backend-frontend-test1
+git pull --ff-only
+```
+
+Rerun setup after an update to install changed dependencies and prepare missing
+models. Existing model weights are reused. Use the commands for your current folder:
+
+| System | Current folder | Online setup | Start afterward |
+|---|---|---|---|
+| macOS/Linux | Repository root | `sh backend/setup.sh` | `sh backend/run_offline.sh` |
+| macOS/Linux | Inside `backend` | `sh setup.sh` | `sh run_offline.sh` |
+| Windows PowerShell | Repository root | `powershell -ExecutionPolicy Bypass -File .\backend\setup.ps1` | `powershell -ExecutionPolicy Bypass -File .\backend\run_offline.ps1` |
+| Windows PowerShell | Inside `backend` | `powershell -ExecutionPolicy Bypass -File .\setup.ps1` | `powershell -ExecutionPolicy Bypass -File .\run_offline.ps1` |
+
+Wait for **Echo ready**, start the backend, and reload the browser. Existing reviews,
+plans, credentials, and owner decisions are preserved.
+
+## Troubleshooting setup and startup
+
+| What you see | What to do |
+|---|---|
+| Setup ends with `Environment ready. Run ./download_model.sh...` | This is the older setup script from `main`. Follow the branch switch and update steps, then rerun setup. |
+| `Offline translation model is missing` or a missing MiniLM model | Run online setup on `Backend-frontend-test1` and wait for Echo ready. Python packages alone are not the model files. |
+| `No such file or directory` | Check your current folder. Inside `backend`, use `sh setup.sh` and `sh run_offline.sh`; from the root, include the `backend/` prefix. |
+| `cd: .../bin/python: Not a directory` | `cd` accepts folders. A Python path is an executable; run it directly rather than trying to enter it. |
+| Browser cannot connect | Keep the backend running and use `http://127.0.0.1:8000/` on that computer. Check Terminal for startup errors and try `/health`. |
+
+On Mac/Linux, inspect your location and branch with:
+
+```sh
+pwd
+ls
+git branch --show-current
+```
+
+On Windows PowerShell:
+
+```powershell
+Get-Location
+Get-ChildItem
+git branch --show-current
+```
+
+When reporting a failure, include the command, current folder and branch, and the
+final 30 lines of the traceback including the last error message.
+
+## Bundled demo and local storage
+
+`backend/data/synthetic/noor_reviews.json` and `noor_plans.json` contain the
+pretranslated, preclassified demo. Import requires no model inference or extra
+review download. The dashboard and review cards identify synthetic data. Future
+months are intentional simulation data; live reviews still reject future dates.
+
+Import runs once for an untouched `noor` account, including an existing empty
+account. Existing reviews, plans, or ignored-suggestion decisions cause import to
+be skipped. Deleted reviews also count as existing records. A persistent marker
+prevents restarts from restoring data you removed.
+
+Each clone creates its own `backend/echo.db`; data is not shared between computers.
+Virtual environments, databases, model weights, backups, and translation caches
+are excluded from Git. Standard setup stores OPUS in `backend/models/opus-en-sw/`
+and MiniLM in `backend/models/insight-model/`. An existing root OPUS model in
+`models/opus-en-sw/` is also supported.
+
+To start a fresh database without importing the demo, set `ECHO_SEED_DEMO=0`.
+This does not remove already imported data. From the repository root:
+
+```sh
+ECHO_SEED_DEMO=0 sh backend/run_offline.sh
+```
+
+Windows PowerShell equivalent:
+
+```powershell
+$env:ECHO_SEED_DEMO = '0'
+powershell -ExecutionPolicy Bypass -File .\backend\run_offline.ps1
+```
+
+See [the demo documentation](docs/SYNTHETIC_DEMO.md) for the monthly story,
+rating distribution, controlled patterns, and preservation rules.
+
+## Repository layout
+
+| Location | Purpose |
+|---|---|
+| `frontend/` | Phone-style interface, API client, bundled browser libraries and fonts |
+| `backend/api.py` and `echo_api.py` | Local server, account/PIN access, reviews, suggestions, plans and performance |
+| `backend/translate_opus.py` and `insight_model.py` | Local translation and English topic classification |
+| `backend/review_pipeline.py` | Shared processing for live and developer-generated reviews |
+| `backend/store.py` and `echo_analytics.py` | SQLite storage, recurring patterns and before/after statistics |
+| `backend/data/` | Reviewed 17-topic knowledge, approved advice, synthetic data and audits |
+| `backend/tools/` | One-time model preparation and optional development utilities |
+| `backend/tests/` | Isolated API, model, demo-import and browser verification |
+| `docs/` | Implementation and synthetic demo documentation |
+
+## Optional developer commands
+
+These commands run from the **repository root**, using the `backend/.venv` created
+by setup. If you maintain a root `.venv`, use its Python instead.
+
+### Run tests
+
+Windows PowerShell:
+
+```powershell
+.\backend\.venv\Scripts\python.exe -m pytest backend/tests -q
+```
+
+macOS/Linux:
+
+```sh
+backend/.venv/bin/python -m pytest backend/tests -q
+```
+
+Tests use isolated databases. Real model tests block outgoing connections and
+verify OPUS/MiniLM inference. Other tests cover validation, owner isolation,
+corrections, demo import, confidence thresholds and plan tracking.
+
+Browser checks require **Microsoft Edge** and the development dependencies.
+Windows PowerShell:
+
+```powershell
+.\backend\.venv\Scripts\python.exe -m pip install -r backend/requirements-dev.txt
+.\backend\.venv\Scripts\python.exe backend/tests/browser_offline.py
+.\backend\.venv\Scripts\python.exe backend/tests/browser_offline.py --seeded-demo
+```
+
+macOS/Linux, with Microsoft Edge installed:
+
+```sh
+backend/.venv/bin/python -m pip install -r backend/requirements-dev.txt
+backend/.venv/bin/python backend/tests/browser_offline.py
+backend/.venv/bin/python backend/tests/browser_offline.py --seeded-demo
+```
+
+The seeded check starts from an empty database and verifies automatic import,
+all twelve monthly counts and ratings, confidence cases, and the Better plan.
+Both browser checks reject external requests. Artifacts go to ignored
+`backend/test-results/`.
+
+For a manual offline check, finish setup, disconnect the internet, start Echo,
+inspect the demo, and submit a new English review. Verify Kiswahili, suggestions
+and monthly data, then stop and restart to confirm persistence. To test exact
+three/five-review thresholds independently of the demo, use a new separate
+account or a fresh database with `ECHO_SEED_DEMO=0`.
+
+### Regenerate the demo only when changing it
+
+Automatic import is sufficient for ordinary clones. Developer regeneration runs
+the real models again and can take longer. Windows PowerShell:
+
+```powershell
+.\backend\.venv\Scripts\python.exe backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
+```
+
+macOS/Linux:
 
 ```sh
 backend/.venv/bin/python backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
 ```
 
-Regeneration is only needed when changing the demo. Restart the backend after
-taxonomy changes. Reset replaces only Noor's synthetic reviews/plans and backs
-up the database first.
-Real reviews, real plans and other accounts are preserved. A first run translates
-250 distinct texts; later runs reuse the real OPUS translation cache and classify
-the English again. Full exported records and the measured audit are in
-`backend/data/synthetic/`. See [the synthetic demo report](docs/SYNTHETIC_DEMO.md)
-for the monthly story, 17 coffee-farm topics and controlled confidence cases.
+Inside the Mac `backend` folder, use `./.venv/bin/python` and
+`tools/generate_synthetic_reviews.py`. Reset replaces only Noor's synthetic
+reviews/plans and backs up the database first. Real data and other accounts are
+preserved. See [the demo documentation](docs/SYNTHETIC_DEMO.md) for details.
 
-## Verify
+### Rebuild development knowledge
 
-```powershell
-.\.venv\Scripts\python.exe -m pytest backend/tests -q
-```
-
-Tests include real OPUS/MiniLM loading and inference while every outgoing
-`socket.connect` is rejected. Other tests inject a translator/classifier to
-isolate validation, persistence and business rules. Test databases are isolated
-from `backend/echo.db`.
-
-Optional actual-browser test (Edge must be installed):
+Runtime knowledge is already bundled. An optional rebuild requires your own Yelp
+reference sample; the app does not need that sample to run. Replace the sample
+path below with the path on your computer:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r backend/requirements-dev.txt
-.\.venv\Scripts\python.exe backend/tests/browser_offline.py
-.\.venv\Scripts\python.exe backend/tests/browser_offline.py --seeded-demo
+.\backend\.venv\Scripts\python.exe backend/tools/build_echo_knowledge.py 'path/to/echo_yelp_tourism_sample.json'
+.\backend\.venv\Scripts\python.exe backend/tools/localize_knowledge.py
 ```
 
-The browser test rejects non-loopback requests in both browser and Python. It
-exercises login, submissions, PIN, bilingual reviews, advice, plans, monthly
-statistics, delete/undo, reload persistence and manual correction. Artifacts go
-to ignored `backend/test-results/`. See [the implementation report](docs/OFFLINE_IMPLEMENTATION.md)
-for exact rules, thresholds, data provenance, changes and limitations.
+On Mac/Linux, use `backend/.venv/bin/python` for the same scripts. The build audits
+reference feedback into the reviewed 17-topic library without importing visitor
+records. Localization pretranslates fixed approved advice. Runtime selects from
+these files and never scans Yelp or generates new advice.
 
-Manual disconnected test:
+### Run a separate frontend server
 
-For the exact support thresholds below, use a fresh database with
-`ECHO_SEED_DEMO=0`. Opting out does not remove an already imported demo.
-
-1. Complete installation and model preparation while online.
-2. Disconnect Wi-Fi/Ethernet. Set `HF_HUB_OFFLINE=1` and `TRANSFORMERS_OFFLINE=1`.
-3. Start the backend; open its localhost URL and log in.
-4. Switch to Visitor Feedback. Submit English with a rating and either text field.
-5. Unlock with 0000. Verify Kiswahili first and unchanged English underneath.
-6. Submit three matching reviews: expect medium-confidence approved advice.
-   Five matching reviews: expect high confidence. One or two: no actionable advice.
-7. Accept, save, start and complete plans. Check monthly statistics. Correct an
-   uncertain review; delete and undo a review. Reload to verify persistence.
-8. In developer tools, confirm all requests use localhost. Runtime also forces
-   the model offline flags. `/docs` and `/redoc` are disabled to avoid remote
-   documentation assets; the schema remains available at `/openapi.json`.
-
-## Development knowledge rebuild
+The normal port-8000 server already serves the frontend. For development, an
+optional local proxy can serve it on port 5500 while the backend stays on 8000.
+In a second terminal, from the repository root:
 
 ```powershell
-.\.venv\Scripts\python.exe backend/tools/build_echo_knowledge.py "C:\Users\brand\OneDrive\Desktop\Yelp JSON\yelp_dataset\echo_yelp_tourism_sample.json"
-.\.venv\Scripts\python.exe backend/tools/localize_knowledge.py
+.\backend\.venv\Scripts\python.exe frontend/serve.py
 ```
 
-The first command audits 1,500 reference reviews into topic counts and a reviewed
-17-topic coffee-farm phrase/advice library. It retains no Yelp text and never imports visitor
-records. The second pretranslates approved English advice with local OPUS;
-runtime advice is selected from the file. Unchanged translations survive a rebuild.
-Neither script runs at app startup or for review submissions.
+On Mac/Linux, use `backend/.venv/bin/python frontend/serve.py`. Open
+**http://127.0.0.1:5500/**. This server proxies `/api/` so account cookies work.
+Opening `index.html` as a file does not provide the local API.
 
-## API
+## API and implementation details
 
 - `/api/auth/signup`, `/api/auth/login`, `/api/auth/logout`, `/api/auth/me`
 - `/api/pin/unlock`, `/api/pin/lock`, `PATCH /api/pin`
@@ -176,9 +362,12 @@ Neither script runs at app startup or for review submissions.
 - `GET/POST /api/plans`, `PATCH/DELETE /api/plans/{id}`
 - `GET /api/performance/monthly?month=YYYY-MM`, `GET /health`
 
-Login identifies the business receiving feedback. Visitors can submit while its
-dashboard is PIN locked; owner data requires login and unlock. Data is isolated
-by account. Existing translation-only endpoints remain protected testing utilities
-with their legacy JSON store; Echo's UI exclusively uses SQLite `/api/` routes.
-Old prototype/JSON reviews are not imported because translated-only records
-cannot reconstruct their English source.
+Login identifies the business receiving feedback. Owner data requires account
+login and PIN unlock; data is isolated by account. `/docs` and `/redoc` are
+disabled to avoid remote documentation assets; the schema is at `/openapi.json`.
+Legacy translation-only endpoints remain protected utilities with their JSON
+store. Echo's frontend uses the SQLite `/api/` routes.
+
+See [the offline implementation report](docs/OFFLINE_IMPLEMENTATION.md) for rules,
+thresholds, provenance and limitations, and [the demo documentation](docs/SYNTHETIC_DEMO.md)
+for the fictional full-year data.

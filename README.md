@@ -66,6 +66,10 @@ language mismatch between translated review content and English topic labels.
 The Noor frontend also loads those original fields for its local topic
 labels, while displaying the Kiswahili fields as translations.
 
+To reset the local test store, replace `backend/translated_reviews.json` with
+an empty JSON array (`[]`) and submit new reviews through the frontend or the
+batch endpoint.
+
 ## Example request
 
 ```bash

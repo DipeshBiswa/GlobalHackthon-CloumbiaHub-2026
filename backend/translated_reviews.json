@@ -2,143 +2,136 @@
   {
     "rating": 5.0,
     "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "Kiongozi alikuwa mwenye urafiki.",
-    "improvement": "Ongeza wakati zaidi."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "favorite sw",
-    "improvement": "improvement sw"
-  },
-  {
-    "rating": 3.0,
-    "language": "sw",
-    "date": "2025-10-31",
-    "favorite": "Nilipenda vita",
-    "improvement": "kilikuwa kirefu mno"
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "Kiongozi wetu alikuwa mwenye urafiki, mwenye ujuzi, na alifanya kila mtu ahisi amekaribishwa.",
-    "improvement": "Dumisha mazoezi bora kabisa ya mwongozo."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "Maoni ya mlima huo yalikuwa mazuri na yenye kufaa kwa picha.",
-    "improvement": "Ruhusu wakati zaidi kwa maoni hayo."
-  },
-  {
-    "rating": 4.0,
-    "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "Nilifurahia kujifunza kuhusu historia na utamaduni wa eneo hilo.",
-    "improvement": "Tafadhali ongeza wakati zaidi kwa ajili ya kituo cha utamaduni."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "Maonyesho ya kukaanga kahawa yalikuwa jambo kuu la ziara hiyo.",
-    "improvement": "Toa mfuko mdogo wa kahawa kwenda nyumbani."
-  },
-  {
-    "rating": 3.0,
-    "language": "sw",
-    "date": "2026-10-03",
-    "favorite": "Mandhari ilikuwa nzuri ajabu na njia ilikuwa yenye kukumbukwa.",
-    "improvement": "Safari hiyo ya kupanda mlima ilikuwa yenye kuchosha; iliandaa njia fupi zaidi na kupumzika zaidi."
-  },
-  {
-    "rating": 4.0,
-    "language": "sw",
-    "date": "2026-10-02",
-    "favorite": "Ladha ya chakula katika eneo hilo ilikuwa tamu na halisi.",
-    "improvement": "Ongeza njia nyingine ya kuonja kwa wageni."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-02",
-    "favorite": "Kikundi chetu kidogo kilifanya jambo hilo liwe la kibinafsi na lenye kustarehesha.",
-    "improvement": "Tafadhali endeleeni kutembelea kikundi kidogo."
-  },
-  {
-    "rating": 2.0,
-    "language": "sw",
-    "date": "2026-10-02",
-    "favorite": "Kiongozi huyo alieleza waziwazi mahali pa kwenda.",
-    "improvement": "Maagizo ya gari na habari za kuegesha magari zilikuwa zenye kutatanisha."
-  },
-  {
-    "rating": 4.0,
-    "language": "sw",
-    "date": "2026-10-02",
-    "favorite": "Poromoko la maji na mandhari yake hayakusahaulika.",
-    "improvement": "Ongeza viti vyenye kivuli karibu na eneo la kungoja."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-01",
-    "favorite": "Kiongozi huyo alijibu kila swali kuhusu jamii na historia.",
-    "improvement": "Tumia wakati mwingi zaidi pamoja na hadithi za kitamaduni."
-  },
-  {
-    "rating": 3.0,
-    "language": "sw",
-    "date": "2026-10-01",
-    "favorite": "Ladha ya kahawa ilipendeza sana.",
-    "improvement": "Safari hiyo iliharakishwa; ongeza wakati kwenye vituo vikuu."
-  },
-  {
-    "rating": 4.0,
-    "language": "sw",
-    "date": "2026-10-01",
-    "favorite": "Tulifurahia chakula na kukutana na watu wa eneo hilo.",
-    "improvement": "Ongeza ufundi au vitu vya ukumbusho vya kwenu ili ununue."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-09-30",
-    "favorite": "Kiongozi huyo alikuwa mwenye fadhili na aliifurahia safari yote.",
-    "improvement": "Hakuna jambo kubwa, endeleeni tu kuwakaribisha wageni."
-  },
-  {
-    "rating": 2.0,
-    "language": "sw",
-    "date": "2026-09-30",
-    "favorite": "Maoni hayo yalistahili kuonwa.",
-    "improvement": "Njia hiyo ilikuwa ngumu na ilihitaji kupumzika zaidi."
-  },
-  {
-    "rating": 4.0,
-    "language": "sw",
-    "date": "2026-09-30",
-    "favorite": "Mlo wa mahali hapo na pia kusimulia hadithi kulikuwa bora sana.",
-    "improvement": "Tafadhali eleza jinsi unavyoweza kutumia njia mbalimbali kabla ya matembezi."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
     "date": "2026-10-04",
-    "favorite": "Kiongozi huyo mwenye urafiki alieleza vizuri historia ya eneo hilo.",
-    "improvement": "Tumia wakati mwingi zaidi pamoja na hadithi za kitamaduni."
-  },
-  {
-    "rating": 5.0,
-    "language": "sw",
-    "date": "2026-10-04",
-    "favorite": "Kiongozi huyo mwenye urafiki alieleza vizuri historia ya eneo hilo.",
+    "favorite": "Kiongozi huyo alikuwa mwenye urafiki na akaeleza historia waziwazi.",
     "improvement": "Tumia wakati mwingi zaidi pamoja na hadithi za kitamaduni.",
-    "original_favorite": "The friendly guide explained local history clearly.",
+    "original_favorite": "The guide was friendly and explained the history clearly.",
     "original_improvement": "Give the cultural stories more time."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Mandhari ya milima na maporomoko ya maji yalikuwa yenye kupendeza.",
+    "improvement": "Ruhusu wakati zaidi kwa picha.",
+    "original_favorite": "The mountain views and waterfall were beautiful.",
+    "original_improvement": "Allow more time for photos."
+  },
+  {
+    "rating": 4.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Ladha ya chakula cha eneo hilo ilikuwa tamu.",
+    "improvement": "Ongeza chaguo jingine la mlo mahali penu.",
+    "original_favorite": "The local food tasting was delicious.",
+    "original_improvement": "Add another local meal option."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Maonyesho ya kukaanga kahawa yalikuwa mazuri sana.",
+    "improvement": "Toa mifuko ya kahawa kama vikumbusho.",
+    "original_favorite": "The coffee roasting demonstration was excellent.",
+    "original_improvement": "Offer coffee bags as souvenirs."
+  },
+  {
+    "rating": 4.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Kikundi chetu kidogo kilihisi utulivu na utu.",
+    "improvement": "Endelea kutembelea vikundi vidogo - vidogo vya watu.",
+    "original_favorite": "Our small group felt relaxed and personal.",
+    "original_improvement": "Keep offering small group tours."
+  },
+  {
+    "rating": 3.0,
+    "language": "sw",
+    "date": "2026-10-04",
+    "favorite": "Mandhari hiyo ilikuwa yenye kukumbukwa.",
+    "improvement": "Njia ya kupanda mlima ilikuwa yenye kuchosha; ongeza pumziko zaidi.",
+    "original_favorite": "The scenery was memorable.",
+    "original_improvement": "The uphill route was tiring; add more rest stops."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-03",
+    "favorite": "Kiongozi huyo alijibu kila swali naye alikuwa mwenye kukaribisha sana.",
+    "improvement": "Endelea kutumia pesa zako katika mazoezi ya kuongoza.",
+    "original_favorite": "The guide answered every question and was very welcoming.",
+    "original_improvement": "Keep investing in guide training."
+  },
+  {
+    "rating": 4.0,
+    "language": "sw",
+    "date": "2026-10-03",
+    "favorite": "Nilifurahia kujifunza kuhusu tamaduni na maisha ya kijamii.",
+    "improvement": "Ongeza wakati zaidi kwenye kituo cha utamaduni.",
+    "original_favorite": "I enjoyed learning about local traditions and community life.",
+    "original_improvement": "Add more time at the cultural stop."
+  },
+  {
+    "rating": 2.0,
+    "language": "sw",
+    "date": "2026-10-03",
+    "favorite": "Safari hiyo ilikuwa yenye kupendeza.",
+    "improvement": "Kura na maagizo ya kuegesha magari yalikuwa yenye kutatanisha.",
+    "original_favorite": "The destination was interesting.",
+    "original_improvement": "Pickup and parking instructions were confusing."
+  },
+  {
+    "rating": 4.0,
+    "language": "sw",
+    "date": "2026-10-03",
+    "favorite": "Maoni hayo yalistahili ziara hiyo.",
+    "improvement": "Tafadhali andaa mahali pa kuketi palipo na kivuli.",
+    "original_favorite": "The views were worth the visit.",
+    "original_improvement": "Please provide shaded seating."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-02",
+    "favorite": "Kiongozi huyo aliwakaribisha watu wote.",
+    "improvement": "Hakuna jambo lolote ambalo ni muhimu ili kuboresha hali hiyo.",
+    "original_favorite": "The guide made the whole experience welcoming.",
+    "original_improvement": "Nothing major to improve."
+  },
+  {
+    "rating": 3.0,
+    "language": "sw",
+    "date": "2026-10-02",
+    "favorite": "Ladha ya kahawa ilipendeza sana.",
+    "improvement": "Safari hiyo iliharakishwa kwenye vituo vikuu.",
+    "original_favorite": "The coffee tasting was interesting.",
+    "original_improvement": "The tour felt rushed at the main stops."
+  },
+  {
+    "rating": 4.0,
+    "language": "sw",
+    "date": "2026-10-02",
+    "favorite": "Tulifurahia kukutana na watu wa eneo hilo na kuonja chakula.",
+    "improvement": "Ongeza vyombo vya kazi ili kununua na kupeleka nyumbani.",
+    "original_favorite": "We enjoyed meeting local people and tasting food.",
+    "original_improvement": "Add local crafts to buy and take home."
+  },
+  {
+    "rating": 2.0,
+    "language": "sw",
+    "date": "2026-10-01",
+    "favorite": "Njia hiyo ilikuwa na mandhari yenye kupendeza.",
+    "improvement": "Njia hiyo ilikuwa ngumu na ilihitaji njia inayoweza kufikiwa.",
+    "original_favorite": "The route had beautiful scenery.",
+    "original_improvement": "The trail was difficult and needs an accessible option."
+  },
+  {
+    "rating": 5.0,
+    "language": "sw",
+    "date": "2026-10-01",
+    "favorite": "Utoaji huo wa historia ulikuwa wenye kuarifu na wenye kuhusisha.",
+    "improvement": "Tafadhali iweni na miongozo yenye ujuzi.",
+    "original_favorite": "The history presentation was informative and engaging.",
+    "original_improvement": "Please keep the knowledgeable guides."
   }
 ]

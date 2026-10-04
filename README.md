@@ -4,6 +4,7 @@
 
 ```text
 backend/   Offline translation API, models, analytics, and JSON storage
+frontend/  Frontend application goes here
 ```
 
 ## Run the backend

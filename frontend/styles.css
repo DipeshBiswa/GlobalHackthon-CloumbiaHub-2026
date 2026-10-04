@@ -323,3 +323,10 @@ mark{background:var(--tint-strong);color:inherit;border-radius:4px;padding:0 2px
 .toast-act{border:none;background:none;color:var(--tint-strong);font:600 15px/20px var(--font);min-height:40px;padding:0 10px;border-radius:999px;cursor:pointer}
 @keyframes toastIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.15s!important;animation-name:fadeIn!important;transition-duration:.01s!important}}
+
+/* All Reviews: Sort by dropdown */
+.sortrow{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin:-4px 0 16px}
+.sortwrap{position:relative;display:inline-flex;align-items:center}
+.sortsel{appearance:none;-webkit-appearance:none;height:36px;padding:0 36px 0 14px;border-radius:999px;border:1px solid var(--line-input);background:var(--surface);color:var(--text);font:600 14px/20px var(--font);cursor:pointer}
+.sortsel:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.sortwrap .ic{position:absolute;right:12px;pointer-events:none;color:var(--text2)}

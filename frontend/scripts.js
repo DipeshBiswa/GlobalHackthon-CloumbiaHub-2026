@@ -13,7 +13,7 @@ const STORE_KEY = "beanback-demo-v3";
 
 /* ---------- Visitor-side strings (EN / SW / DE / FR) ---------- */
 const V = {
-  en: { langName: "English", title: "How was your visit?", subtitle: "Noor's coffee farm tour", date: "Today's date", rating: "Your rating",
+  en: { langName: "English", title: "How was your visit?", subtitle: "Noor's coffee farm tour", date: "Today's date", pickDate: "Select a date", rating: "Your rating",
     ratingWords: ["Poor", "Fair", "Good", "Very good", "Excellent"], q1: "What was your favorite part?", q2: "What could be better?",
     p1: "For example, roasting the coffee", p2: "For example, the walk was tiring",
     privacy: "Anonymous. No names collected. Saved only on this phone.", consent: "By submitting, you agree Noor can read your review to improve her tour.",
@@ -21,7 +21,7 @@ const V = {
     errRating: "Please choose a rating", errText: "Tell Noor at least one thing", thanks: "Thank you!", thanksBody: "Your review helps Noor improve her tour.",
     done: "Done · hand the phone back", countdown: "Returning to start in {n} s", saved: "Saved on this phone", back: "Language",
     ok: "Done", discardTitle: "Discard this review?", discardBody: "What you wrote will be lost.", keep: "Keep writing", discard: "Discard", locale: "en-GB" },
-  sw: { langName: "Kiswahili", title: "Ziara yako ilikuwaje?", subtitle: "Ziara ya shamba la kahawa la Noor", date: "Tarehe ya leo", rating: "Ukadiriaji wako",
+  sw: { langName: "Kiswahili", title: "Ziara yako ilikuwaje?", subtitle: "Ziara ya shamba la kahawa la Noor", date: "Tarehe ya leo", pickDate: "Chagua tarehe", rating: "Ukadiriaji wako",
     ratingWords: ["Mbaya", "Wastani", "Nzuri", "Nzuri sana", "Bora kabisa"], q1: "Ulipenda nini zaidi?", q2: "Nini kingeweza kuwa bora zaidi?",
     p1: "Kwa mfano, kuchoma kahawa", p2: "Kwa mfano, matembezi yalichosha",
     privacy: "Bila jina. Hatukusanyi majina. Inahifadhiwa kwenye simu hii tu.", consent: "Kwa kutuma, unakubali Noor asome maoni yako ili kuboresha ziara yake.",
@@ -29,7 +29,7 @@ const V = {
     errRating: "Tafadhali chagua ukadiriaji", errText: "Mwambie Noor angalau jambo moja", thanks: "Asante!", thanksBody: "Maoni yako yanamsaidia Noor kuboresha ziara yake.",
     done: "Nimemaliza · rudisha simu", countdown: "Inarudi mwanzo baada ya sekunde {n}", saved: "Imehifadhiwa kwenye simu hii", back: "Lugha",
     ok: "Sawa", discardTitle: "Futa maoni haya?", discardBody: "Ulichoandika kitapotea.", keep: "Endelea kuandika", discard: "Futa", locale: "sw-KE" },
-  de: { langName: "Deutsch", title: "Wie war Ihr Besuch?", subtitle: "Noors Kaffeefarm-Tour", date: "Heutiges Datum", rating: "Ihre Bewertung",
+  de: { langName: "Deutsch", title: "Wie war Ihr Besuch?", subtitle: "Noors Kaffeefarm-Tour", date: "Heutiges Datum", pickDate: "Datum wählen", rating: "Ihre Bewertung",
     ratingWords: ["Schlecht", "Ausreichend", "Gut", "Sehr gut", "Ausgezeichnet"], q1: "Was hat Ihnen am besten gefallen?", q2: "Was könnte besser sein?",
     p1: "Zum Beispiel: das Kaffeerösten", p2: "Zum Beispiel: der Weg war anstrengend",
     privacy: "Anonym. Keine Namen. Nur auf diesem Telefon gespeichert.", consent: "Mit dem Absenden erlauben Sie Noor, Ihre Bewertung zu lesen, um ihre Tour zu verbessern.",
@@ -37,7 +37,7 @@ const V = {
     errRating: "Bitte wählen Sie eine Bewertung", errText: "Sagen Sie Noor mindestens eine Sache", thanks: "Danke!", thanksBody: "Ihre Bewertung hilft Noor, ihre Tour zu verbessern.",
     done: "Fertig · Telefon zurückgeben", countdown: "Zurück zum Start in {n} s", saved: "Auf diesem Telefon gespeichert", back: "Sprache",
     ok: "Fertig", discardTitle: "Bewertung verwerfen?", discardBody: "Ihr Text geht verloren.", keep: "Weiter schreiben", discard: "Verwerfen", locale: "de-DE" },
-  fr: { langName: "Français", title: "Comment s'est passée votre visite ?", subtitle: "Visite de la ferme de café de Noor", date: "Date du jour", rating: "Votre note",
+  fr: { langName: "Français", title: "Comment s'est passée votre visite ?", subtitle: "Visite de la ferme de café de Noor", date: "Date du jour", pickDate: "Choisir une date", rating: "Votre note",
     ratingWords: ["Médiocre", "Passable", "Bien", "Très bien", "Excellent"], q1: "Qu'avez-vous préféré ?", q2: "Qu'est-ce qui pourrait être amélioré ?",
     p1: "Par exemple : torréfier le café", p2: "Par exemple : la marche était fatigante",
     privacy: "Anonyme. Aucun nom collecté. Enregistré uniquement sur ce téléphone.", consent: "En envoyant, vous acceptez que Noor lise votre avis pour améliorer sa visite.",
@@ -58,7 +58,7 @@ const N = {
   en: {
     navVisitor: "Visitor Feedback", navNoor: "Noor's Dashboard", navDash: "Dashboard", hi: "Hi Noor", lock: "Lock dashboard", how: "How Echo works",
     saved: "Saved on this phone", reviewsWeek: "reviews this week", avgRating: "average rating", yourDash: "YOUR DASHBOARD",
-    summary: "Plans", summaryD: "What visitors loved, what to improve, AI suggestions",
+    summary: "Summarized Plans", summaryD: "What visitors loved, what to improve, AI suggestions",
     all: "All Reviews", allD: "Every review, exactly as visitors wrote it",
     notSure: "Not Sure", notSureD: "Reviews the AI couldn't understand. Check with your guide.",
     plans: "My Plans", plansD: "Changes you decided to try, and how they're going",
@@ -76,19 +76,19 @@ const N = {
     reviewsAbout: "Reviews about this ({n})", showAll: "Show all {n}", showLess: "Show less", whatDo: "What will you do?",
     tryIt: "Try it", notNow: "Not now", ignore: "Ignore", inPlans: "In My Plans since {d}", savedLater: "Saved for later", undo: "Undo", view: "View",
     tAdded: "Added to My Plans", tSaved: "Saved for later", tHidden: "Hidden from Plans", tooFew: "Fewer than 3 visitors mention this now, so there is no suggestion. Ask your guide.",
-    allSub: "{n} reviews, exactly as written · newest first", fAll: "All", f5: "5 ★", f4: "4 ★", f3: "3 ★ and below", fComplaint: "Has a complaint",
+    allSub: "{n} reviews, exactly as written · newest first", fAll: "All", f5: "5 ★", f4: "4 ★", f3: "3 ★ and below", sortBy: "Sort by", sortNew: "Most Recent", sortOld: "Oldest to Newest", allSubOld: "{n} reviews, exactly as written · oldest first",
     favPart: "Favorite part", better: "Could be better", readMore: "Read more", showTr: "Show English translation", hideTr: "Hide translation",
     noReviews: "No reviews yet", noReviewsB: "Reviews appear here after visitors submit them.", noMatch: "No reviews match this filter.",
     more: "More options", delTitle: "Delete this review?", delBody: "It will be removed from every screen and all counts.", del: "Delete", keep: "Keep", tDeleted: "Review deleted",
     nsSub: "The AI couldn't understand these. Check them with your guide.", nsBanner: "These stay out of your Plans until someone labels them. Corrections are saved separately from model predictions.",
-    lowConf: "AI not confident · {n}%", unsupported: "Language not supported", pickOne: "Good or bad? Pick one:", longQ: "Good long or bad long? Pick one:",
+    lowConf: "AI not confident · {n}%", unsupported: "Language not supported", pickOne: "What is this about? Pick one:", noneOf: "None of these", longQ: "Good long or bad long? Pick one:",
     skip: "Skip for now", askGuide: "Ask your guide to read it.", markChecked: "Mark as checked", tLabelled: "Thanks, labelled ‘{l}’", tChecked: "Marked as checked",
     allClear: "All clear", allClearB: "Nothing to check right now.", good: "Good experience", bad: "Something to improve",
     tlGood: "Tour length: good", tlBad: "Tour length: bad",
     plansSub: "Suggestions you chose to try", trying: "TRYING NOW", savedSec: "SAVED FOR LATER", doneSec: "DONE", started: "Started {d}", savedOn: "Saved {d}",
     from: "from ‘{t}’", before: "BEFORE", after: "AFTER", waiting: "Waiting for 3+ new reviews", newOf: "{n} of 3 new reviews",
     betterR: "Better", same: "No change", worse: "Worse", startTrying: "Start trying", tMoved: "Moved to Trying now",
-    noPlans: "No plans yet", noPlansB: "Open Plans and tap ‘Try it’ on a suggestion.", goSummary: "Go to Plans",
+    noPlans: "No plans yet", noPlansB: "Open Summarized Plans and tap ‘Try it’ on a suggestion.", goSummary: "View Summarized Plans",
     markDone: "Mark as done", moveSaved: "Move to saved for later", stop: "Stop trying", tDone: "Marked as done", tStopped: "Stopped trying",
     month: "Month", selectMonth: "Select a month", pickTitle: "Choose a month", pickBody: "Pick a month above to see the average rating, why, and what you tried.", perfWas: "This month's performance was", avgOf: "Average of {n} {m} reviews", onlyN: "Based on only {n} reviews",
     higher: "{d} higher than {m}", lower: "{d} lower than {m}", sameAs: "Same as {m}", why: "Potentially why:", fromBetter: "From the ‘What could be better’ answers in {m}",
@@ -108,7 +108,7 @@ const N = {
   sw: {
     navVisitor: "Maoni ya Wageni", navNoor: "Dashibodi ya Noor", navDash: "Dashibodi", hi: "Habari Noor", lock: "Funga dashibodi", how: "Jinsi Echo inavyofanya kazi",
     saved: "Imehifadhiwa kwenye simu hii", reviewsWeek: "maoni wiki hii", avgRating: "wastani wa nyota", yourDash: "DASHIBODI YAKO",
-    summary: "Mipango", summaryD: "Wageni walichopenda, cha kuboresha, mapendekezo ya AI",
+    summary: "Muhtasari wa Mipango", summaryD: "Wageni walichopenda, cha kuboresha, mapendekezo ya AI",
     all: "Maoni yote", allD: "Kila maoni, jinsi wageni walivyoandika",
     notSure: "Sina uhakika", notSureD: "Maoni ambayo AI haikuelewa. Angalia na mwongozo wako.",
     plans: "Mipango yangu", plansD: "Mabadiliko uliyoamua kujaribu, na yanavyoendelea",
@@ -126,19 +126,19 @@ const N = {
     reviewsAbout: "Maoni kuhusu hili ({n})", showAll: "Onyesha yote {n}", showLess: "Onyesha machache", whatDo: "Utafanya nini?",
     tryIt: "Jaribu", notNow: "Sio sasa", ignore: "Puuza", inPlans: "Kwenye Mipango tangu {d}", savedLater: "Imehifadhiwa kwa baadaye", undo: "Rudisha", view: "Ona",
     tAdded: "Imeongezwa kwenye Mipango yangu", tSaved: "Imehifadhiwa kwa baadaye", tHidden: "Imefichwa kwenye Mipango", tooFew: "Sasa chini ya wageni 3 wanataja hili, kwa hiyo hakuna pendekezo. Muulize mwongozo wako.",
-    allSub: "Maoni {n}, jinsi yalivyoandikwa · mapya kwanza", fAll: "Yote", f5: "5 ★", f4: "4 ★", f3: "3 ★ na chini", fComplaint: "Yenye malalamiko",
+    allSub: "Maoni {n}, jinsi yalivyoandikwa · mapya kwanza", fAll: "Yote", f5: "5 ★", f4: "4 ★", f3: "3 ★ na chini", sortBy: "Panga kwa", sortNew: "Mapya kwanza", sortOld: "Ya zamani hadi mapya", allSubOld: "Maoni {n}, jinsi yalivyoandikwa · ya zamani kwanza",
     favPart: "Alichopenda", better: "Kingeweza kuwa bora", readMore: "Soma zaidi", showTr: "Onyesha tafsiri ya Kiingereza", hideTr: "Ficha tafsiri",
     noReviews: "Bado hakuna maoni", noReviewsB: "Maoni yataonekana hapa wageni wakishayatuma.", noMatch: "Hakuna maoni yanayolingana na kichujio hiki.",
     more: "Chaguo zaidi", delTitle: "Futa maoni haya?", delBody: "Yataondolewa kila mahali na kwenye hesabu zote.", del: "Futa", keep: "Acha", tDeleted: "Maoni yamefutwa",
     nsSub: "AI haikuelewa haya. Yaangalie na mwongozo wako.", nsBanner: "Haya hayaingii kwenye Mipango hadi mtu ayape lebo. Majibu yako yanasaidia AI kujifunza.",
-    lowConf: "AI haina uhakika · {n}%", unsupported: "Lugha haitumiki", pickOne: "Nzuri au mbaya? Chagua moja:", longQ: "Ndefu nzuri au ndefu mbaya? Chagua moja:",
+    lowConf: "AI haina uhakika · {n}%", unsupported: "Lugha haitumiki", pickOne: "Hii inahusu nini? Chagua moja:", noneOf: "Hakuna kati ya haya", longQ: "Ndefu nzuri au ndefu mbaya? Chagua moja:",
     skip: "Ruka kwa sasa", askGuide: "Mwombe mwongozo wako aisome.", markChecked: "Weka kama imeangaliwa", tLabelled: "Asante, lebo: ‘{l}’", tChecked: "Imewekwa kama imeangaliwa",
     allClear: "Hakuna cha kuangalia", allClearB: "Hakuna kitu cha kuangalia sasa hivi.", good: "Uzoefu mzuri", bad: "Kitu cha kuboresha",
     tlGood: "Urefu wa ziara: mzuri", tlBad: "Urefu wa ziara: mbaya",
     plansSub: "Mapendekezo uliyochagua kujaribu", trying: "NINAJARIBU SASA", savedSec: "IMEHIFADHIWA KWA BAADAYE", doneSec: "IMEKAMILIKA", started: "Ilianza {d}", savedOn: "Ilihifadhiwa {d}",
     from: "kutoka ‘{t}’", before: "KABLA", after: "BAADA", waiting: "Inasubiri maoni mapya 3+", newOf: "Maoni mapya {n} kati ya 3",
     betterR: "Bora zaidi", same: "Hakuna mabadiliko", worse: "Mbaya zaidi", startTrying: "Anza kujaribu", tMoved: "Imehamishiwa Ninajaribu sasa",
-    noPlans: "Bado hakuna mipango", noPlansB: "Fungua Mipango na ubonyeze ‘Jaribu’ kwenye pendekezo.", goSummary: "Nenda Mipango",
+    noPlans: "Bado hakuna mipango", noPlansB: "Fungua Muhtasari wa Mipango na ubonyeze ‘Jaribu’ kwenye pendekezo.", goSummary: "Ona Muhtasari wa Mipango",
     markDone: "Weka kama imekamilika", moveSaved: "Hamishia kwa baadaye", stop: "Acha kujaribu", tDone: "Imewekwa kama imekamilika", tStopped: "Umeacha kujaribu",
     month: "Mwezi", selectMonth: "Chagua mwezi", pickTitle: "Chagua mwezi", pickBody: "Chagua mwezi hapo juu kuona wastani wa nyota, sababu, na ulichojaribu.", perfWas: "Utendaji wa mwezi huu ulikuwa", avgOf: "Wastani wa maoni {n} ya {m}", onlyN: "Kutoka maoni {n} tu",
     higher: "{d} juu kuliko {m}", lower: "{d} chini kuliko {m}", sameAs: "Sawa na {m}", why: "Huenda kwa sababu:", fromBetter: "Kutoka majibu ya ‘Nini kingeweza kuwa bora’ ya {m}",
@@ -209,6 +209,7 @@ const ICONS = {
   msg: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/>',
   home: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v10a2 2 0 0 0 2 2h3v-6h4v6h3a2 2 0 0 0 2-2V9"/>',
   dash: '<rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>',
+  docpen: '<path d="M13 21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v3"/><path d="M7.5 7.5h6"/><path d="M7.5 11h5"/><path d="M7.5 14.5h3"/><path d="M19.3 10.7a1.7 1.7 0 0 1 2.4 2.4L15 19.8l-3.3 1 1-3.3z"/>',
   sparkles: '<path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.14-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.14a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.14 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.14a.5.5 0 0 1-.96 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/>',
   help: '<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
   clip: '<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/>',
@@ -251,7 +252,7 @@ function vib(ms) { try { navigator.vibrate && navigator.vibrate(ms); } catch (e)
 const coarse = (() => { try { return window.matchMedia("(pointer: coarse)").matches; } catch (e) { return false; } })();
 
 function loadDb() { return seedState(); }
-const blankForm = (lang = "en") => ({ lang, date: TODAY, stars: 0, fav: "", better: "", share: false, errors: {}, saving: false });
+const blankForm = (lang = "en") => ({ lang, date: TODAY, datePicked: false, stars: 0, fav: "", better: "", share: false, errors: {}, saving: false });
 
 /* ---------- small shared pieces ---------- */
 function Logo({ kind = "mark", h, alt = "Echo", cls = "" }) {
@@ -430,9 +431,11 @@ function Welcome({ ctx }) {
   const [pass, setPass] = useState(ctx.loggedIn ? DEMO_PASS : "");
   const [show, setShow] = useState(false);
   const [signup,setSignup] = useState(false);
-  const login = async (e) => {e.preventDefault();try {const account = signup ? await EchoAPI.signup(user,pass,user) : await EchoAPI.login(user,pass);ctx.setOwnerName(account.display_name);ctx.setLoggedIn(true);ctx.go("welcome",{n:Date.now()},"fade");} catch(e) {ctx.showToast(e.message);}};
+  const login = async (e) => {e.preventDefault();try {let u = user, pw = pass;
+    if (!signup) { u = DEMO_USER; pw = DEMO_PASS; setUser(u); setPass(pw); await new Promise((res) => setTimeout(res, 450)); }
+    const account = signup ? await EchoAPI.signup(u,pw,u) : await EchoAPI.login(u,pw);ctx.setOwnerName(account.display_name);ctx.setLoggedIn(true);ctx.go("welcome",{n:Date.now()},"fade");} catch(e) {ctx.showToast(e.message);}};
   return html`<div class="scr"><div class="welcome">
-    <h1 class="welcome-title" key=${ctx.loggedIn ? "in" : "out"}>${ctx.loggedIn ? html`<span class="popin" style=${{ display: "inline-block" }}>Welcome, ${ctx.ownerName}</span>` : "Welcome"}</h1>
+    <h1 class="welcome-title" key=${ctx.loggedIn ? "in" : "out"}>${ctx.loggedIn ? html`<span class="popin" style=${{ display: "inline-block" }}>Welcome, <span style=${{ color: "#bda49c" }}>${ctx.ownerName}</span></span>` : "Welcome"}</h1>
     <${Logo} kind="lock" h=${190} cls="popin" />
     <p class="body muted welcome-text">An app that turns visitor feedback into AI-powered insights and suggestions.</p>
     ${ctx.loggedIn ? null : html`<form class="login" onSubmit=${login}>
@@ -485,7 +488,7 @@ function Form({ ctx }) {
   const grow = (el) => { el.style.height = "auto"; el.style.height = Math.min(el.scrollHeight + 2, 6 * 24 + 30) + "px"; };
   const back = () => { const doIt = () => { setForm(blankForm()); ctx.go("language", {}, "back"); }; if (ctx.form.stars || ctx.form.fav.trim() || ctx.form.better.trim() || ctx.form.share) ctx.setSheet({ type: "discard", onDiscard: doIt }); else doIt(); };
   const d = new Date(form.date + "T12:00:00");
-  const dateTxt = d.toLocaleDateString(s.locale, { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+  const dateTxt = form.datePicked ? d.toLocaleDateString(s.locale, { weekday: "short", day: "numeric", month: "short", year: "numeric" }) : s.pickDate;
   const ta = (k, id, ph, err) => html`<div class="tawrap">
     <textarea id=${id} class=${"input" + (err ? " err" : "")} rows="3" maxlength="300" placeholder=${ph} value=${form[k]} readOnly=${form.saving}
       onInput=${(e) => { set(k, e.target.value); grow(e.target); }} onFocus=${() => ctx.setKb(true)} onBlur=${() => ctx.setKb(false)}
@@ -498,7 +501,7 @@ function Form({ ctx }) {
       <h1 class="h1">${s.title}</h1><p class="sec" style=${{ marginTop: 4 }}>${s.subtitle}</p>
       <div class="formgroups">
         <div class="field"><label class="lbl" for="visit-date">${s.date}</label>
-          <button id="visit-date" class="input datefield" onClick=${() => ctx.setSheet({ type: "date", lang: form.lang })}><span>${dateTxt}</span><${Icon} n="calendar" /></button></div>
+          <button id="visit-date" class=${"input datefield" + (form.datePicked ? "" : " placeholder")} onClick=${() => ctx.setSheet({ type: "date", lang: form.lang })}><span>${dateTxt}</span><${Icon} n="calendar" /></button></div>
         <div class="field" ref=${ratingRef}><span class="lbl" id="rating-l">${s.rating}</span>
           <div class="stars" role="radiogroup" aria-labelledby="rating-l">
             ${[1, 2, 3, 4, 5].map((n) => html`<button key=${n} role="radio" aria-checked=${form.stars === n} aria-label=${n + " " + (n === 1 ? "star" : "stars") + ", " + s.ratingWords[n - 1]}
@@ -568,10 +571,10 @@ function Home({ ctx }) {
   const longStart = () => {};
   const longEnd = () => clearTimeout(pressT.current);
   const cards = [
-    ["summary", "sparkles", t("summary"), ctx.reviews.length ? t("summaryD") : t("empty0"), db.pending ? html`<span class="mini-load"><span class="spinner sm dark"></span>${t("reading", { n: db.pending })}</span>` : null],
+    ["summary", "docpen", t("summary"), ctx.reviews.length ? t("summaryD") : t("empty0"), db.pending ? html`<span class="mini-load"><span class="spinner sm dark"></span>${t("reading", { n: db.pending })}</span>` : null],
+    ["plans", "clip", t("plans"), t("plansD"), trying ? html`<span class="cap">${t("tryingNow", { n: trying })}</span>` : null],
     ["reviews", "list", t("all"), t("allD"), newCount ? html`<span class="tag">${t("nNew", { n: newCount })}</span>` : null],
     ["notsure", "help", t("notSure"), t("notSureD"), notSure.length ? html`<span class="tag warn">${t("toCheck", { n: notSure.length })}</span>` : null],
-    ["plans", "clip", t("plans"), t("plansD"), trying ? html`<span class="cap">${t("tryingNow", { n: trying })}</span>` : null],
     ["perf", "bar", t("perf"), t("perfD"), null],
   ];
   return html`<div class="scr"><div class="scroll typeA">
@@ -689,14 +692,18 @@ function ReviewCard({ r, ctx, menu = true }) {
   </article>`;
 }
 function Reviews({ ctx }) {
-  const { t, reviews } = ctx; const [f, setF] = useState("all");
+  const { t, reviews } = ctx; const [f, setF] = useState("all"); const [sort, setSort] = useState("new");
   useEffect(() => { ctx.upd((d) => { d.lastSeenSeq = d.seq; return d; }); }, []);
-  const sorted = reviews.slice().sort((a,b) => b.created_at.localeCompare(a.created_at));
-  const fl = sorted.filter((r) => f === "all" || (f === "5" && r.stars === 5) || (f === "4" && r.stars === 4) || (f === "3" && r.stars <= 3) || (f === "c" && (r.labels || []).some((l) => l.feeling === "negative")));
+  const newestFirst = (a,b) => b.date.localeCompare(a.date) || b.created_at.localeCompare(a.created_at);
+  const sorted = reviews.slice().sort((a,b) => sort === "old" ? -newestFirst(a,b) : newestFirst(a,b));
+  const fl = sorted.filter((r) => f === "all" || (f === "5" && r.stars === 5) || (f === "4" && r.stars === 4) || (f === "3" && r.stars <= 3));
   const [showAll, setShowAll] = useState(false); const limit = showAll ? fl.length : 20;
-  const chips = [["all",t("fAll")],["5",t("f5")],["4",t("f4")],["3",t("f3")],["c",t("fComplaint")]];
-  return html`<${Inner} title=${t("all")} sub=${t("allSub", { n: reviews.length })} back=${t("home")} onBack=${() => ctx.go("home", {}, "back")}>
+  const chips = [["all",t("fAll")],["5",t("f5")],["4",t("f4")],["3",t("f3")]];
+  return html`<${Inner} title=${t("all")} sub=${t(sort === "old" ? "allSubOld" : "allSub", { n: reviews.length })} back=${t("home")} onBack=${() => ctx.go("home", {}, "back")}>
     <div class="chips" role="radiogroup">${chips.map(([k, l]) => html`<button key=${k} role="radio" aria-checked=${f === k} class=${"chip" + (f === k ? " on" : "")} onClick=${() => setF(k)}>${f === k ? html`<${Icon} n="check" s=${16} />` : null}${l}</button>`)}</div>
+    <div class="sortrow"><label class="lbl14" for="sort-by">${t("sortBy")}</label>
+      <span class="sortwrap"><select id="sort-by" class="sortsel" value=${sort} onChange=${(e) => setSort(e.target.value)}>
+        <option value="new">${t("sortNew")}</option><option value="old">${t("sortOld")}</option></select><${Icon} n="chevron-down" s=${16} /></span></div>
     ${!reviews.length ? html`<${Empty} title=${t("noReviews")} body=${t("noReviewsB")} />` : !fl.length ? html`<div class="empty"><p class="sec">${t("noMatch")}</p><button class="btn-text" onClick=${() => setF("all")}>${t("fAll")}</button></div>` :
       html`<div class="stack12">${fl.slice(0, limit).map((r) => html`<${ReviewCard} key=${r.id} r=${r} ctx=${ctx} />`)}
         ${fl.length > 20 ? html`<button class="btn btn-secondary" onClick=${() => setShowAll(!showAll)}>${showAll ? t("showLess") : t("showAll", { n: fl.length })}<${Icon} n="chevron-down" cls=${showAll ? "rot" : ""} /></button>` : null}</div>`}
@@ -713,7 +720,8 @@ function NotSure({ ctx }) {
   return html`<${Inner} title=${t("notSure")} sub=${t("nsSub")} back=${t("home")} onBack=${() => ctx.go("home", {}, "back")}>
     <div class="banner warnbg"><${Icon} n="info" cls="warnc" /><span>${t("nsBanner")}</span></div>
     ${!notSure.length ? html`<${Empty} title=${t("allClear")} body=${t("allClearB")} />` : html`<div class="stack12">${notSure.map((r) => {
-      const opts = Object.entries(TOPIC_NAME).filter(([k]) => k !== "other").flatMap(([k,v]) => [[k+":positive",v[ctx.L]+" · "+t("good")],[k+":negative",v[ctx.L]+" · "+t("bad")],[k+":request",v[ctx.L]+" · Request"]]);
+      const cand = [...new Set(((r.model_prediction && r.model_prediction.uncertain) || r.uncertain || []).slice().sort((a, b) => b.classifier_score - a.classifier_score).map((u) => u.topic))].filter((k) => TOPIC_NAME[k] && k !== "other").slice(0, 2);
+      const opts = cand.flatMap((k) => [[k+":positive",TOPIC_NAME[k][ctx.L]+" · "+t("good")],[k+":negative",TOPIC_NAME[k][ctx.L]+" · "+t("bad")]]);
       const lv = leaving[r.id];
       return html`<div key=${r.id} class=${"card dashedcard" + (lv ? " leaving" : "")}>
         <span class="tag warn"><${Icon} n="help" s=${16} />${r.reason === "unsupported_language" ? t("unsupported") : t("lowConf", { n: Math.round((r.confidence || 0.42) * 100) })}</span>
@@ -722,7 +730,8 @@ function NotSure({ ctx }) {
         <div class="rv-top"><${StarRow} value=${r.stars} /><span class="cap">${shortDate(r.date)}</span></div>
         ${r.reason === "unsupported_language" ? html`<p class="sec">${t("askGuide")}</p><button class="btn btn-secondary" onClick=${() => check(r)}>${t("markChecked")}</button>` :
           html`<p class="sec">${r.options ? t("longQ") : t("pickOne")}</p>
-          <div class="stack8">${opts.map(([k, l]) => html`<button key=${k} class=${"chip grow" + (lv === k ? " on" : "")} onClick=${() => label(r, k, l)}>${lv === k ? html`<${Icon} n="check" s=${16} />` : null}${l}</button>`)}</div>
+          <div class="stack8">${opts.map(([k, l]) => html`<button key=${k} class=${"chip grow" + (lv === k ? " on" : "")} onClick=${() => label(r, k, l)}>${lv === k ? html`<${Icon} n="check" s=${16} />` : null}${l}</button>`)}
+            <button class=${"chip grow" + (lv === "x" ? " on" : "")} onClick=${() => check(r)}>${t("noneOf")}</button></div>
           ${!r.skipped ? html`<button class="btn-text left" onClick=${() => skip(r)}>${t("skip")}</button>` : null}`}
       </div>`; })}</div>`}
   </${Inner}>`;
@@ -755,6 +764,7 @@ function Plans({ ctx }) {
         <button class="btn-text" onClick=${() => start(p)}>${t("startTrying")}</button></div>`)}</div>` : null}
     ${done.length ? html`<p class="ov" style=${{ marginTop: 24 }}>${t("doneSec")}</p><div class="stack12">${done.map((p) => html`<div key=${p.id} class="card plan small">
         <${Icon} n="ccheck" cls="okc" /><div class="grow"><div class="h4">${title(p)}</div><p class="cap">${t("started", { d: shortDate(p.startedAt) })}</p></div></div>`)}</div>` : null}
+    ${trying.length || saved.length || done.length ? html`<button class="btn btn-primary" style=${{ marginTop: 24 }} onClick=${() => ctx.go("summary")}>${t("goSummary")}</button>` : null}
   </${Inner}>`;
 }
 function whySentences(list, L) {
@@ -769,7 +779,9 @@ function whySentences(list, L) {
   });
 }
 function Perf({ ctx }) {
-  const { t, monthIdx } = ctx;
+  const { t } = ctx; const [opened, setOpened] = useState(false);
+  useEffect(() => { ctx.setMonthIdx(null); setOpened(true); }, []);
+  const monthIdx = opened ? ctx.monthIdx : null;
   if (monthIdx == null) return html`<${Inner} title=${t("perf")} back=${t("home")} onBack=${() => ctx.go("home", {}, "back")}>
     <div class="field"><span class="lbl" id="ml">${t("month")}</span>
       <button class="input datefield placeholder" aria-labelledby="ml" onClick=${() => ctx.setSheet({ type: "month" })}><span>${t("selectMonth")}</span><${Icon} n="chevron-down" /></button></div>
@@ -840,18 +852,19 @@ function Sheet({ title, close, children, foot, label }) {
 }
 function DateSheet({ ctx, close }) {
   const s = V[ctx.form.lang]; const sel = ctx.form.date;
-  const [ym, setYm] = useState(sel.slice(0, 7)); const [pick, setPick] = useState(sel);
+  const CAL_YEAR = "2026";
+  const [ym, setYm] = useState(ctx.form.datePicked ? sel.slice(0, 7) : CAL_YEAR + "-" + TODAY.slice(5, 7)); const [pick, setPick] = useState(ctx.form.datePicked ? sel : null);
   const [y, m] = ym.split("-").map(Number);
   const first = new Date(y, m - 1, 1); const days = new Date(y, m, 0).getDate(); const offset = (first.getDay() + 6) % 7;
   const title = first.toLocaleDateString(s.locale, { month: "long", year: "numeric" });
   const wd = [...Array(7)].map((_, i) => new Date(2026, 5, 1 + i).toLocaleDateString(s.locale, { weekday: "narrow" }));
   const shift = (n) => { const d = new Date(y, m - 1 + n, 1); setYm(d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0")); };
-  const canNext = ym < TODAY.slice(0,7);const canPrev = ym > `${CURRENT_YEAR-5}-01`;
-  return html`<${Sheet} title=${s.date} close=${close} foot=${html`<button class="btn btn-primary" onClick=${() => { ctx.setForm((f) => ({ ...f, date: pick })); close(); }}>${s.ok}</button>`}>
+  const canNext = ym < CAL_YEAR + "-12"; const canPrev = ym > CAL_YEAR + "-01";
+  return html`<${Sheet} title=${s.date} close=${close} foot=${html`<button class="btn btn-primary" onClick=${() => { if (pick) ctx.setForm((f) => ({ ...f, date: pick, datePicked: true })); close(); }}>${s.ok}</button>`}>
     <div class="cal-head"><button class="icon-btn" aria-label="Previous month" disabled=${!canPrev} onClick=${() => shift(-1)}><${Icon} n="chevron-left" /></button><span class="h3">${title}</span>
       <button class="icon-btn" aria-label="Next month" disabled=${!canNext} onClick=${() => shift(1)}><${Icon} n="chevron-right" /></button></div>
     <div class="cal">${wd.map((w, i) => html`<span key=${"w" + i} class="cal-wd">${w}</span>`)}${[...Array(offset)].map((_, i) => html`<span key=${"e" + i}></span>`)}
-      ${[...Array(days)].map((_, i) => { const iso = `${ym}-${String(i + 1).padStart(2, "0")}`; const fut = iso > TODAY;
+      ${[...Array(days)].map((_, i) => { const iso = `${ym}-${String(i + 1).padStart(2, "0")}`; const fut = iso > TODAY || !iso.startsWith(CAL_YEAR + "-");
         return html`<button key=${iso} class=${"cal-day" + (iso === pick ? " sel" : "") + (iso === TODAY ? " today" : "")} disabled=${fut} onClick=${() => setPick(iso)} aria-pressed=${iso === pick}>${i + 1}</button>`; })}</div>
   </${Sheet}>`;
 }

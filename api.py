@@ -9,12 +9,15 @@ from pydantic import BaseModel, Field, field_validator
 from review import Review, TranslatedReview
 from review_storage import load_translated_reviews, save_translated_reviews
 from translate_opus import translate_review
+from analytics import build_insights
+from insight_model import InsightModel
 
 app = FastAPI(
     title="Review Translation API",
     description="Translate English tour reviews into Kiswahili.",
     version="1.0.0",
 )
+insight_model = None
 
 
 class ReviewPayload(BaseModel):
@@ -140,4 +143,18 @@ def get_translated_reviews() -> list[TranslatedReviewPayload]:
         raise HTTPException(
             status_code=500,
             detail="Could not read translated review storage.",
+        ) from error
+
+
+@app.get("/reviews/insights")
+def get_review_insights() -> dict:
+    global insight_model
+    try:
+        if insight_model is None:
+            insight_model = InsightModel()
+        return build_insights(load_translated_reviews(), insight_model)
+    except (OSError, ValueError, TypeError, FileNotFoundError) as error:
+        raise HTTPException(
+            status_code=503,
+            detail="Offline insight model or review data is unavailable.",
         ) from error

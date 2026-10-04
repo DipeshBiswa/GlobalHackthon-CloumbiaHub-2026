@@ -49,6 +49,23 @@ Windows PowerShell:
 This creates `models/opus-en-sw/`. Keep that directory on the computer; it is
 required for offline translation. Do not run `download_opus.py` offline.
 
+Optional: download the small local insight model while online:
+
+macOS/Linux:
+
+```bash
+./download_insight_model.sh
+```
+
+Windows PowerShell:
+
+```powershell
+.\download_insight_model.ps1
+```
+
+This creates `models/insight-model/` and is required for
+`GET /reviews/insights`.
+
 ### 4. Start offline
 
 macOS/Linux:
@@ -73,6 +90,8 @@ The API is available at `http://127.0.0.1:8000`. Open
 - `POST /reviews/translate/batch` translates and saves up to 50 reviews.
 - `GET /reviews/translated` reads saved translations from
   `translated_reviews.json`.
+- `GET /reviews/insights` classifies saved reviews locally and returns
+  evidence-backed themes, counts, confidence, and recommendations.
 
 Example request on macOS/Linux:
 

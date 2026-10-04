@@ -12,21 +12,20 @@ import tempfile
 import time
 import threading
 import socket
-import sqlite3
 from urllib.request import urlopen
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[2]
 
 def verify_seeded_demo(page, expect):
-    """Exercise the actual seeded database in a disposable SQLite copy."""
+    """Exercise automatic bundled import into a brand-new database."""
     from calendar import month_name
     report = json.loads((ROOT/"backend/data/synthetic/noor_demo_report.json").read_text(encoding="utf-8"))
     page.get_by_role("button",name="Noor's Dashboard",exact=True).click()
     for _ in range(4): page.get_by_role("button",name="0",exact=True).click()
     page.get_by_role("button",name="Enter",exact=True).click()
     expect(page.get_by_text("Hi Noor",exact=True)).to_be_visible()
-    expect(page.get_by_text("Demo data: 225 synthetic reviews 2026.",exact=False)).to_be_visible()
+    expect(page.get_by_text("Demo data: 225 synthetic reviews 2026.",exact=False)).to_be_visible(timeout=15000)
     page.get_by_role("button",name="All Reviews",exact=False).click()
     expect(page.locator("article.review")).to_have_count(20)
     expect(page.get_by_text("Synthetic",exact=True)).to_have_count(20)
@@ -64,10 +63,7 @@ def verify_seeded_demo(page, expect):
 def run(seed_demo=False):
     from playwright.sync_api import sync_playwright, expect
     with tempfile.TemporaryDirectory(prefix="echo-browser-", ignore_cleanup_errors=True) as directory:
-        if seed_demo:
-            with sqlite3.connect(ROOT/"backend/echo.db") as source_db, sqlite3.connect(Path(directory)/"echo.db") as target_db:
-                source_db.backup(target_db)
-        os.environ.update({"ECHO_DB":str(Path(directory)/"echo.db"),"HF_HUB_OFFLINE":"1","TRANSFORMERS_OFFLINE":"1"})
+        os.environ.update({"ECHO_DB":str(Path(directory)/"echo.db"),"ECHO_SEED_DEMO":"1" if seed_demo else "0","HF_HUB_OFFLINE":"1","TRANSFORMERS_OFFLINE":"1"})
         original_connect = socket.socket.connect
         def local_connect(sock, address):
             if isinstance(address, tuple) and address[0] not in {"127.0.0.1","localhost","::1"}:
@@ -88,6 +84,10 @@ def run(seed_demo=False):
                         if not thread.is_alive(): raise RuntimeError("Server thread stopped")
                         time.sleep(.5)
                 else: raise RuntimeError("Server did not start")
+                if seed_demo:
+                    import store
+                    with store.connect() as db:
+                        assert db.execute("SELECT count(*) FROM reviews").fetchone()[0] == 225, "Fresh startup did not import the bundled demo"
                 with sync_playwright() as pw:
                     browser = pw.chromium.launch(channel="msedge",headless=True)
                     context = browser.new_context(viewport={"width":1100,"height":1100})
@@ -193,5 +193,5 @@ def run(seed_demo=False):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--seeded-demo",action="store_true",help="Check all twelve months using a disposable copy of the seeded database.")
+    parser.add_argument("--seeded-demo",action="store_true",help="Check first-start bundled import and all twelve months using a fresh temporary database.")
     run(seed_demo=parser.parse_args().seeded_demo)

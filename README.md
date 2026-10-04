@@ -16,9 +16,17 @@ py -3 -m venv .venv
 ```
 
 Alternatively, `./backend/setup.ps1` creates `backend/.venv` and prepares models.
-macOS/Linux: `sh backend/setup.sh`. The browser libraries, fonts and licenses are
-included in `frontend/vendor/`. Setup downloads missing models, then verifies
-both using local-only loading.
+On macOS/Linux, from the repository root:
+
+```sh
+sh backend/setup.sh
+sh backend/run_offline.sh
+```
+
+If Terminal is already inside `backend`, use `sh setup.sh` and then
+`sh run_offline.sh`. The browser libraries, fonts and licenses are included in
+`frontend/vendor/`. Setup downloads missing models for live translation and
+classification, then verifies both using local-only loading.
 
 OPUS: `backend/models/opus-en-sw/`; the existing root `models/opus-en-sw/` is also
 supported. MiniLM: `backend/models/insight-model/`. Model weights and SQLite
@@ -56,19 +64,45 @@ Restart logs out without deleting reviews or plans.
 
 ## Noor's full-year synthetic demo
 
-The local demo now has 225 synthetic coffee-farm reviews for all twelve months of
-2026, translated and classified by the real offline models. They belong to the
-same `noor` account and are visibly marked synthetic. Future months are deliberate
-simulation data; normal visitor submissions still reject future dates.
+The branch includes 225 synthetic coffee-farm reviews for all twelve months of
+2026 and a directions improvement plan. The checked-in JSON already contains real
+model translations and classifications. Starting the backend automatically imports
+it into a fresh database, or an existing empty `noor` account. No generation,
+extra download or model inference is needed to load the demo.
 
-Regenerate from the repository root:
+Existing reviews and plans are left untouched. A persistent import marker keeps
+restarts from restoring reviews you deleted. Set `ECHO_SEED_DEMO=0` before starting
+to opt out of automatic import. The dashboard and review cards label the synthetic data;
+future months are deliberate simulation data, and normal visitor submissions still
+reject future dates.
+
+For an existing Mac clone, from the repository root:
+
+```sh
+git pull --ff-only
+sh backend/run_offline.sh
+```
+
+If Terminal is already inside `backend`, run `git pull --ff-only` and then
+`sh run_offline.sh`. Restart any running backend after pulling, then log in with
+**noor / coffee2025**, PIN **0000**.
+
+Optional developer regeneration, from the repository root with the root Windows
+environment:
 
 ```powershell
 .\.venv\Scripts\python.exe backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
 ```
 
-Restart the backend after taxonomy changes, then log in to see the demo. Reset
-replaces only Noor's synthetic reviews/plans and backs up the database first.
+With the setup script's Mac environment, the equivalent root command is:
+
+```sh
+backend/.venv/bin/python backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
+```
+
+Regeneration is only needed when changing the demo. Restart the backend after
+taxonomy changes. Reset replaces only Noor's synthetic reviews/plans and backs
+up the database first.
 Real reviews, real plans and other accounts are preserved. A first run translates
 250 distinct texts; later runs reuse the real OPUS translation cache and classify
 the English again. Full exported records and the measured audit are in
@@ -101,6 +135,9 @@ to ignored `backend/test-results/`. See [the implementation report](docs/OFFLINE
 for exact rules, thresholds, data provenance, changes and limitations.
 
 Manual disconnected test:
+
+For the exact support thresholds below, use a fresh database with
+`ECHO_SEED_DEMO=0`. Opting out does not remove an already imported demo.
 
 1. Complete installation and model preparation while online.
 2. Disconnect Wi-Fi/Ethernet. Set `HF_HUB_OFFLINE=1` and `TRANSFORMERS_OFFLINE=1`.

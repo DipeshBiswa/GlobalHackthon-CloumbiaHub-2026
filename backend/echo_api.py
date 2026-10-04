@@ -1,5 +1,6 @@
 """Echo's local application API. Visitor submission stays available while PIN locked."""
 import secrets
+import os
 import time
 from datetime import date, datetime, timezone
 from datetime import date as Date
@@ -26,12 +27,18 @@ def classifier():
     from insight_model import InsightModel
     return InsightModel()
 
-def initialize():
+def initialize(seed_demo=None):
     store.initialize()
     with store.connect() as db:
         if not db.execute("SELECT 1 FROM users WHERE username='noor'").fetchone():
-            db.execute("INSERT INTO users(id,username,password_hash,display_name,pin_hash) VALUES(?,?,?,?,?)",
+            db.execute("INSERT OR IGNORE INTO users(id,username,password_hash,display_name,pin_hash) VALUES(?,?,?,?,?)",
                        (str(uuid4()), "noor", hash_secret("coffee2025"), "Noor", hash_secret("0000")))
+        user_id = db.execute("SELECT id FROM users WHERE username='noor'").fetchone()[0]
+    if seed_demo is None:
+        seed_demo = os.environ.get("ECHO_SEED_DEMO", "1") != "0"
+    if seed_demo:
+        from demo_data import seed_bundled_demo
+        seed_bundled_demo(user_id)
 
 def session(request: Request):
     with store.connect() as db:

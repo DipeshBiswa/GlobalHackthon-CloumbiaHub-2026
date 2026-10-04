@@ -10,13 +10,54 @@ Future months are intentionally included. The live review API still rejects futu
 dates and writes `is_synthetic: false`. Viewing reviews marks the actual records
 seen so future demo timestamps cannot keep generating false new-review badges.
 
-## Generate or reset
+## Use the bundled demo
 
-From the repository root with installed offline models:
+The branch contains the fully processed reviews and directions plan. On startup,
+`backend/demo_data.py` imports them into a fresh database or an existing empty
+`noor` account. No generation, translation, classification or extra download is
+required for that import. Existing reviews and plans are left untouched. A
+persistent import marker prevents restarts from readding deleted demo records.
+
+For a fresh Mac clone, run these from the repository root:
+
+```sh
+sh backend/setup.sh
+sh backend/run_offline.sh
+```
+
+Setup still downloads the models once for live visitor submissions. The bundled
+demo itself needs no model inference. If Terminal is already inside `backend`,
+use `sh setup.sh` and then `sh run_offline.sh`.
+
+For an existing Mac clone, stop the running backend and run:
+
+```sh
+git pull --ff-only
+sh backend/run_offline.sh
+```
+
+Inside `backend`, use `git pull --ff-only` and then `sh run_offline.sh`. Open
+**http://127.0.0.1:8000/**. Login: **noor / coffee2025**. PIN: **0000**.
+Set `ECHO_SEED_DEMO=0` before starting to opt out of automatic import for an empty
+database; this does not delete data that has already been imported.
+
+## Optional developer generation or reset
+
+Regeneration is only needed to change the demo. From the repository root with
+installed offline models and the root Windows environment:
 
 ```powershell
 .\.venv\Scripts\python.exe backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
 ```
+
+With the setup script's Mac environment, from the repository root:
+
+```sh
+backend/.venv/bin/python backend/tools/generate_synthetic_reviews.py --count 225 --year 2026 --seed 42 --reset
+```
+
+Inside `backend`, that command starts with `./.venv/bin/python` and uses
+`tools/generate_synthetic_reviews.py`.
 
 Defaults are 225 reviews, 2026, seed 42. Optional `--batch-size`, `--threads` and
 `--output-dir` control local preprocessing. The first run performs real OPUS
@@ -41,6 +82,8 @@ Restart the backend to load updated taxonomy/approved advice, then open
 - Reviewed coffee-farm taxonomy: `backend/data/farm_taxonomy.py`
 - Compact runtime knowledge: `backend/data/echo_topic_rules.json`, `echo_suggestions.json`
 - Full processed export: `backend/data/synthetic/noor_reviews.json`
+- Bundled synthetic plan: `backend/data/synthetic/noor_plans.json`
+- Automatic startup importer: `backend/demo_data.py`
 - Measured audit: `backend/data/synthetic/noor_demo_report.json`
 - Ignored reusable OPUS cache: `backend/data/synthetic/opus_translation_cache.json`
 
@@ -135,8 +178,8 @@ Tests cover reproducibility, monthly/rating distributions, realistic field lengt
 shared processing, future-date rejection, reset isolation, stable repeated writes,
 legacy aliases, measured demo thresholds and before/after tracking. The real model
 test blocks socket connections and checks batched OPUS as well as single translation.
-The seeded browser check copies the local demo database into a temporary directory,
-then checks the synthetic badges, all 225 reviews, High/Medium topic suggestions,
+The seeded browser check starts with an empty temporary database and exercises
+automatic import, then checks the synthetic badges, all 225 reviews, High/Medium topic suggestions,
 the Better plan result, and all twelve monthly counts and averages. It blocks
 external connections in both Python and the browser.
 

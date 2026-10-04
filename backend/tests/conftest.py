@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
 os.environ["ECHO_DB"] = str(Path(__file__).parent / "test-bootstrap.db")
+os.environ["ECHO_SEED_DEMO"] = "0"
 
 @pytest.fixture
 def client(tmp_path, monkeypatch):

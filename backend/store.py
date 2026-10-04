@@ -33,6 +33,8 @@ def initialize():
           id TEXT PRIMARY KEY, user_id TEXT REFERENCES users(id), data TEXT NOT NULL);
         CREATE TABLE IF NOT EXISTS decisions (
           user_id TEXT REFERENCES users(id), key TEXT, PRIMARY KEY(user_id,key));
+        CREATE TABLE IF NOT EXISTS app_metadata (
+          key TEXT PRIMARY KEY, value TEXT NOT NULL);
         ''')
 
 def put(table, record, user_id):

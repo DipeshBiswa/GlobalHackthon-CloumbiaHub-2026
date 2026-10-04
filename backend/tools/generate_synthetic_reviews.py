@@ -200,7 +200,7 @@ def main():
     from echo_api import initialize, classifier
     from review_pipeline import process_review
     from translate_opus import translate, translate_many
-    initialize()
+    initialize(seed_demo=False)
     with store.connect() as db:
         user_id = db.execute("SELECT id FROM users WHERE username='noor'").fetchone()[0]
     args.output_dir.mkdir(parents=True,exist_ok=True)
@@ -244,6 +244,8 @@ def main():
         source_db.backup(target_db)
     persist_demo(reviews,plans,user_id,args.reset)
     (args.output_dir/"noor_reviews.json").write_text(json.dumps(reviews,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    portable_plans = [{k:v for k,v in p.items() if k not in {"user_id", "progress"}} for p in plans]
+    (args.output_dir/"noor_plans.json").write_text(json.dumps(portable_plans,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     (args.output_dir/"noor_demo_report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"database":str(store.DB_PATH),"review_count":len(reviews),"rating_counts":report["rating_counts"],"controlled_patterns":report["controlled_patterns"],"backup":str(backup)},indent=2),flush=True)
 

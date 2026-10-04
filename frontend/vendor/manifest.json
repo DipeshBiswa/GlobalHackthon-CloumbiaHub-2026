@@ -1,0 +1,54 @@
+{
+  "react.production.min.js": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js",
+    "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd"
+  },
+  "react-dom.production.min.js": {
+    "url": "https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js",
+    "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d"
+  },
+  "htm.umd.js": {
+    "url": "https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js",
+    "sha256": "7a31776e04bd4afde0d4308177d26f377716fcf7e4bd70be590746d6aa594f08"
+  },
+  "react.LICENSE": {
+    "url": "https://raw.githubusercontent.com/facebook/react/v18.3.1/LICENSE",
+    "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+  },
+  "htm.LICENSE": {
+    "url": "https://raw.githubusercontent.com/developit/htm/3.1.1/LICENSE",
+    "sha256": "740725f7252e750af735d0028cc534970772f513331e9f68150fede8fb3ce00f"
+  },
+  "Inter.OFL.txt": {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+    "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+  },
+  "Lora.OFL.txt": {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/lora/OFL.txt",
+    "sha256": "1d9a970809ac804b582a6ce7f0ebc4e7fefcbfd7ff6299cad35ee656a21be716"
+  },
+  "font-0.ttf": {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+    "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+  },
+  "font-1.ttf": {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+    "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+  },
+  "font-2.ttf": {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+    "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+  },
+  "font-3.ttf": {
+    "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+    "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+  },
+  "font-4.ttf": {
+    "url": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787wsuyJG.ttf",
+    "sha256": "9bfe70fd1d70600c523d7ef66c8a024187270f115570d82baf97df7f05e6c2aa"
+  },
+  "font-5.ttf": {
+    "url": "https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787zAvCJG.ttf",
+    "sha256": "36120862013ba0d8059ee03b3f6155d6420cabbf0743ccf5542f22ef918c20a2"
+  }
+}

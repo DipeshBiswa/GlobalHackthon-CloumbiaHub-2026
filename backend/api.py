@@ -3,7 +3,11 @@
 from datetime import date
 from typing import Annotated
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
+from echo_api import router, initialize, owner
 from pydantic import BaseModel, Field, field_validator
 
 from review import Review, TranslatedReview
@@ -13,11 +17,16 @@ from analytics import build_insights
 from insight_model import InsightModel
 
 app = FastAPI(
-    title="Review Translation API",
-    description="Translate English tour reviews into Kiswahili.",
-    version="1.0.0",
+    title="Echo Offline API",
+    description="Local visitor feedback, translation, topics and approved suggestions.",
+    version="2.0.0",
+    docs_url=None,
+    redoc_url=None,
 )
 insight_model = None
+initialize()
+app.add_middleware(CORSMiddleware, allow_origins=["http://127.0.0.1:5500", "http://localhost:5500"], allow_credentials=True, allow_methods=["GET", "POST", "PATCH", "DELETE"], allow_headers=["Content-Type"])
+app.include_router(router)
 
 
 class ReviewPayload(BaseModel):
@@ -26,8 +35,8 @@ class ReviewPayload(BaseModel):
     rating: Annotated[float, Field(ge=1, le=5)]
     language: str = "en"
     date: date
-    favorite: str = Field(min_length=1)
-    improvement: str = Field(min_length=1)
+    favorite: str = ""
+    improvement: str = ""
 
     @field_validator("language")
     @classmethod
@@ -39,8 +48,6 @@ class ReviewPayload(BaseModel):
     @field_validator("favorite", "improvement")
     @classmethod
     def validate_text(cls, value: str) -> str:
-        if not value.strip():
-            raise ValueError("review text must not be empty.")
         return value
 
     def to_review(self) -> Review:
@@ -94,7 +101,7 @@ def health() -> dict[str, str]:
     "/reviews/translate",
     response_model=TranslatedReviewPayload,
 )
-def translate_single_review(payload: ReviewPayload) -> TranslatedReviewPayload:
+def translate_single_review(payload: ReviewPayload, s=Depends(owner)) -> TranslatedReviewPayload:
     try:
         translated = translate_review(payload.to_review())
     except ValueError as error:
@@ -112,6 +119,7 @@ def translate_single_review(payload: ReviewPayload) -> TranslatedReviewPayload:
 )
 def translate_review_batch(
     payload: BatchReviewPayload,
+    s=Depends(owner),
 ) -> BatchTranslatedReviewPayload:
     translated_models: list[TranslatedReview] = []
     for review_payload in payload.reviews:
@@ -135,7 +143,7 @@ def translate_review_batch(
     "/reviews/translated",
     response_model=list[TranslatedReviewPayload],
 )
-def get_translated_reviews() -> list[TranslatedReviewPayload]:
+def get_translated_reviews(s=Depends(owner)) -> list[TranslatedReviewPayload]:
     try:
         stored_reviews = load_translated_reviews()
         return [TranslatedReviewPayload.model_validate(review) for review in stored_reviews]
@@ -147,14 +155,10 @@ def get_translated_reviews() -> list[TranslatedReviewPayload]:
 
 
 @app.get("/reviews/insights")
-def get_review_insights() -> dict:
-    global insight_model
-    try:
-        if insight_model is None:
-            insight_model = InsightModel()
-        return build_insights(load_translated_reviews(), insight_model)
-    except (OSError, ValueError, TypeError, FileNotFoundError) as error:
-        raise HTTPException(
-            status_code=503,
-            detail="Offline insight model or review data is unavailable.",
-        ) from error
+def get_review_insights(s=Depends(owner)) -> dict:
+    from echo_analytics import patterns
+    import store
+    return {"themes": patterns(store.records("reviews", s["user_id"]))}
+
+# Serve the unchanged frontend directory from the local API for simple offline startup.
+app.mount("/", StaticFiles(directory=Path(__file__).resolve().parents[1] / "frontend", html=True), name="frontend")

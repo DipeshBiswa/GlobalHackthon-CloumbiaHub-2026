@@ -2,3 +2,10 @@
 **/myenv/
 **/models/
 **/__pycache__/
+**/echo.db*
+.pytest_cache/
+backend/test-results/
+backend/tests/*.db*
+backend/data/backups/
+backend/data/synthetic/opus_translation_cache.json
+backend/data/synthetic/failed_pattern_report.json

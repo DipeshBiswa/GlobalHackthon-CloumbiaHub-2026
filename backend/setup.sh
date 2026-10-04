@@ -15,5 +15,6 @@ fi
 
 "$VENV_DIR/bin/python" -m pip install --upgrade pip
 "$VENV_DIR/bin/python" -m pip install -r "$PROJECT_DIR/requirements.txt"
+"$VENV_DIR/bin/python" "$PROJECT_DIR/tools/prepare_offline.py"
 
-echo "Environment ready. Run ./download_model.sh while online, then ./run_offline.sh."
+echo "Echo ready. Run ./run_offline.sh and open http://127.0.0.1:8000."

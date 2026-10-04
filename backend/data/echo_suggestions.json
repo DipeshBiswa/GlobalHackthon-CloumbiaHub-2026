@@ -1,0 +1,512 @@
+{
+  "guide_quality:positive": {
+    "topic": "guide_quality",
+    "sentiment": "positive",
+    "title": "Guide quality",
+    "summary": "Visitors praised guide quality.",
+    "suggestion": "Keep emphasizing knowledgeable, welcoming guides.",
+    "suggestion_sw": "Endelea kukazia miongozo yenye maarifa na yenye kukaribisha.",
+    "title_sw": "Sifa ya kuongoza",
+    "summary_sw": "Wageni walisifu ubora wa mwongozo."
+  },
+  "guide_quality:negative": {
+    "topic": "guide_quality",
+    "sentiment": "negative",
+    "title": "Guide quality",
+    "summary": "Visitors raised concerns about guide quality.",
+    "suggestion": "Give Noor time to explain each stop and answer visitor questions.",
+    "title_sw": "Sifa ya kuongoza",
+    "summary_sw": "Wageni walizusha wasiwasi kuhusu ubora wa mwongozo.",
+    "suggestion_sw": "Toa wakati wa kutosha kueleza kila kituo na kujibu maswali ya wageni."
+  },
+  "guide_quality:request": {
+    "topic": "guide_quality",
+    "sentiment": "request",
+    "title": "Guide quality",
+    "summary": "Visitors asked for improvements to guide quality.",
+    "suggestion": "Give Noor time to explain each stop and answer visitor questions.",
+    "title_sw": "Sifa ya kuongoza",
+    "summary_sw": "Wageni waliomba marekebisho ili waongoze vizuri.",
+    "suggestion_sw": "Toa wakati wa kutosha kueleza kila kituo na kujibu maswali ya wageni."
+  },
+  "coffee_education:positive": {
+    "topic": "coffee_education",
+    "sentiment": "positive",
+    "title": "Learning about coffee",
+    "summary": "Visitors praised learning about coffee.",
+    "suggestion": "Keep showing how coffee is grown, harvested, dried and processed.",
+    "title_sw": "Kujifunza juu ya kahawa",
+    "summary_sw": "Wageni walisifu kujifunza juu ya kahawa.",
+    "suggestion_sw": "Endelea kuonyesha jinsi kahawa inavyokuzwa, kuvunwa, kukaushwa na kutayarishwa."
+  },
+  "coffee_education:negative": {
+    "topic": "coffee_education",
+    "sentiment": "negative",
+    "title": "Learning about coffee",
+    "summary": "Visitors raised concerns about learning about coffee.",
+    "suggestion": "Add clearer examples of the coffee-growing and processing stages.",
+    "title_sw": "Kujifunza juu ya kahawa",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya kujifunza juu ya kahawa.",
+    "suggestion_sw": "Ongeza mifano iliyo wazi zaidi ya hatua za kukua kwa kahawa na za utayarishaji."
+  },
+  "coffee_education:request": {
+    "topic": "coffee_education",
+    "sentiment": "request",
+    "title": "Learning about coffee",
+    "summary": "Visitors asked for improvements to learning about coffee.",
+    "suggestion": "Add clearer examples of the coffee-growing and processing stages.",
+    "title_sw": "Kujifunza juu ya kahawa",
+    "summary_sw": "Wageni waliomba marekebisho ili wajifunze kuhusu kahawa.",
+    "suggestion_sw": "Ongeza mifano iliyo wazi zaidi ya hatua za kukua kwa kahawa na za utayarishaji."
+  },
+  "coffee_roasting:positive": {
+    "topic": "coffee_roasting",
+    "sentiment": "positive",
+    "title": "Coffee roasting",
+    "summary": "Visitors praised coffee roasting.",
+    "suggestion": "Keep the hands-on coffee roasting demonstration.",
+    "title_sw": "Kukaangwa kwa Kahawa",
+    "summary_sw": "Wageni walisifu kukaanga kahawa.",
+    "suggestion_sw": "Endeleza maandamano ya kukaanga kahawa kwa mikono."
+  },
+  "coffee_roasting:negative": {
+    "topic": "coffee_roasting",
+    "sentiment": "negative",
+    "title": "Coffee roasting",
+    "summary": "Visitors raised concerns about coffee roasting.",
+    "suggestion": "Allow extra time to watch the roasting demonstration and ask questions.",
+    "title_sw": "Kukaangwa kwa Kahawa",
+    "summary_sw": "Wageni walihangaikia kukaanga kahawa.",
+    "suggestion_sw": "Ruhusu wakati wa ziada wa kutazama maandamano ya kukaanga na kuuliza maswali."
+  },
+  "coffee_roasting:request": {
+    "topic": "coffee_roasting",
+    "sentiment": "request",
+    "title": "Coffee roasting",
+    "summary": "Visitors asked for improvements to coffee roasting.",
+    "suggestion": "Allow extra time to watch the roasting demonstration and ask questions.",
+    "title_sw": "Kukaangwa kwa Kahawa",
+    "summary_sw": "Wageni waliomba kuwe na maendeleo katika kukaanga kahawa.",
+    "suggestion_sw": "Ruhusu wakati wa ziada wa kutazama maandamano ya kukaanga na kuuliza maswali."
+  },
+  "coffee_tasting:positive": {
+    "topic": "coffee_tasting",
+    "sentiment": "positive",
+    "title": "Coffee tasting",
+    "summary": "Visitors praised coffee tasting.",
+    "suggestion": "Keep the fresh coffee tasting and explain differences between the cups.",
+    "title_sw": "Ladha ya Kahawa",
+    "summary_sw": "Wageni walisifu ladha ya kahawa.",
+    "suggestion_sw": "Usionje kahawa mpya na ueleze tofauti kati ya vikombe hivyo."
+  },
+  "coffee_tasting:negative": {
+    "topic": "coffee_tasting",
+    "sentiment": "negative",
+    "title": "Coffee tasting",
+    "summary": "Visitors raised concerns about coffee tasting.",
+    "suggestion": "Add a few extra minutes to the coffee tasting portion of the tour.",
+    "title_sw": "Ladha ya Kahawa",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya kuonja kahawa.",
+    "suggestion_sw": "Ongeza dakika chache za ziada kwenye sehemu ya matembezi ya kahawa."
+  },
+  "coffee_tasting:request": {
+    "topic": "coffee_tasting",
+    "sentiment": "request",
+    "title": "Coffee tasting",
+    "summary": "Visitors asked for improvements to coffee tasting.",
+    "suggestion": "Add a few extra minutes to the coffee tasting portion of the tour.",
+    "title_sw": "Ladha ya Kahawa",
+    "summary_sw": "Wageni waliomba kuboresha ladha ya kahawa.",
+    "suggestion_sw": "Ongeza dakika chache za ziada kwenye sehemu ya matembezi ya kahawa."
+  },
+  "farm_tour_content:positive": {
+    "topic": "farm_tour_content",
+    "sentiment": "positive",
+    "title": "Farm tour experience",
+    "summary": "Visitors praised farm tour experience.",
+    "suggestion": "Keep the personal farm visit and time among the coffee plants.",
+    "title_sw": "Mambo yaliyoonwa katika matembezi ya shambani",
+    "summary_sw": "Wageni walisifu matembezi ya shambani.",
+    "suggestion_sw": "Weka ziara na wakati wa kibinafsi miongoni mwa mimea ya kahawa."
+  },
+  "farm_tour_content:negative": {
+    "topic": "farm_tour_content",
+    "sentiment": "negative",
+    "title": "Farm tour experience",
+    "summary": "Visitors raised concerns about farm tour experience.",
+    "suggestion": "Review the farm route and offer optional time for a deeper tour.",
+    "title_sw": "Mambo yaliyoonwa katika matembezi ya shambani",
+    "summary_sw": "Wageni walizusha wasiwasi kuhusu matembezi ya shambani.",
+    "suggestion_sw": "Pitia njia hiyo ya shamba na utenge wakati wa ziada kwa ajili ya ziara yenye kina kirefu zaidi."
+  },
+  "farm_tour_content:request": {
+    "topic": "farm_tour_content",
+    "sentiment": "request",
+    "title": "Farm tour experience",
+    "summary": "Visitors asked for improvements to farm tour experience.",
+    "suggestion": "Review the farm route and offer optional time for a deeper tour.",
+    "title_sw": "Mambo yaliyoonwa katika matembezi ya shambani",
+    "summary_sw": "Wageni waliomba kuboresha uzoefu wao wa matembezi ya shambani.",
+    "suggestion_sw": "Pitia njia hiyo ya shamba na utenge wakati wa ziada kwa ajili ya ziara yenye kina kirefu zaidi."
+  },
+  "tour_difficulty:positive": {
+    "topic": "tour_difficulty",
+    "sentiment": "positive",
+    "title": "Walking conditions",
+    "summary": "Visitors praised walking conditions.",
+    "suggestion": "Keep enjoyable farm routes with clear difficulty information.",
+    "title_sw": "Hali za Kutembea",
+    "summary_sw": "Wageni walisifu hali za kutembea.",
+    "suggestion_sw": "Weka njia za kuonea shangwe za shamba ukiwa na habari zilizo ngumu kueleweka."
+  },
+  "tour_difficulty:negative": {
+    "topic": "tour_difficulty",
+    "sentiment": "negative",
+    "title": "Walking conditions",
+    "summary": "Visitors raised concerns about walking conditions.",
+    "suggestion": "Provide clearer difficulty information and consider adding rest stops or a shorter route.",
+    "suggestion_sw": "Andaa habari iliyo wazi zaidi na ufikirie kuongeza pumziko au njia fupi zaidi.",
+    "title_sw": "Hali za Kutembea",
+    "summary_sw": "Wageni walizusha wasiwasi kuhusu hali za kutembea."
+  },
+  "tour_difficulty:request": {
+    "topic": "tour_difficulty",
+    "sentiment": "request",
+    "title": "Walking conditions",
+    "summary": "Visitors asked for improvements to walking conditions.",
+    "suggestion": "Provide clearer difficulty information and consider adding rest stops or a shorter route.",
+    "suggestion_sw": "Andaa habari iliyo wazi zaidi na ufikirie kuongeza pumziko au njia fupi zaidi.",
+    "title_sw": "Hali za Kutembea",
+    "summary_sw": "Wageni waliomba kuboresha hali ya kutembea."
+  },
+  "timing_pacing:positive": {
+    "topic": "timing_pacing",
+    "sentiment": "positive",
+    "title": "Tour timing and pacing",
+    "summary": "Visitors praised tour timing and pacing.",
+    "suggestion": "Keep the relaxed pacing visitors appreciate.",
+    "title_sw": "Kuendesha baiskeli kwa wakati unaofaa na kwapango",
+    "summary_sw": "Wageni walisifu wakati wa kutalii na kuzunguka.",
+    "suggestion_sw": "Wazoeze wageni waliotulia wathamini."
+  },
+  "timing_pacing:negative": {
+    "topic": "timing_pacing",
+    "sentiment": "negative",
+    "title": "Tour timing and pacing",
+    "summary": "Visitors raised concerns about tour timing and pacing.",
+    "suggestion": "Allow more time at key stops and explain the tour duration before arrival.",
+    "title_sw": "Kuendesha baiskeli kwa wakati unaofaa na kwapango",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya wakati wa kutalii na kuzunguka.",
+    "suggestion_sw": "Ruhusu wakati zaidi kwenye vituo vya msingi na ueleze muda wa matembezi kabla ya kuwasili."
+  },
+  "timing_pacing:request": {
+    "topic": "timing_pacing",
+    "sentiment": "request",
+    "title": "Tour timing and pacing",
+    "summary": "Visitors asked for improvements to tour timing and pacing.",
+    "suggestion": "Allow more time at key stops and explain the tour duration before arrival.",
+    "title_sw": "Kuendesha baiskeli kwa wakati unaofaa na kwapango",
+    "summary_sw": "Wageni waliomba marekebisho ili kutembea kwa wakati unaofaa na kuzunguka.",
+    "suggestion_sw": "Ruhusu wakati zaidi kwenye vituo vya msingi na ueleze muda wa matembezi kabla ya kuwasili."
+  },
+  "group_size:positive": {
+    "topic": "group_size",
+    "sentiment": "positive",
+    "title": "Group size and hearing Noor",
+    "summary": "Visitors praised group size and hearing noor.",
+    "suggestion": "Keep the personal small-group experience with time for questions.",
+    "title_sw": "Ukubwa wa kikundi na uwezo wa kusikia",
+    "summary_sw": "Wageni waliwasifu watu waliokuwa na ukubwa na uwezo wa kusikia.",
+    "suggestion_sw": "Hakikisha kwamba kikundi kidogo kinapata wakati wa kuuliza maswali."
+  },
+  "group_size:negative": {
+    "topic": "group_size",
+    "sentiment": "negative",
+    "title": "Group size and hearing Noor",
+    "summary": "Visitors raised concerns about group size and hearing noor.",
+    "suggestion": "Consider smaller tour groups or pausing in quieter areas while explaining the farm.",
+    "title_sw": "Ukubwa wa kikundi na uwezo wa kusikia",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya ukubwa wa kikundi na sauti ya kusikia.",
+    "suggestion_sw": "Fikiria vikundi vidogo - vidogo vya watalii au kutembea katika maeneo matulivu zaidi unapoeleza kuhusu shamba hilo."
+  },
+  "group_size:request": {
+    "topic": "group_size",
+    "sentiment": "request",
+    "title": "Group size and hearing Noor",
+    "summary": "Visitors asked for improvements to group size and hearing noor.",
+    "suggestion": "Consider smaller tour groups or pausing in quieter areas while explaining the farm.",
+    "title_sw": "Ukubwa wa kikundi na uwezo wa kusikia",
+    "summary_sw": "Wageni waliomba marekebisho kwa ajili ya ukubwa wa kikundi na sauti ya kusikia.",
+    "suggestion_sw": "Fikiria vikundi vidogo - vidogo vya watalii au kutembea katika maeneo matulivu zaidi unapoeleza kuhusu shamba hilo."
+  },
+  "facilities:positive": {
+    "topic": "facilities",
+    "sentiment": "positive",
+    "title": "Farm facilities",
+    "summary": "Visitors praised farm facilities.",
+    "suggestion": "Maintain clean restrooms and comfortable visitor facilities.",
+    "title_sw": "Majengo ya kilimo",
+    "summary_sw": "Wageni walisifu majengo ya shambani.",
+    "suggestion_sw": "Dumisha vyoo safi na mahali pazuri pa kulala."
+  },
+  "facilities:negative": {
+    "topic": "facilities",
+    "sentiment": "negative",
+    "title": "Farm facilities",
+    "summary": "Visitors raised concerns about farm facilities.",
+    "suggestion": "Review seating, restrooms and drinking-water facilities for visitors.",
+    "title_sw": "Majengo ya kilimo",
+    "summary_sw": "Wageni walizusha wasiwasi kuhusu majengo ya shambani.",
+    "suggestion_sw": "Kuketi kwa muda mrefu, vyoo na mahali pa kunywa maji kwa ajili ya wageni."
+  },
+  "facilities:request": {
+    "topic": "facilities",
+    "sentiment": "request",
+    "title": "Farm facilities",
+    "summary": "Visitors asked for improvements to farm facilities.",
+    "suggestion": "Review seating, restrooms and drinking-water facilities for visitors.",
+    "title_sw": "Majengo ya kilimo",
+    "summary_sw": "Wageni waliomba marekebisho kwenye majengo ya shambani.",
+    "suggestion_sw": "Kuketi kwa muda mrefu, vyoo na mahali pa kunywa maji kwa ajili ya wageni."
+  },
+  "transportation:positive": {
+    "topic": "transportation",
+    "sentiment": "positive",
+    "title": "Getting to the farm",
+    "summary": "Visitors praised getting to the farm.",
+    "suggestion": "Keep reliable pickup and clear parking arrangements.",
+    "title_sw": "Kwenda shambani",
+    "summary_sw": "Wageni walisifu kwenda mashambani.",
+    "suggestion_sw": "Weka gari lenye kutegemeka na usafishe mipango ya kuegesha magari."
+  },
+  "transportation:negative": {
+    "topic": "transportation",
+    "sentiment": "negative",
+    "title": "Getting to the farm",
+    "summary": "Visitors raised concerns about getting to the farm.",
+    "suggestion": "Clarify pickup times, parking and transport to Noor's farm.",
+    "title_sw": "Kwenda shambani",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya kwenda shambani.",
+    "suggestion_sw": "Nyakati za gari dogo, kuegesha na kusafirisha hadi kwenye shamba la Noor."
+  },
+  "transportation:request": {
+    "topic": "transportation",
+    "sentiment": "request",
+    "title": "Getting to the farm",
+    "summary": "Visitors asked for improvements to getting to the farm.",
+    "suggestion": "Clarify pickup times, parking and transport to Noor's farm.",
+    "title_sw": "Kwenda shambani",
+    "summary_sw": "Wageni waliomba maendeleo ili wafike shambani.",
+    "suggestion_sw": "Nyakati za gari dogo, kuegesha na kusafirisha hadi kwenye shamba la Noor."
+  },
+  "accessibility:positive": {
+    "topic": "accessibility",
+    "sentiment": "positive",
+    "title": "Access, shade and rest",
+    "summary": "Visitors praised access, shade and rest.",
+    "suggestion": "Keep sharing access information and offering shaded rest stops.",
+    "title_sw": "Ukaribisho, kivuli na pumziko",
+    "summary_sw": "Wageni walisifu mahali pa kuingia, kivuli na pumziko.",
+    "suggestion_sw": "Endelea kutoa habari na kupumzika kivulini."
+  },
+  "accessibility:negative": {
+    "topic": "accessibility",
+    "sentiment": "negative",
+    "title": "Access, shade and rest",
+    "summary": "Visitors raised concerns about access, shade and rest.",
+    "suggestion": "Publish farm accessibility details and consider shade and an easier walking option.",
+    "title_sw": "Ukaribisho, kivuli na pumziko",
+    "summary_sw": "Wageni walizusha wasiwasi kuhusu mahali pa kuingia, kivuli na pumziko.",
+    "suggestion_sw": "Mambo madogo - madogo ya shamba yanayoweza kufikiwa kwa urahisi na kufikiria kivuli na njia rahisi zaidi ya kutembea."
+  },
+  "accessibility:request": {
+    "topic": "accessibility",
+    "sentiment": "request",
+    "title": "Access, shade and rest",
+    "summary": "Visitors asked for improvements to access, shade and rest.",
+    "suggestion": "Publish farm accessibility details and consider shade and an easier walking option.",
+    "title_sw": "Ukaribisho, kivuli na pumziko",
+    "summary_sw": "Wageni waliomba marekebisho ili waweze kufika, kivuli na pumziko.",
+    "suggestion_sw": "Mambo madogo - madogo ya shamba yanayoweza kufikiwa kwa urahisi na kufikiria kivuli na njia rahisi zaidi ya kutembea."
+  },
+  "price_value:positive": {
+    "topic": "price_value",
+    "sentiment": "positive",
+    "title": "Price and value",
+    "summary": "Visitors praised price and value.",
+    "suggestion": "Keep explaining what the farm tour and tasting price includes.",
+    "title_sw": "Bei na thamani",
+    "summary_sw": "Wageni walisifu bei na thamani.",
+    "suggestion_sw": "Endelea kueleza matokeo ya matembezi na ladha ya shamba."
+  },
+  "price_value:negative": {
+    "topic": "price_value",
+    "sentiment": "negative",
+    "title": "Price and value",
+    "summary": "Visitors raised concerns about price and value.",
+    "suggestion": "Explain the tour price, duration and included activities before booking.",
+    "title_sw": "Bei na thamani",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya bei na thamani.",
+    "suggestion_sw": "Eleza bei ya matembezi, urefu na utendaji mbalimbali kabla ya kuandika kitabu."
+  },
+  "price_value:request": {
+    "topic": "price_value",
+    "sentiment": "request",
+    "title": "Price and value",
+    "summary": "Visitors asked for improvements to price and value.",
+    "suggestion": "Explain the tour price, duration and included activities before booking.",
+    "title_sw": "Bei na thamani",
+    "summary_sw": "Wageni waliomba bei na thamani iwe bora.",
+    "suggestion_sw": "Eleza bei ya matembezi, urefu na utendaji mbalimbali kabla ya kuandika kitabu."
+  },
+  "staff_service:positive": {
+    "topic": "staff_service",
+    "sentiment": "positive",
+    "title": "Farm staff service",
+    "summary": "Visitors praised farm staff service.",
+    "suggestion": "Keep the welcoming, helpful farm team.",
+    "title_sw": "Huduma za wafanyakazi wa shambani",
+    "summary_sw": "Wageni waliwasifu wafanyakazi wa shambani.",
+    "suggestion_sw": "Endeleeni kuwakaribisha na kuwasaidia."
+  },
+  "staff_service:negative": {
+    "topic": "staff_service",
+    "sentiment": "negative",
+    "title": "Farm staff service",
+    "summary": "Visitors raised concerns about farm staff service.",
+    "suggestion": "Review visitor communication and support from the farm team.",
+    "title_sw": "Huduma za wafanyakazi wa shambani",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya utumishi wa wafanyakazi wa shambani.",
+    "suggestion_sw": "Pitia mawasiliano na utegemezo wa wageni kutoka kwa kikundi cha mashambani."
+  },
+  "staff_service:request": {
+    "topic": "staff_service",
+    "sentiment": "request",
+    "title": "Farm staff service",
+    "summary": "Visitors asked for improvements to farm staff service.",
+    "suggestion": "Review visitor communication and support from the farm team.",
+    "title_sw": "Huduma za wafanyakazi wa shambani",
+    "summary_sw": "Wageni waliomba maendeleo kwa wafanyakazi wa shambani.",
+    "suggestion_sw": "Pitia mawasiliano na utegemezo wa wageni kutoka kwa kikundi cha mashambani."
+  },
+  "souvenirs:positive": {
+    "topic": "souvenirs",
+    "sentiment": "positive",
+    "title": "Coffee beans and local products",
+    "summary": "Visitors praised coffee beans and local products.",
+    "suggestion": "Keep offering local coffee and products visitors can take home.",
+    "title_sw": "Kahawa na bidhaa za kienyeji",
+    "summary_sw": "Wageni walisifu buni na bidhaa za kienyeji.",
+    "suggestion_sw": "Endeleeni kuwapa wageni kahawa na bidhaa za kwenu."
+  },
+  "souvenirs:negative": {
+    "topic": "souvenirs",
+    "sentiment": "negative",
+    "title": "Coffee beans and local products",
+    "summary": "Visitors raised concerns about coffee beans and local products.",
+    "suggestion": "Offer clearly priced bags of coffee beans and a few local products after the tour.",
+    "title_sw": "Kahawa na bidhaa za kienyeji",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya maharagwe ya kahawa na bidhaa za kienyeji.",
+    "suggestion_sw": "Toa kwa wazi mifuko yenye bei ya maharagwe ya kahawa na bidhaa chache za kienyeji baada ya ziara hiyo."
+  },
+  "souvenirs:request": {
+    "topic": "souvenirs",
+    "sentiment": "request",
+    "title": "Coffee beans and local products",
+    "summary": "Visitors asked for improvements to coffee beans and local products.",
+    "suggestion": "Offer clearly priced bags of coffee beans and a few local products after the tour.",
+    "title_sw": "Kahawa na bidhaa za kienyeji",
+    "summary_sw": "Wageni waliomba kahawa na bidhaa za kienyeji zifanyiwe maendeleo.",
+    "suggestion_sw": "Toa kwa wazi mifuko yenye bei ya maharagwe ya kahawa na bidhaa chache za kienyeji baada ya ziara hiyo."
+  },
+  "information_signage:positive": {
+    "topic": "information_signage",
+    "sentiment": "positive",
+    "title": "Farm directions and information",
+    "summary": "Visitors praised farm directions and information.",
+    "suggestion": "Keep the clear farm directions and useful pre-visit information.",
+    "title_sw": "Mielekezo na habari za shambani",
+    "summary_sw": "Wageni walisifu mielekezo na habari za shamba.",
+    "suggestion_sw": "Weka mielekezo iliyo wazi ya shamba na habari muhimu za kabla ya kuanza kutumika."
+  },
+  "information_signage:negative": {
+    "topic": "information_signage",
+    "sentiment": "negative",
+    "title": "Farm directions and information",
+    "summary": "Visitors raised concerns about farm directions and information.",
+    "suggestion": "Send clearer farm directions before arrival and add signs at the final turn.",
+    "title_sw": "Mielekezo na habari za shambani",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya mielekezo na habari za shambani.",
+    "suggestion_sw": "Tuma maagizo ya wazi zaidi ya shamba kabla ya kuwasili na uongeze ishara wakati wa zamu ya mwisho."
+  },
+  "information_signage:request": {
+    "topic": "information_signage",
+    "sentiment": "request",
+    "title": "Farm directions and information",
+    "summary": "Visitors asked for improvements to farm directions and information.",
+    "suggestion": "Send clearer farm directions before arrival and add signs at the final turn.",
+    "title_sw": "Mielekezo na habari za shambani",
+    "summary_sw": "Wageni waliomba waboreshe njia za shamba na habari.",
+    "suggestion_sw": "Tuma maagizo ya wazi zaidi ya shamba kabla ya kuwasili na uongeze ishara wakati wa zamu ya mwisho."
+  },
+  "scenery:positive": {
+    "topic": "scenery",
+    "sentiment": "positive",
+    "title": "Farm scenery",
+    "summary": "Visitors praised farm scenery.",
+    "suggestion": "Keep time to enjoy the farm scenery and take photos.",
+    "title_sw": "Mandhari ya shamba",
+    "summary_sw": "Wageni walisifu mandhari ya shambani.",
+    "suggestion_sw": "Weka wakati wa kufurahia mandhari ya shambani na kupiga picha."
+  },
+  "scenery:negative": {
+    "topic": "scenery",
+    "sentiment": "negative",
+    "title": "Farm scenery",
+    "summary": "Visitors raised concerns about farm scenery.",
+    "suggestion": "Include a safe viewpoint and a short stop to enjoy the farm scenery.",
+    "title_sw": "Mandhari ya shamba",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya mandhari ya shambani.",
+    "suggestion_sw": "Uwe na maoni mazuri na usimame kidogo ili ufurahie mandhari ya shambani."
+  },
+  "scenery:request": {
+    "topic": "scenery",
+    "sentiment": "request",
+    "title": "Farm scenery",
+    "summary": "Visitors asked for improvements to farm scenery.",
+    "suggestion": "Include a safe viewpoint and a short stop to enjoy the farm scenery.",
+    "title_sw": "Mandhari ya shamba",
+    "summary_sw": "Wageni waliomba kuwe na maendeleo katika mandhari ya shambani.",
+    "suggestion_sw": "Uwe na maoni mazuri na usimame kidogo ili ufurahie mandhari ya shambani."
+  },
+  "local_culture:positive": {
+    "topic": "local_culture",
+    "sentiment": "positive",
+    "title": "Farm stories and local culture",
+    "summary": "Visitors praised farm stories and local culture.",
+    "suggestion": "Keep Noor's family stories and the connection to local coffee traditions.",
+    "title_sw": "Hadithi za shambani na utamaduni wa eneo hilo",
+    "summary_sw": "Wageni walisifu hadithi za mashamba na utamaduni wa wenyeji.",
+    "suggestion_sw": "Weka hadithi za familia ya Noor na uhusiano na mapokeo ya kahawa ya huko."
+  },
+  "local_culture:negative": {
+    "topic": "local_culture",
+    "sentiment": "negative",
+    "title": "Farm stories and local culture",
+    "summary": "Visitors raised concerns about farm stories and local culture.",
+    "suggestion": "Allow more time for local culture and stories about the farm community.",
+    "title_sw": "Hadithi za shambani na utamaduni wa eneo hilo",
+    "summary_sw": "Wageni walizusha wasiwasi juu ya hadithi za mashambani na utamaduni wa mahali hapo.",
+    "suggestion_sw": "Ruhusu wakati zaidi kwa ajili ya utamaduni na hadithi za wenyeji kuhusu jumuiya ya mashambani."
+  },
+  "local_culture:request": {
+    "topic": "local_culture",
+    "sentiment": "request",
+    "title": "Farm stories and local culture",
+    "summary": "Visitors asked for improvements to farm stories and local culture.",
+    "suggestion": "Allow more time for local culture and stories about the farm community.",
+    "title_sw": "Hadithi za shambani na utamaduni wa eneo hilo",
+    "summary_sw": "Wageni waliomba kuwe na maendeleo katika hadithi za mashambani na utamaduni wa mahali hapo.",
+    "suggestion_sw": "Ruhusu wakati zaidi kwa ajili ya utamaduni na hadithi za wenyeji kuhusu jumuiya ya mashambani."
+  }
+}

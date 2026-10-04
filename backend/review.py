@@ -27,10 +27,8 @@ class Review:
             raise TypeError("favorite must be a string.")
         if not isinstance(self.improvement, str):
             raise TypeError("improvement must be a string.")
-        if not self.favorite.strip():
-            raise ValueError("favorite must not be empty.")
-        if not self.improvement.strip():
-            raise ValueError("improvement must not be empty.")
+        if not self.favorite.strip() and not self.improvement.strip():
+            raise ValueError("At least one review text field is required.")
 
 
 @dataclass(frozen=True)

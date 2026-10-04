@@ -1,0 +1,243 @@
+{
+  "version": 2,
+  "phrase_threshold": 0.3,
+  "semantic_threshold": 0.42,
+  "semantic_margin": 0.06,
+  "min_support": 3,
+  "high_support": 5,
+  "legacy_topic_aliases": {
+    "tour_content": "farm_tour_content",
+    "food_tasting": "coffee_tasting",
+    "crowding_waits": "group_size",
+    "cleanliness_upkeep": "facilities"
+  },
+  "topics": {
+    "guide_quality": {
+      "name": "Guide quality",
+      "name_sw": "Ubora wa mwongozo",
+      "phrases": [
+        "guide",
+        "host",
+        "farm owner",
+        "knowledgeable",
+        "welcoming",
+        "welcomed"
+      ],
+      "description": "Guide quality: guide, host, farm owner, knowledgeable, welcoming, welcomed"
+    },
+    "coffee_education": {
+      "name": "Learning about coffee",
+      "name_sw": "Kujifunza kuhusu kahawa",
+      "phrases": [
+        "coffee cherries",
+        "harvest",
+        "harvesting",
+        "drying",
+        "processing",
+        "coffee growing",
+        "coffee-growing",
+        "coffee beans are grown"
+      ],
+      "description": "Learning about coffee: coffee cherries, harvest, harvesting, drying, processing, coffee growing, coffee-growing, coffee beans are grown"
+    },
+    "coffee_roasting": {
+      "name": "Coffee roasting",
+      "name_sw": "Kuchoma kahawa",
+      "phrases": [
+        "roasting",
+        "roast",
+        "roasted",
+        "roaster"
+      ],
+      "description": "Coffee roasting: roasting, roast, roasted, roaster"
+    },
+    "coffee_tasting": {
+      "name": "Coffee tasting",
+      "name_sw": "Kuonja kahawa",
+      "phrases": [
+        "tasting",
+        "taste",
+        "fresh coffee",
+        "coffee samples",
+        "brewed coffee"
+      ],
+      "description": "Coffee tasting: tasting, taste, fresh coffee, coffee samples, brewed coffee"
+    },
+    "farm_tour_content": {
+      "name": "Farm tour experience",
+      "name_sw": "Uzoefu wa ziara ya shamba",
+      "phrases": [
+        "farm tour",
+        "coffee plants",
+        "farm walk",
+        "farm visit",
+        "authentic",
+        "coffee rows"
+      ],
+      "description": "Farm tour experience: farm tour, coffee plants, farm walk, farm visit, authentic, coffee rows"
+    },
+    "tour_difficulty": {
+      "name": "Walking conditions",
+      "name_sw": "Hali ya matembezi",
+      "phrases": [
+        "steep",
+        "tiring",
+        "climb",
+        "difficult path",
+        "slippery",
+        "muddy",
+        "shorter route"
+      ],
+      "description": "Walking conditions: steep, tiring, climb, difficult path, slippery, muddy, shorter route"
+    },
+    "timing_pacing": {
+      "name": "Tour timing and pacing",
+      "name_sw": "Muda wa ziara",
+      "phrases": [
+        "rushed",
+        "pacing",
+        "too long",
+        "more time",
+        "not enough time",
+        "duration",
+        "longer tour"
+      ],
+      "description": "Tour timing and pacing: rushed, pacing, too long, more time, not enough time, duration, longer tour"
+    },
+    "group_size": {
+      "name": "Group size and hearing Noor",
+      "name_sw": "Ukubwa wa kundi",
+      "phrases": [
+        "large group",
+        "larger group",
+        "small group",
+        "group size",
+        "crowded",
+        "hear Noor"
+      ],
+      "description": "Group size and hearing Noor: large group, larger group, small group, group size, crowded, hear Noor"
+    },
+    "facilities": {
+      "name": "Farm facilities",
+      "name_sw": "Huduma za shamba",
+      "phrases": [
+        "restroom",
+        "bathroom",
+        "toilet",
+        "seating",
+        "benches",
+        "water station",
+        "clean",
+        "tidy"
+      ],
+      "description": "Farm facilities: restroom, bathroom, toilet, seating, benches, water station, clean, tidy"
+    },
+    "transportation": {
+      "name": "Getting to the farm",
+      "name_sw": "Usafiri kwenda shambani",
+      "phrases": [
+        "parking",
+        "pickup",
+        "bus",
+        "transport",
+        "shuttle",
+        "ride"
+      ],
+      "description": "Getting to the farm: parking, pickup, bus, transport, shuttle, ride"
+    },
+    "accessibility": {
+      "name": "Access, shade and rest",
+      "name_sw": "Ufikivu na kupumzika",
+      "phrases": [
+        "wheelchair",
+        "accessible",
+        "accessibility",
+        "mobility",
+        "shade",
+        "rest stop",
+        "step-free"
+      ],
+      "description": "Access, shade and rest: wheelchair, accessible, accessibility, mobility, shade, rest stop, step-free"
+    },
+    "price_value": {
+      "name": "Price and value",
+      "name_sw": "Bei na thamani",
+      "phrases": [
+        "price",
+        "expensive",
+        "pricey",
+        "value",
+        "cost",
+        "overpriced"
+      ],
+      "description": "Price and value: price, expensive, pricey, value, cost, overpriced"
+    },
+    "staff_service": {
+      "name": "Farm staff service",
+      "name_sw": "Huduma ya wafanyakazi",
+      "phrases": [
+        "staff",
+        "team",
+        "service",
+        "helper",
+        "friendly",
+        "helpful"
+      ],
+      "description": "Farm staff service: staff, team, service, helper, friendly, helpful"
+    },
+    "souvenirs": {
+      "name": "Coffee beans and local products",
+      "name_sw": "Kahawa na bidhaa za ndani",
+      "phrases": [
+        "souvenir",
+        "take home",
+        "buy coffee",
+        "bags of beans",
+        "local products",
+        "beans for sale",
+        "buy beans"
+      ],
+      "description": "Coffee beans and local products: souvenir, take home, buy coffee, bags of beans, local products, beans for sale, buy beans"
+    },
+    "information_signage": {
+      "name": "Farm directions and information",
+      "name_sw": "Maelekezo na taarifa",
+      "phrases": [
+        "signs",
+        "signage",
+        "directions",
+        "map",
+        "instructions",
+        "arrival information"
+      ],
+      "description": "Farm directions and information: signs, signage, directions, map, instructions, arrival information"
+    },
+    "scenery": {
+      "name": "Farm scenery",
+      "name_sw": "Mandhari ya shamba",
+      "phrases": [
+        "scenery",
+        "views",
+        "view",
+        "hills",
+        "landscape",
+        "green",
+        "birds"
+      ],
+      "description": "Farm scenery: scenery, views, view, hills, landscape, green, birds"
+    },
+    "local_culture": {
+      "name": "Farm stories and local culture",
+      "name_sw": "Hadithi na utamaduni",
+      "phrases": [
+        "culture",
+        "traditions",
+        "family stories",
+        "farm stories",
+        "community",
+        "local history"
+      ],
+      "description": "Farm stories and local culture: culture, traditions, family stories, farm stories, community, local history"
+    }
+  }
+}

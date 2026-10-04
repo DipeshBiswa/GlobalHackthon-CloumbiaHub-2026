@@ -1,0 +1,1388 @@
+{
+  "business": "Noor's Coffee Farm",
+  "review_count": 225,
+  "is_synthetic": true,
+  "year": 2026,
+  "rating_counts": {
+    "5": 124,
+    "3": 22,
+    "4": 67,
+    "2": 9,
+    "1": 3
+  },
+  "mentions_noor": 168,
+  "unique_feedback_pairs": 225,
+  "blank_favorites": 7,
+  "blank_improvements": 97,
+  "topic_counts": {
+    "coffee_education": 13,
+    "information_signage": 17,
+    "facilities": 15,
+    "farm_tour_content": 48,
+    "scenery": 15,
+    "group_size": 23,
+    "price_value": 16,
+    "staff_service": 10,
+    "tour_difficulty": 27,
+    "coffee_roasting": 39,
+    "transportation": 21,
+    "local_culture": 23,
+    "timing_pacing": 15,
+    "souvenirs": 30,
+    "guide_quality": 39,
+    "accessibility": 17,
+    "coffee_tasting": 33
+  },
+  "classification_statuses": {
+    "classified": 216,
+    "not_sure": 9
+  },
+  "controlled_patterns": [
+    {
+      "topic": "coffee_tasting",
+      "sentiment": "negative",
+      "support": 12,
+      "expected_confidence": "high",
+      "observed_confidence": "high",
+      "passed": true
+    },
+    {
+      "topic": "group_size",
+      "sentiment": "negative",
+      "support": 4,
+      "expected_confidence": "medium",
+      "observed_confidence": "medium",
+      "passed": true
+    },
+    {
+      "topic": "facilities",
+      "sentiment": "request",
+      "support": 2,
+      "expected_confidence": null,
+      "observed_confidence": null,
+      "passed": true
+    }
+  ],
+  "patterns": [
+    {
+      "key": "farm_tour_content:positive",
+      "topic": "farm_tour_content",
+      "sentiment": "positive",
+      "title": "Farm tour experience",
+      "summary": "Visitors praised farm tour experience.",
+      "suggestion": "Keep the personal farm visit and time among the coffee plants.",
+      "title_sw": "Mambo yaliyoonwa katika matembezi ya shambani",
+      "summary_sw": "Wageni walisifu matembezi ya shambani.",
+      "suggestion_sw": "Weka ziara na wakati wa kibinafsi miongoni mwa mimea ya kahawa.",
+      "supporting_review_count": 38,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "8b021bc3-5ec0-5cb3-bdf9-f99f0d637507",
+        "c0f479b8-28c3-5bf0-ba28-2a97b6a32062",
+        "86f48122-8972-5a03-be61-da98f10bdd14",
+        "97c68ebe-0ea9-5446-9b1d-1fc1ab4a8b35",
+        "453fbede-d363-57f5-92e5-dd244e1494ea",
+        "a00b5273-e4e1-5cbf-82c5-8d9d8fd79b7b",
+        "85362610-cef0-5ba6-84ba-7e6e5ca281f4",
+        "2307f625-9658-58c8-a238-bdfdb0aca972",
+        "c047bc37-17cb-5863-938b-1fcb001549e4",
+        "377c6e6f-74ee-5fc4-8152-8af946cf2630",
+        "806e2c8e-cd3a-57e8-87d6-4637ddcc6a76",
+        "d1e62609-b76c-58b6-8969-6842c30e5c42",
+        "2013d55b-ff83-5645-97b2-c4f007b69c54",
+        "0aa4cf1e-05c4-5070-b37a-9467c5323bc2",
+        "ec355d50-be9f-590b-93f9-be07a382fd72",
+        "d17fa8c2-4ece-5c78-a942-11d3f5edd984",
+        "2ec662fa-b5aa-5820-82fb-da35716c3f39",
+        "49e0023d-c648-504d-b860-9c3cd50f4e60",
+        "d06f105b-b5bf-50f3-8ade-5878be0d7b04",
+        "638cb49e-8620-5114-baef-7cb89a437eed",
+        "0918f2b4-dff4-573e-9287-5114d8f33a29",
+        "3e0c5ae4-6d6a-510a-acbf-b64e3be7b151",
+        "0044b5d1-6353-5dfd-8d09-7f0189fc0ee4",
+        "f4364215-2751-5d5b-a83a-a9c0e6ab5308",
+        "5968c280-0408-5277-94e6-916593c19d75",
+        "4adc967c-03dc-5be5-a9c8-fcbecc7475dd",
+        "ce386695-0acd-5134-82ab-923d5b507549",
+        "0e36d1bc-2f8b-58cb-ae2b-8ba7c54f8983",
+        "00dde1e4-3bda-51cb-907b-d3d15e256d8f",
+        "52b54d4d-0b87-5dae-8697-af9d7a89c34e",
+        "bd5eba67-d787-5834-a9e6-5839d408e380",
+        "525d63cc-5b31-557d-9ca8-ed1ad530e1f5",
+        "39713b35-a6b3-5456-9b66-6db9f8494566",
+        "31e997e2-9764-5ceb-91f6-be03cdd87101",
+        "3d7ba5e0-eb8d-568a-a4bb-bb5b88775afd",
+        "39d25b51-e8ad-5172-bf44-37c8f4608e65",
+        "58e2442d-686c-566a-83e3-c788700258bb",
+        "60cf3d7c-7bca-5c0e-8792-f93fd0e8a66c"
+      ]
+    },
+    {
+      "key": "guide_quality:positive",
+      "topic": "guide_quality",
+      "sentiment": "positive",
+      "title": "Guide quality",
+      "summary": "Visitors praised guide quality.",
+      "suggestion": "Keep emphasizing knowledgeable, welcoming guides.",
+      "suggestion_sw": "Endelea kukazia miongozo yenye maarifa na yenye kukaribisha.",
+      "title_sw": "Sifa ya kuongoza",
+      "summary_sw": "Wageni walisifu ubora wa mwongozo.",
+      "supporting_review_count": 36,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "ef68c08b-4603-5012-b746-1aa4136050a0",
+        "86916848-1551-5852-aa1e-21d2016fa8ad",
+        "a00b5273-e4e1-5cbf-82c5-8d9d8fd79b7b",
+        "b30c45b3-df68-596b-9203-f9cd56bfa0ba",
+        "85362610-cef0-5ba6-84ba-7e6e5ca281f4",
+        "55cdae6b-97fe-5e0b-8e56-8d8db1787ff5",
+        "00808c10-43e8-5e31-a472-06b6a70199d9",
+        "6cc479f7-d691-5a10-a0d2-364612428417",
+        "377c6e6f-74ee-5fc4-8152-8af946cf2630",
+        "7706c882-cd20-583f-9869-b5dc09b5f6af",
+        "17e2bb80-fa81-50a9-8154-ae2c9446bb2d",
+        "d1e62609-b76c-58b6-8969-6842c30e5c42",
+        "464172c6-6f12-53e2-ac46-1941945632b6",
+        "97170eac-c098-5fd8-90d4-adf1c65a4830",
+        "d17fa8c2-4ece-5c78-a942-11d3f5edd984",
+        "53176320-0653-5e0a-b42d-0ae67937db00",
+        "71450f10-1025-5bf8-a861-2ffc158c8ccb",
+        "19318b65-69a4-59a9-a28d-c7ba786af82f",
+        "b0fadcd6-84d4-52c3-a960-6358fbe30473",
+        "c8a1e752-0c8a-5562-8184-2a3cefbe7a4f",
+        "74f0c4f6-9c6f-584e-ab5b-919605cd5524",
+        "4e0c72e4-e8c6-5ba1-8832-48e05fa9c3fc",
+        "1cd8420c-3230-5354-9e8e-01badd6a260c",
+        "a17976bd-c44f-5742-a85b-b4f5dbfdcdb3",
+        "ab285621-7c37-5547-a6a6-cee021e5bda4",
+        "dbcab259-de5f-5e2b-9ff0-758741b904e0",
+        "fc7798a5-b0d6-5052-a53b-dec63578c5d7",
+        "846c1ab2-148c-5653-a980-009e507a689d",
+        "7c5f1fc6-7305-5969-b245-41ef2b9ef6c1",
+        "b9c70367-3e4e-5d90-adaa-3d10f27898e1",
+        "8f5ac5aa-e22e-56cf-8aaf-3265d2cfcc17",
+        "31e997e2-9764-5ceb-91f6-be03cdd87101",
+        "9a8c8bca-7059-5281-a430-80f502a1bbdb",
+        "9151ffa0-878f-514b-98e8-2340dacb882e",
+        "60cf3d7c-7bca-5c0e-8792-f93fd0e8a66c",
+        "e5738fcb-ae69-5535-b329-bfb8bac10e76"
+      ]
+    },
+    {
+      "key": "tour_difficulty:negative",
+      "topic": "tour_difficulty",
+      "sentiment": "negative",
+      "title": "Walking conditions",
+      "summary": "Visitors raised concerns about walking conditions.",
+      "suggestion": "Provide clearer difficulty information and consider adding rest stops or a shorter route.",
+      "suggestion_sw": "Andaa habari iliyo wazi zaidi na ufikirie kuongeza pumziko au njia fupi zaidi.",
+      "title_sw": "Hali za Kutembea",
+      "summary_sw": "Wageni walizusha wasiwasi kuhusu hali za kutembea.",
+      "supporting_review_count": 23,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "b6f427a3-07b2-5a5d-aade-9d19cf1593af",
+        "a4c52786-9d10-57e6-b2a1-3644d4479ea4",
+        "76b52522-9fb2-52c9-8154-ff63ec38c6d3",
+        "75686721-8aed-575c-9000-93717f8655dd",
+        "453fbede-d363-57f5-92e5-dd244e1494ea",
+        "de462cde-5525-5339-9032-303751b3cdc9",
+        "0425a7c2-ee28-5f37-bd3e-15669d86da2a",
+        "f71b1fe5-fc74-5c0d-8a20-0214fe7c03d9",
+        "0af168d6-fd37-5832-b461-6fd7e32bd333",
+        "bdaa932c-b070-59cc-a2a8-dd8f7b71bb05",
+        "9c34c9f8-8cb0-5787-b724-e74f9314039e",
+        "7c4ce4b3-464a-564c-b9cb-46dd4dc1e08b",
+        "2ec662fa-b5aa-5820-82fb-da35716c3f39",
+        "f376536d-3c16-5959-a67e-529fda283b30",
+        "a70483a6-9822-52b5-97e8-b374c122ae05",
+        "36360d44-130b-5aa7-bac2-65b4bd32d0e6",
+        "0918f2b4-dff4-573e-9287-5114d8f33a29",
+        "5e5fa999-269d-5b15-a48f-c4e16bd982df",
+        "4205690b-19a1-5ad3-9e55-9185475b3428",
+        "b100ec5a-e7e3-57f1-b9a1-77dda611e918",
+        "c28618fb-2873-50c2-8854-43ba34890b30",
+        "f33f8993-9288-576d-aff2-6cc045bbf246",
+        "6d714694-7ad1-5ea4-873a-a1824e09d331"
+      ]
+    },
+    {
+      "key": "group_size:positive",
+      "topic": "group_size",
+      "sentiment": "positive",
+      "title": "Group size and hearing Noor",
+      "summary": "Visitors praised group size and hearing noor.",
+      "suggestion": "Keep the personal small-group experience with time for questions.",
+      "title_sw": "Ukubwa wa kikundi na uwezo wa kusikia",
+      "summary_sw": "Wageni waliwasifu watu waliokuwa na ukubwa na uwezo wa kusikia.",
+      "suggestion_sw": "Hakikisha kwamba kikundi kidogo kinapata wakati wa kuuliza maswali.",
+      "supporting_review_count": 19,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "7252f004-43ea-52a9-a69e-5395f638d92d",
+        "ef68c08b-4603-5012-b746-1aa4136050a0",
+        "7ae652e6-4874-59e0-98c0-97c96546613a",
+        "00808c10-43e8-5e31-a472-06b6a70199d9",
+        "2c114692-e8ca-5d4e-b596-7094d39d21c0",
+        "028c09df-09e5-569a-8559-f9d1dd2df30c",
+        "279f6a27-4b46-5e8f-9cab-6ac7545322c7",
+        "2aba85d7-ad76-52ab-a726-ae709ddc3e8b",
+        "d86b950d-532f-57c6-99ce-18a35700c259",
+        "8b769457-ba64-5b77-aee8-e8cf4992ae1e",
+        "cab932cb-c36b-54ea-9151-c7d42f7d9e4c",
+        "0918f2b4-dff4-573e-9287-5114d8f33a29",
+        "d68e1f72-e5ca-50b5-bb07-dd69f298ee60",
+        "589e0dac-c55d-5fd5-a99d-94b0dad7e03e",
+        "601b8a14-728d-5966-9909-0dfd052d4ca3",
+        "f33f8993-9288-576d-aff2-6cc045bbf246",
+        "4bf328b5-cb09-565d-bd59-2f4fc1f55304",
+        "873cf9ed-78d4-52f4-a082-905f3bbd4184",
+        "a3b24f4e-dc54-59a5-985f-f27bb3785019"
+      ]
+    },
+    {
+      "key": "local_culture:positive",
+      "topic": "local_culture",
+      "sentiment": "positive",
+      "title": "Farm stories and local culture",
+      "summary": "Visitors praised farm stories and local culture.",
+      "suggestion": "Keep Noor's family stories and the connection to local coffee traditions.",
+      "title_sw": "Hadithi za shambani na utamaduni wa eneo hilo",
+      "summary_sw": "Wageni walisifu hadithi za mashamba na utamaduni wa wenyeji.",
+      "suggestion_sw": "Weka hadithi za familia ya Noor na uhusiano na mapokeo ya kahawa ya huko.",
+      "supporting_review_count": 19,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "17a7ac39-6818-5a03-8049-9897ddfb50f6",
+        "ef68c08b-4603-5012-b746-1aa4136050a0",
+        "a00b5273-e4e1-5cbf-82c5-8d9d8fd79b7b",
+        "55cdae6b-97fe-5e0b-8e56-8d8db1787ff5",
+        "00808c10-43e8-5e31-a472-06b6a70199d9",
+        "17e2bb80-fa81-50a9-8154-ae2c9446bb2d",
+        "d1e62609-b76c-58b6-8969-6842c30e5c42",
+        "464172c6-6f12-53e2-ac46-1941945632b6",
+        "7ed68f27-c069-5520-a69a-7a86b33da2f9",
+        "d17fa8c2-4ece-5c78-a942-11d3f5edd984",
+        "19318b65-69a4-59a9-a28d-c7ba786af82f",
+        "af3211c1-ae65-55cd-b0da-5377970539de",
+        "74f0c4f6-9c6f-584e-ab5b-919605cd5524",
+        "84a6863d-c91b-5a18-91bf-3de07c199902",
+        "c4478dfb-84e4-5fe8-92b7-d363bceb94bb",
+        "9a8c8bca-7059-5281-a430-80f502a1bbdb",
+        "efcc6063-24e8-5ad3-bcb3-035ba3904d8a",
+        "a5771abd-390b-507e-a683-8a2a3ce92361",
+        "e5738fcb-ae69-5535-b329-bfb8bac10e76"
+      ]
+    },
+    {
+      "key": "coffee_tasting:positive",
+      "topic": "coffee_tasting",
+      "sentiment": "positive",
+      "title": "Coffee tasting",
+      "summary": "Visitors praised coffee tasting.",
+      "suggestion": "Keep the fresh coffee tasting and explain differences between the cups.",
+      "title_sw": "Ladha ya Kahawa",
+      "summary_sw": "Wageni walisifu ladha ya kahawa.",
+      "suggestion_sw": "Usionje kahawa mpya na ueleze tofauti kati ya vikombe hivyo.",
+      "supporting_review_count": 19,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "26b3d508-a2a5-5d64-925d-ae0984d4d31c",
+        "0d3b9778-6c90-543b-b6f3-9423c2ec9c46",
+        "684e6895-8bdb-5864-8b72-b24124b851fb",
+        "e8675bd0-9009-5041-9d12-09caffa74c17",
+        "53c44085-b052-5b03-b215-6de7d4b35ac6",
+        "e0bdbd94-4e12-5100-98f3-49e4851f4eab",
+        "5968c280-0408-5277-94e6-916593c19d75",
+        "6e8cec58-9393-5d8f-8925-fbe25dfa4b74",
+        "ba406c9e-7ed5-547a-bcc9-45e565afad80",
+        "310dcf86-e8e6-5bab-a68d-0c1e381ea130",
+        "78ad96ee-9575-5835-bc3b-450fb75c17c8",
+        "72305969-f4e0-510e-ac6d-7e74d4a949b9",
+        "525d63cc-5b31-557d-9ca8-ed1ad530e1f5",
+        "17d170c9-1fb9-5293-bdd8-e6d1c23dbc06",
+        "6e13bb4b-2a17-59d8-abbd-2990968a5cd9",
+        "b77a4435-3774-5a17-87d1-105365714703",
+        "6c83119a-1cda-5ff7-9766-80068de6396d",
+        "cdf57773-4b50-550a-8dfd-1e7942cc4ffb",
+        "b9c70367-3e4e-5d90-adaa-3d10f27898e1"
+      ]
+    },
+    {
+      "key": "souvenirs:request",
+      "topic": "souvenirs",
+      "sentiment": "request",
+      "title": "Coffee beans and local products",
+      "summary": "Visitors asked for improvements to coffee beans and local products.",
+      "suggestion": "Offer clearly priced bags of coffee beans and a few local products after the tour.",
+      "title_sw": "Kahawa na bidhaa za kienyeji",
+      "summary_sw": "Wageni waliomba kahawa na bidhaa za kienyeji zifanyiwe maendeleo.",
+      "suggestion_sw": "Toa kwa wazi mifuko yenye bei ya maharagwe ya kahawa na bidhaa chache za kienyeji baada ya ziara hiyo.",
+      "supporting_review_count": 17,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "f32b825f-5177-5bb9-b272-a448b72ea87a",
+        "f62cbdcb-f410-51ef-91b6-e066e07afdd1",
+        "8ffa388c-0665-5648-9b2b-62d0f4c5a7ca",
+        "7ae652e6-4874-59e0-98c0-97c96546613a",
+        "df3e8495-8084-5f40-b0d1-76d61a083450",
+        "241d7e43-1d24-5af8-8b97-6bc1d0d3f3b4",
+        "981a4b9d-29ca-5b02-8c5e-83aa4b2bfa83",
+        "6ec59701-70dd-558e-b605-40b75b883eba",
+        "428a0224-effc-50ec-b02e-ff3ce46d3f39",
+        "826af3b5-b178-5db9-8357-800f045ae3e8",
+        "4adc967c-03dc-5be5-a9c8-fcbecc7475dd",
+        "ab285621-7c37-5547-a6a6-cee021e5bda4",
+        "8930a819-f41c-5935-868c-30385e30ff47",
+        "b9c70367-3e4e-5d90-adaa-3d10f27898e1",
+        "9151ffa0-878f-514b-98e8-2340dacb882e",
+        "39d25b51-e8ad-5172-bf44-37c8f4608e65",
+        "e5738fcb-ae69-5535-b329-bfb8bac10e76"
+      ]
+    },
+    {
+      "key": "coffee_roasting:request",
+      "topic": "coffee_roasting",
+      "sentiment": "request",
+      "title": "Coffee roasting",
+      "summary": "Visitors asked for improvements to coffee roasting.",
+      "suggestion": "Allow extra time to watch the roasting demonstration and ask questions.",
+      "title_sw": "Kukaangwa kwa Kahawa",
+      "summary_sw": "Wageni waliomba kuwe na maendeleo katika kukaanga kahawa.",
+      "suggestion_sw": "Ruhusu wakati wa ziada wa kutazama maandamano ya kukaanga na kuuliza maswali.",
+      "supporting_review_count": 15,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "62416834-da15-5bf0-b42f-0e8a8d881c2c",
+        "bd60aeae-20bb-581b-9b6c-50f533e9b373",
+        "c047bc37-17cb-5863-938b-1fcb001549e4",
+        "a52d49e0-65d2-51d4-9d8b-6d63c4c4caf8",
+        "7c0dd565-e75d-5bd9-80f9-3de092ce2957",
+        "2aba85d7-ad76-52ab-a726-ae709ddc3e8b",
+        "4e85687f-8571-5d09-aaea-1aa9c8aaf3a7",
+        "74f0c4f6-9c6f-584e-ab5b-919605cd5524",
+        "fdeaa1e4-1f12-5500-b2d4-7c4153212962",
+        "b14e22a9-99dd-5ae8-9ef8-f37452348b22",
+        "987ffc09-b1a7-50ec-b5d5-1f049546d658",
+        "b1ef5e5d-f14b-584b-88d1-79d1647d0106",
+        "ce386695-0acd-5134-82ab-923d5b507549",
+        "846c1ab2-148c-5653-a980-009e507a689d",
+        "8a92cf7a-c38b-5d0b-81a0-432609346554"
+      ]
+    },
+    {
+      "key": "facilities:positive",
+      "topic": "facilities",
+      "sentiment": "positive",
+      "title": "Farm facilities",
+      "summary": "Visitors praised farm facilities.",
+      "suggestion": "Maintain clean restrooms and comfortable visitor facilities.",
+      "title_sw": "Majengo ya kilimo",
+      "summary_sw": "Wageni walisifu majengo ya shambani.",
+      "suggestion_sw": "Dumisha vyoo safi na mahali pazuri pa kulala.",
+      "supporting_review_count": 13,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "8b021bc3-5ec0-5cb3-bdf9-f99f0d637507",
+        "86f48122-8972-5a03-be61-da98f10bdd14",
+        "453fbede-d363-57f5-92e5-dd244e1494ea",
+        "6cc479f7-d691-5a10-a0d2-364612428417",
+        "d1e62609-b76c-58b6-8969-6842c30e5c42",
+        "981a4b9d-29ca-5b02-8c5e-83aa4b2bfa83",
+        "53176320-0653-5e0a-b42d-0ae67937db00",
+        "0e36d1bc-2f8b-58cb-ae2b-8ba7c54f8983",
+        "9b2095c0-9e36-5578-8bb6-eade8ec623f1",
+        "1511fcef-b1c0-551c-b7df-d528cd058133",
+        "d57e33bf-46b1-57e7-b2f9-6e86314bf603",
+        "a51ed093-3935-5625-a88f-7826ef5d740b",
+        "39d25b51-e8ad-5172-bf44-37c8f4608e65"
+      ]
+    },
+    {
+      "key": "coffee_education:positive",
+      "topic": "coffee_education",
+      "sentiment": "positive",
+      "title": "Learning about coffee",
+      "summary": "Visitors praised learning about coffee.",
+      "suggestion": "Keep showing how coffee is grown, harvested, dried and processed.",
+      "title_sw": "Kujifunza juu ya kahawa",
+      "summary_sw": "Wageni walisifu kujifunza juu ya kahawa.",
+      "suggestion_sw": "Endelea kuonyesha jinsi kahawa inavyokuzwa, kuvunwa, kukaushwa na kutayarishwa.",
+      "supporting_review_count": 12,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "401d75d3-6082-50c5-bf6b-8ab77d27bd4b",
+        "59b10ce8-c206-5f74-a404-d5bf319ad3ef",
+        "86916848-1551-5852-aa1e-21d2016fa8ad",
+        "0d3b9778-6c90-543b-b6f3-9423c2ec9c46",
+        "57e1e9d3-992c-5a9d-b199-6c77ba14ccaa",
+        "061c2c90-d0eb-5f03-b943-79f36bd956c0",
+        "0d4b41af-dc90-549a-9acb-87a8cb2c92b9",
+        "4d74ba75-807c-5780-9933-d7d46ca583c8",
+        "a17976bd-c44f-5742-a85b-b4f5dbfdcdb3",
+        "2b466793-30fe-5659-a865-6cbd1a0a6404",
+        "8f5ac5aa-e22e-56cf-8aaf-3265d2cfcc17",
+        "e04a459a-beff-5345-8836-eafed406621b"
+      ]
+    },
+    {
+      "key": "scenery:positive",
+      "topic": "scenery",
+      "sentiment": "positive",
+      "title": "Farm scenery",
+      "summary": "Visitors praised farm scenery.",
+      "suggestion": "Keep time to enjoy the farm scenery and take photos.",
+      "title_sw": "Mandhari ya shamba",
+      "summary_sw": "Wageni walisifu mandhari ya shambani.",
+      "suggestion_sw": "Weka wakati wa kufurahia mandhari ya shambani na kupiga picha.",
+      "supporting_review_count": 12,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "bc5ae22d-21fb-5ad2-8fa5-327dfb3e44af",
+        "76b52522-9fb2-52c9-8154-ff63ec38c6d3",
+        "8cc6d138-2693-5315-839c-3f4f3fb3e465",
+        "005c56ba-0efd-5030-b9a7-e91e85aa0f02",
+        "c047bc37-17cb-5863-938b-1fcb001549e4",
+        "545a256f-c97a-59e1-9be2-f681aad3012a",
+        "b7e3873d-6565-5652-b661-5f9025a75d40",
+        "f4364215-2751-5d5b-a83a-a9c0e6ab5308",
+        "341f1512-e556-50d4-aae1-71421b83120d",
+        "35510144-1116-5999-b7dc-4e56a040438c",
+        "fdaed60b-a9f7-54f7-9db3-ec1dce7b2dc9",
+        "99ffb6cb-a121-5348-b424-f37a6a1680b6"
+      ]
+    },
+    {
+      "key": "coffee_roasting:positive",
+      "topic": "coffee_roasting",
+      "sentiment": "positive",
+      "title": "Coffee roasting",
+      "summary": "Visitors praised coffee roasting.",
+      "suggestion": "Keep the hands-on coffee roasting demonstration.",
+      "title_sw": "Kukaangwa kwa Kahawa",
+      "summary_sw": "Wageni walisifu kukaanga kahawa.",
+      "suggestion_sw": "Endeleza maandamano ya kukaanga kahawa kwa mikono.",
+      "supporting_review_count": 12,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "4a851265-7616-522a-b992-7cefdab2dcb9",
+        "5b7dcc76-449b-5a26-be50-8c8f91df87fe",
+        "2ddc4261-e73f-59e1-8820-eda407585a9d",
+        "5855c984-9b1c-501b-8ce3-36320ad7bf8b",
+        "71450f10-1025-5bf8-a861-2ffc158c8ccb",
+        "7c3645b0-aaac-5aef-8a7a-b7bea5e80264",
+        "50f3281e-1898-5af3-ae52-3cb4fea5226a",
+        "7911d814-2c22-5b93-87df-a1b0233aa5e1",
+        "f5269ad3-bef6-5712-bf48-00128b8121a9",
+        "17d170c9-1fb9-5293-bdd8-e6d1c23dbc06",
+        "9a8c8bca-7059-5281-a430-80f502a1bbdb",
+        "a5771abd-390b-507e-a683-8a2a3ce92361"
+      ]
+    },
+    {
+      "key": "accessibility:request",
+      "topic": "accessibility",
+      "sentiment": "request",
+      "title": "Access, shade and rest",
+      "summary": "Visitors asked for improvements to access, shade and rest.",
+      "suggestion": "Publish farm accessibility details and consider shade and an easier walking option.",
+      "title_sw": "Ukaribisho, kivuli na pumziko",
+      "summary_sw": "Wageni waliomba marekebisho ili waweze kufika, kivuli na pumziko.",
+      "suggestion_sw": "Mambo madogo - madogo ya shamba yanayoweza kufikiwa kwa urahisi na kufikiria kivuli na njia rahisi zaidi ya kutembea.",
+      "supporting_review_count": 12,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "425d0598-a3a4-5689-ac54-9194e9205daa",
+        "6f910a27-882e-5994-8ded-3e282a7f1804",
+        "377c6e6f-74ee-5fc4-8152-8af946cf2630",
+        "684e6895-8bdb-5864-8b72-b24124b851fb",
+        "49e0023d-c648-504d-b860-9c3cd50f4e60",
+        "19318b65-69a4-59a9-a28d-c7ba786af82f",
+        "4d74ba75-807c-5780-9933-d7d46ca583c8",
+        "7c3645b0-aaac-5aef-8a7a-b7bea5e80264",
+        "4bf328b5-cb09-565d-bd59-2f4fc1f55304",
+        "7911d814-2c22-5b93-87df-a1b0233aa5e1",
+        "d600deea-603d-5a28-9f77-3378ce8e8032",
+        "efcc6063-24e8-5ad3-bcb3-035ba3904d8a"
+      ]
+    },
+    {
+      "key": "coffee_tasting:negative",
+      "topic": "coffee_tasting",
+      "sentiment": "negative",
+      "title": "Coffee tasting",
+      "summary": "Visitors raised concerns about coffee tasting.",
+      "suggestion": "Add a few extra minutes to the coffee tasting portion of the tour.",
+      "title_sw": "Ladha ya Kahawa",
+      "summary_sw": "Wageni walizusha wasiwasi juu ya kuonja kahawa.",
+      "suggestion_sw": "Ongeza dakika chache za ziada kwenye sehemu ya matembezi ya kahawa.",
+      "supporting_review_count": 12,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "57e1e9d3-992c-5a9d-b199-6c77ba14ccaa",
+        "028c09df-09e5-569a-8559-f9d1dd2df30c",
+        "806e2c8e-cd3a-57e8-87d6-4637ddcc6a76",
+        "e8675bd0-9009-5041-9d12-09caffa74c17",
+        "66db249c-2a8e-50bb-b539-83d4b16d88d0",
+        "d86b950d-532f-57c6-99ce-18a35700c259",
+        "b0fadcd6-84d4-52c3-a960-6358fbe30473",
+        "e0bdbd94-4e12-5100-98f3-49e4851f4eab",
+        "c22f91a9-ebc6-534d-904b-4fa0df4285c3",
+        "1a56bf50-5f25-5ff9-903a-cea14124ba10",
+        "9b2095c0-9e36-5578-8bb6-eade8ec623f1",
+        "0b30b0a7-9198-5938-ab39-a87aedcb61ff"
+      ]
+    },
+    {
+      "key": "coffee_roasting:negative",
+      "topic": "coffee_roasting",
+      "sentiment": "negative",
+      "title": "Coffee roasting",
+      "summary": "Visitors raised concerns about coffee roasting.",
+      "suggestion": "Allow extra time to watch the roasting demonstration and ask questions.",
+      "title_sw": "Kukaangwa kwa Kahawa",
+      "summary_sw": "Wageni walihangaikia kukaanga kahawa.",
+      "suggestion_sw": "Ruhusu wakati wa ziada wa kutazama maandamano ya kukaanga na kuuliza maswali.",
+      "supporting_review_count": 11,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "b3e78ec9-a574-523d-aad5-121b36005ac8",
+        "41284cae-7906-5b2c-89b8-435b56e9648b",
+        "7706c882-cd20-583f-9869-b5dc09b5f6af",
+        "15cb76f9-1dbe-5fa1-aea0-5182318b5695",
+        "331c8fb1-416f-50bc-a9ac-70b44b4ca01d",
+        "53176320-0653-5e0a-b42d-0ae67937db00",
+        "c8a1e752-0c8a-5562-8184-2a3cefbe7a4f",
+        "c192a4fa-9e1e-5a7c-87a8-ee30f5ee5180",
+        "388a2aa6-a827-5314-9cdc-d14e14c85e78",
+        "4e778dcb-9701-5c3d-8756-51769bcfa352",
+        "6e8cec58-9393-5d8f-8925-fbe25dfa4b74"
+      ]
+    },
+    {
+      "key": "souvenirs:positive",
+      "topic": "souvenirs",
+      "sentiment": "positive",
+      "title": "Coffee beans and local products",
+      "summary": "Visitors praised coffee beans and local products.",
+      "suggestion": "Keep offering local coffee and products visitors can take home.",
+      "title_sw": "Kahawa na bidhaa za kienyeji",
+      "summary_sw": "Wageni walisifu buni na bidhaa za kienyeji.",
+      "suggestion_sw": "Endeleeni kuwapa wageni kahawa na bidhaa za kwenu.",
+      "supporting_review_count": 11,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "b17d1b8f-9209-5f8c-8132-23a83bb7f279",
+        "5a6b7dce-4842-5711-96b1-c42cfb926718",
+        "31baeb82-8af8-5e6c-bd3f-63b3b1313f64",
+        "19318b65-69a4-59a9-a28d-c7ba786af82f",
+        "d06f105b-b5bf-50f3-8ade-5878be0d7b04",
+        "f4364215-2751-5d5b-a83a-a9c0e6ab5308",
+        "1a56bf50-5f25-5ff9-903a-cea14124ba10",
+        "00dde1e4-3bda-51cb-907b-d3d15e256d8f",
+        "84a6863d-c91b-5a18-91bf-3de07c199902",
+        "70ce852c-a25a-5215-89fb-8fb8d67c4c2d",
+        "efcc6063-24e8-5ad3-bcb3-035ba3904d8a"
+      ]
+    },
+    {
+      "key": "transportation:positive",
+      "topic": "transportation",
+      "sentiment": "positive",
+      "title": "Getting to the farm",
+      "summary": "Visitors praised getting to the farm.",
+      "suggestion": "Keep reliable pickup and clear parking arrangements.",
+      "title_sw": "Kwenda shambani",
+      "summary_sw": "Wageni walisifu kwenda mashambani.",
+      "suggestion_sw": "Weka gari lenye kutegemeka na usafishe mipango ya kuegesha magari.",
+      "supporting_review_count": 10,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "b3e78ec9-a574-523d-aad5-121b36005ac8",
+        "ef68c08b-4603-5012-b746-1aa4136050a0",
+        "de462cde-5525-5339-9032-303751b3cdc9",
+        "0425a7c2-ee28-5f37-bd3e-15669d86da2a",
+        "331c8fb1-416f-50bc-a9ac-70b44b4ca01d",
+        "8867a6e5-25e9-5b94-92f1-cb409dadf9d5",
+        "0044b5d1-6353-5dfd-8d09-7f0189fc0ee4",
+        "601b8a14-728d-5966-9909-0dfd052d4ca3",
+        "0c33b8e9-8d70-5b56-95c5-fe61800d02ea",
+        "1a5a5ed7-50b4-5b6c-b081-7fac02153221"
+      ]
+    },
+    {
+      "key": "staff_service:positive",
+      "topic": "staff_service",
+      "sentiment": "positive",
+      "title": "Farm staff service",
+      "summary": "Visitors praised farm staff service.",
+      "suggestion": "Keep the welcoming, helpful farm team.",
+      "title_sw": "Huduma za wafanyakazi wa shambani",
+      "summary_sw": "Wageni waliwasifu wafanyakazi wa shambani.",
+      "suggestion_sw": "Endeleeni kuwakaribisha na kuwasaidia.",
+      "supporting_review_count": 9,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "b6f427a3-07b2-5a5d-aade-9d19cf1593af",
+        "b3e78ec9-a574-523d-aad5-121b36005ac8",
+        "df3e8495-8084-5f40-b0d1-76d61a083450",
+        "15cb76f9-1dbe-5fa1-aea0-5182318b5695",
+        "d68e1f72-e5ca-50b5-bb07-dd69f298ee60",
+        "987ffc09-b1a7-50ec-b5d5-1f049546d658",
+        "11ba0a2d-9e7b-52aa-850a-81690da2889c",
+        "0c33b8e9-8d70-5b56-95c5-fe61800d02ea",
+        "c40db142-4d17-5308-ad1e-f344626b4da7"
+      ]
+    },
+    {
+      "key": "price_value:negative",
+      "topic": "price_value",
+      "sentiment": "negative",
+      "title": "Price and value",
+      "summary": "Visitors raised concerns about price and value.",
+      "suggestion": "Explain the tour price, duration and included activities before booking.",
+      "title_sw": "Bei na thamani",
+      "summary_sw": "Wageni walizusha wasiwasi juu ya bei na thamani.",
+      "suggestion_sw": "Eleza bei ya matembezi, urefu na utendaji mbalimbali kabla ya kuandika kitabu.",
+      "supporting_review_count": 8,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "7252f004-43ea-52a9-a69e-5395f638d92d",
+        "57e1e9d3-992c-5a9d-b199-6c77ba14ccaa",
+        "31baeb82-8af8-5e6c-bd3f-63b3b1313f64",
+        "d86b950d-532f-57c6-99ce-18a35700c259",
+        "5968c280-0408-5277-94e6-916593c19d75",
+        "9b2095c0-9e36-5578-8bb6-eade8ec623f1",
+        "45876136-30a1-552a-8ad6-e245fa90f1c9",
+        "0b30b0a7-9198-5938-ab39-a87aedcb61ff"
+      ]
+    },
+    {
+      "key": "timing_pacing:positive",
+      "topic": "timing_pacing",
+      "sentiment": "positive",
+      "title": "Tour timing and pacing",
+      "summary": "Visitors praised tour timing and pacing.",
+      "suggestion": "Keep the relaxed pacing visitors appreciate.",
+      "title_sw": "Kuendesha baiskeli kwa wakati unaofaa na kwapango",
+      "summary_sw": "Wageni walisifu wakati wa kutalii na kuzunguka.",
+      "suggestion_sw": "Wazoeze wageni waliotulia wathamini.",
+      "supporting_review_count": 8,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "59b10ce8-c206-5f74-a404-d5bf319ad3ef",
+        "f62cbdcb-f410-51ef-91b6-e066e07afdd1",
+        "bd60aeae-20bb-581b-9b6c-50f533e9b373",
+        "735b1400-20dd-52aa-a206-4fdfecff6101",
+        "8b769457-ba64-5b77-aee8-e8cf4992ae1e",
+        "c192a4fa-9e1e-5a7c-87a8-ee30f5ee5180",
+        "341f1512-e556-50d4-aae1-71421b83120d",
+        "5f985515-a097-5a31-a52c-a786527e65e1"
+      ]
+    },
+    {
+      "key": "farm_tour_content:negative",
+      "topic": "farm_tour_content",
+      "sentiment": "negative",
+      "title": "Farm tour experience",
+      "summary": "Visitors raised concerns about farm tour experience.",
+      "suggestion": "Review the farm route and offer optional time for a deeper tour.",
+      "title_sw": "Mambo yaliyoonwa katika matembezi ya shambani",
+      "summary_sw": "Wageni walizusha wasiwasi kuhusu matembezi ya shambani.",
+      "suggestion_sw": "Pitia njia hiyo ya shamba na utenge wakati wa ziada kwa ajili ya ziara yenye kina kirefu zaidi.",
+      "supporting_review_count": 8,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "a4c52786-9d10-57e6-b2a1-3644d4479ea4",
+        "75686721-8aed-575c-9000-93717f8655dd",
+        "0af168d6-fd37-5832-b461-6fd7e32bd333",
+        "9c34c9f8-8cb0-5787-b724-e74f9314039e",
+        "b0fadcd6-84d4-52c3-a960-6358fbe30473",
+        "36360d44-130b-5aa7-bac2-65b4bd32d0e6",
+        "5e5fa999-269d-5b15-a48f-c4e16bd982df",
+        "6d714694-7ad1-5ea4-873a-a1824e09d331"
+      ]
+    },
+    {
+      "key": "information_signage:negative",
+      "topic": "information_signage",
+      "sentiment": "negative",
+      "title": "Farm directions and information",
+      "summary": "Visitors raised concerns about farm directions and information.",
+      "suggestion": "Send clearer farm directions before arrival and add signs at the final turn.",
+      "title_sw": "Mielekezo na habari za shambani",
+      "summary_sw": "Wageni walizusha wasiwasi juu ya mielekezo na habari za shambani.",
+      "suggestion_sw": "Tuma maagizo ya wazi zaidi ya shamba kabla ya kuwasili na uongeze ishara wakati wa zamu ya mwisho.",
+      "supporting_review_count": 7,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "401d75d3-6082-50c5-bf6b-8ab77d27bd4b",
+        "8b021bc3-5ec0-5cb3-bdf9-f99f0d637507",
+        "c0f479b8-28c3-5bf0-ba28-2a97b6a32062",
+        "5b02a7ce-e954-5d49-93c8-e3a91eb1858d",
+        "5163b4fc-c056-5cc0-a4db-8ae1ecea7721",
+        "19194e56-f4cb-5283-84c6-c1dbafc5fb0c",
+        "005c56ba-0efd-5030-b9a7-e91e85aa0f02"
+      ]
+    },
+    {
+      "key": "transportation:negative",
+      "topic": "transportation",
+      "sentiment": "negative",
+      "title": "Getting to the farm",
+      "summary": "Visitors raised concerns about getting to the farm.",
+      "suggestion": "Clarify pickup times, parking and transport to Noor's farm.",
+      "title_sw": "Kwenda shambani",
+      "summary_sw": "Wageni walizusha wasiwasi juu ya kwenda shambani.",
+      "suggestion_sw": "Nyakati za gari dogo, kuegesha na kusafirisha hadi kwenye shamba la Noor.",
+      "supporting_review_count": 7,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "14835d22-505a-5066-8400-4391500b0b15",
+        "f376536d-3c16-5959-a67e-529fda283b30",
+        "06bafa57-9fbd-5405-aed7-6bde3a1f42fc",
+        "f4364215-2751-5d5b-a83a-a9c0e6ab5308",
+        "09cb989a-690d-5d71-80ec-6566234d9d87",
+        "341f1512-e556-50d4-aae1-71421b83120d",
+        "75aade8d-8480-518f-8f20-951709b057d0"
+      ]
+    },
+    {
+      "key": "information_signage:positive",
+      "topic": "information_signage",
+      "sentiment": "positive",
+      "title": "Farm directions and information",
+      "summary": "Visitors praised farm directions and information.",
+      "suggestion": "Keep the clear farm directions and useful pre-visit information.",
+      "title_sw": "Mielekezo na habari za shambani",
+      "summary_sw": "Wageni walisifu mielekezo na habari za shamba.",
+      "suggestion_sw": "Weka mielekezo iliyo wazi ya shamba na habari muhimu za kabla ya kuanza kutumika.",
+      "supporting_review_count": 7,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "14835d22-505a-5066-8400-4391500b0b15",
+        "428a0224-effc-50ec-b02e-ff3ce46d3f39",
+        "5e5fa999-269d-5b15-a48f-c4e16bd982df",
+        "b2eac4ea-66bc-52a6-8d57-9375fb025989",
+        "75aade8d-8480-518f-8f20-951709b057d0",
+        "0b30b0a7-9198-5938-ab39-a87aedcb61ff",
+        "8a92cf7a-c38b-5d0b-81a0-432609346554"
+      ]
+    },
+    {
+      "key": "timing_pacing:negative",
+      "topic": "timing_pacing",
+      "sentiment": "negative",
+      "title": "Tour timing and pacing",
+      "summary": "Visitors raised concerns about tour timing and pacing.",
+      "suggestion": "Allow more time at key stops and explain the tour duration before arrival.",
+      "title_sw": "Kuendesha baiskeli kwa wakati unaofaa na kwapango",
+      "summary_sw": "Wageni walizusha wasiwasi juu ya wakati wa kutalii na kuzunguka.",
+      "suggestion_sw": "Ruhusu wakati zaidi kwenye vituo vya msingi na ueleze muda wa matembezi kabla ya kuwasili.",
+      "supporting_review_count": 5,
+      "pattern_confidence": "high",
+      "review_ids": [
+        "59b10ce8-c206-5f74-a404-d5bf319ad3ef",
+        "806e2c8e-cd3a-57e8-87d6-4637ddcc6a76",
+        "c22f91a9-ebc6-534d-904b-4fa0df4285c3",
+        "1a56bf50-5f25-5ff9-903a-cea14124ba10",
+        "00dde1e4-3bda-51cb-907b-d3d15e256d8f"
+      ]
+    },
+    {
+      "key": "price_value:positive",
+      "topic": "price_value",
+      "sentiment": "positive",
+      "title": "Price and value",
+      "summary": "Visitors praised price and value.",
+      "suggestion": "Keep explaining what the farm tour and tasting price includes.",
+      "title_sw": "Bei na thamani",
+      "summary_sw": "Wageni walisifu bei na thamani.",
+      "suggestion_sw": "Endelea kueleza matokeo ya matembezi na ladha ya shamba.",
+      "supporting_review_count": 4,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "62416834-da15-5bf0-b42f-0e8a8d881c2c",
+        "6f910a27-882e-5994-8ded-3e282a7f1804",
+        "826af3b5-b178-5db9-8357-800f045ae3e8",
+        "a5970ebf-3b53-54a6-ab3a-4812874e9295"
+      ]
+    },
+    {
+      "key": "price_value:request",
+      "topic": "price_value",
+      "sentiment": "request",
+      "title": "Price and value",
+      "summary": "Visitors asked for improvements to price and value.",
+      "suggestion": "Explain the tour price, duration and included activities before booking.",
+      "title_sw": "Bei na thamani",
+      "summary_sw": "Wageni waliomba bei na thamani iwe bora.",
+      "suggestion_sw": "Eleza bei ya matembezi, urefu na utendaji mbalimbali kabla ya kuandika kitabu.",
+      "supporting_review_count": 4,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "4a62890e-efee-5a07-9b84-921ef342d818",
+        "279f6a27-4b46-5e8f-9cab-6ac7545322c7",
+        "e5ed2a5f-71ae-5d59-b9b7-6777382de88b",
+        "7c5f1fc6-7305-5969-b245-41ef2b9ef6c1"
+      ]
+    },
+    {
+      "key": "group_size:negative",
+      "topic": "group_size",
+      "sentiment": "negative",
+      "title": "Group size and hearing Noor",
+      "summary": "Visitors raised concerns about group size and hearing noor.",
+      "suggestion": "Consider smaller tour groups or pausing in quieter areas while explaining the farm.",
+      "title_sw": "Ukubwa wa kikundi na uwezo wa kusikia",
+      "summary_sw": "Wageni walizusha wasiwasi juu ya ukubwa wa kikundi na sauti ya kusikia.",
+      "suggestion_sw": "Fikiria vikundi vidogo - vidogo vya watalii au kutembea katika maeneo matulivu zaidi unapoeleza kuhusu shamba hilo.",
+      "supporting_review_count": 4,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "7706c882-cd20-583f-9869-b5dc09b5f6af",
+        "97170eac-c098-5fd8-90d4-adf1c65a4830",
+        "8867a6e5-25e9-5b94-92f1-cb409dadf9d5",
+        "50f3281e-1898-5af3-ae52-3cb4fea5226a"
+      ]
+    },
+    {
+      "key": "transportation:request",
+      "topic": "transportation",
+      "sentiment": "request",
+      "title": "Getting to the farm",
+      "summary": "Visitors asked for improvements to getting to the farm.",
+      "suggestion": "Clarify pickup times, parking and transport to Noor's farm.",
+      "title_sw": "Kwenda shambani",
+      "summary_sw": "Wageni waliomba maendeleo ili wafike shambani.",
+      "suggestion_sw": "Nyakati za gari dogo, kuegesha na kusafirisha hadi kwenye shamba la Noor.",
+      "supporting_review_count": 4,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "464172c6-6f12-53e2-ac46-1941945632b6",
+        "586e77c9-a8e9-5158-8280-d38b0bd52d07",
+        "2d2c1001-94b0-59dc-8676-f80f90ff9518",
+        "3907bbbe-a91e-5830-8e9b-03a20a3b0654"
+      ]
+    },
+    {
+      "key": "tour_difficulty:positive",
+      "topic": "tour_difficulty",
+      "sentiment": "positive",
+      "title": "Walking conditions",
+      "summary": "Visitors praised walking conditions.",
+      "suggestion": "Keep enjoyable farm routes with clear difficulty information.",
+      "title_sw": "Hali za Kutembea",
+      "summary_sw": "Wageni walisifu hali za kutembea.",
+      "suggestion_sw": "Weka njia za kuonea shangwe za shamba ukiwa na habari zilizo ngumu kueleweka.",
+      "supporting_review_count": 3,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "f32b825f-5177-5bb9-b272-a448b72ea87a",
+        "241d7e43-1d24-5af8-8b97-6bc1d0d3f3b4",
+        "b745f13c-8c2b-5d22-a920-82e677c66d82"
+      ]
+    },
+    {
+      "key": "accessibility:positive",
+      "topic": "accessibility",
+      "sentiment": "positive",
+      "title": "Access, shade and rest",
+      "summary": "Visitors praised access, shade and rest.",
+      "suggestion": "Keep sharing access information and offering shaded rest stops.",
+      "title_sw": "Ukaribisho, kivuli na pumziko",
+      "summary_sw": "Wageni walisifu mahali pa kuingia, kivuli na pumziko.",
+      "suggestion_sw": "Endelea kutoa habari na kupumzika kivulini.",
+      "supporting_review_count": 3,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "f71b1fe5-fc74-5c0d-8a20-0214fe7c03d9",
+        "2013d55b-ff83-5645-97b2-c4f007b69c54",
+        "d600deea-603d-5a28-9f77-3378ce8e8032"
+      ]
+    },
+    {
+      "key": "information_signage:request",
+      "topic": "information_signage",
+      "sentiment": "request",
+      "title": "Farm directions and information",
+      "summary": "Visitors asked for improvements to farm directions and information.",
+      "suggestion": "Send clearer farm directions before arrival and add signs at the final turn.",
+      "title_sw": "Mielekezo na habari za shambani",
+      "summary_sw": "Wageni waliomba waboreshe njia za shamba na habari.",
+      "suggestion_sw": "Tuma maagizo ya wazi zaidi ya shamba kabla ya kuwasili na uongeze ishara wakati wa zamu ya mwisho.",
+      "supporting_review_count": 3,
+      "pattern_confidence": "medium",
+      "review_ids": [
+        "5855c984-9b1c-501b-8ce3-36320ad7bf8b",
+        "8b769457-ba64-5b77-aee8-e8cf4992ae1e",
+        "848ebdac-483f-57d3-be1f-0d940c18c71f"
+      ]
+    }
+  ],
+  "months": [
+    {
+      "month": "2026-01",
+      "review_count": 10,
+      "average_rating": 4.6,
+      "change_from_previous_month": null,
+      "top_positive_topics": [
+        {
+          "topic": "coffee_education",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "staff_service",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "facilities",
+          "supporting_review_count": 1
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "information_signage",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "price_value",
+          "supporting_review_count": 1
+        }
+      ]
+    },
+    {
+      "month": "2026-02",
+      "review_count": 11,
+      "average_rating": 4.64,
+      "change_from_previous_month": 0.04,
+      "top_positive_topics": [
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "facilities",
+          "supporting_review_count": 1
+        },
+        {
+          "topic": "scenery",
+          "supporting_review_count": 1
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "information_signage",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "coffee_roasting",
+          "supporting_review_count": 1
+        }
+      ]
+    },
+    {
+      "month": "2026-03",
+      "review_count": 17,
+      "average_rating": 4.71,
+      "change_from_previous_month": 0.07,
+      "top_positive_topics": [
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "price_value",
+          "supporting_review_count": 1
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "information_signage",
+          "supporting_review_count": 1
+        }
+      ]
+    },
+    {
+      "month": "2026-04",
+      "review_count": 20,
+      "average_rating": 4.5,
+      "change_from_previous_month": -0.21,
+      "top_positive_topics": [
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 5
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 4
+        },
+        {
+          "topic": "scenery",
+          "supporting_review_count": 2
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "information_signage",
+          "supporting_review_count": 1
+        },
+        {
+          "topic": "coffee_tasting",
+          "supporting_review_count": 1
+        }
+      ]
+    },
+    {
+      "month": "2026-05",
+      "review_count": 26,
+      "average_rating": 4.31,
+      "change_from_previous_month": -0.19,
+      "top_positive_topics": [
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 5
+        },
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 4
+        },
+        {
+          "topic": "local_culture",
+          "supporting_review_count": 3
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "coffee_roasting",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 2
+        }
+      ]
+    },
+    {
+      "month": "2026-06",
+      "review_count": 27,
+      "average_rating": 3.96,
+      "change_from_previous_month": -0.35,
+      "top_positive_topics": [
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 5
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 5
+        },
+        {
+          "topic": "group_size",
+          "supporting_review_count": 4
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 4
+        },
+        {
+          "topic": "coffee_tasting",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "transportation",
+          "supporting_review_count": 2
+        }
+      ]
+    },
+    {
+      "month": "2026-07",
+      "review_count": 28,
+      "average_rating": 3.68,
+      "change_from_previous_month": -0.28,
+      "top_positive_topics": [
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 6
+        },
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 4
+        },
+        {
+          "topic": "group_size",
+          "supporting_review_count": 3
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 5
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "coffee_roasting",
+          "supporting_review_count": 3
+        }
+      ]
+    },
+    {
+      "month": "2026-08",
+      "review_count": 26,
+      "average_rating": 3.81,
+      "change_from_previous_month": 0.13,
+      "top_positive_topics": [
+        {
+          "topic": "group_size",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 3
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "timing_pacing",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "tour_difficulty",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "coffee_tasting",
+          "supporting_review_count": 2
+        }
+      ]
+    },
+    {
+      "month": "2026-09",
+      "review_count": 20,
+      "average_rating": 4.7,
+      "change_from_previous_month": 0.89,
+      "top_positive_topics": [
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 3
+        },
+        {
+          "topic": "facilities",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "scenery",
+          "supporting_review_count": 2
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "price_value",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "coffee_tasting",
+          "supporting_review_count": 1
+        },
+        {
+          "topic": "coffee_roasting",
+          "supporting_review_count": 1
+        }
+      ]
+    },
+    {
+      "month": "2026-10",
+      "review_count": 17,
+      "average_rating": 4.82,
+      "change_from_previous_month": 0.12,
+      "top_positive_topics": [
+        {
+          "topic": "coffee_tasting",
+          "supporting_review_count": 11
+        },
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 2
+        }
+      ],
+      "top_negative_topics": []
+    },
+    {
+      "month": "2026-11",
+      "review_count": 12,
+      "average_rating": 4.83,
+      "change_from_previous_month": 0.01,
+      "top_positive_topics": [
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 4
+        },
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "local_culture",
+          "supporting_review_count": 2
+        }
+      ],
+      "top_negative_topics": [
+        {
+          "topic": "coffee_tasting",
+          "supporting_review_count": 1
+        },
+        {
+          "topic": "price_value",
+          "supporting_review_count": 1
+        }
+      ]
+    },
+    {
+      "month": "2026-12",
+      "review_count": 11,
+      "average_rating": 4.82,
+      "change_from_previous_month": -0.01,
+      "top_positive_topics": [
+        {
+          "topic": "farm_tour_content",
+          "supporting_review_count": 4
+        },
+        {
+          "topic": "guide_quality",
+          "supporting_review_count": 2
+        },
+        {
+          "topic": "local_culture",
+          "supporting_review_count": 2
+        }
+      ],
+      "top_negative_topics": []
+    }
+  ],
+  "plans": [
+    {
+      "id": "3353d353-b17e-5994-9ba9-148dc5f4e9e3",
+      "user_id": "ecb26c11-fa93-4930-8ec7-c6b9c52732d6",
+      "key": "information_signage:negative",
+      "topic": "information_signage",
+      "title": "Clearer directions to Noor's farm",
+      "description": "Send clearer farm directions before arrival and add signs at the final turn.",
+      "status": "trying",
+      "created_at": "2026-05-01T00:00:00+00:00",
+      "started_at": "2026-05-01T00:00:00+00:00",
+      "updated_at": "2026-05-01T00:00:00+00:00",
+      "is_synthetic": true,
+      "synthetic_business": "Noor's Coffee Farm",
+      "review_count_at_start": 58,
+      "average_rating_at_start": 4.6,
+      "topic_count_at_start": 7,
+      "review_ids_at_start": [
+        "401d75d3-6082-50c5-bf6b-8ab77d27bd4b",
+        "8b021bc3-5ec0-5cb3-bdf9-f99f0d637507",
+        "bc5ae22d-21fb-5ad2-8fa5-327dfb3e44af",
+        "7252f004-43ea-52a9-a69e-5395f638d92d",
+        "b6f427a3-07b2-5a5d-aade-9d19cf1593af",
+        "4a851265-7616-522a-b992-7cefdab2dcb9",
+        "b3e78ec9-a574-523d-aad5-121b36005ac8",
+        "17a7ac39-6818-5a03-8049-9897ddfb50f6",
+        "59b10ce8-c206-5f74-a404-d5bf319ad3ef",
+        "a4c52786-9d10-57e6-b2a1-3644d4479ea4",
+        "c0f479b8-28c3-5bf0-ba28-2a97b6a32062",
+        "5b02a7ce-e954-5d49-93c8-e3a91eb1858d",
+        "5163b4fc-c056-5cc0-a4db-8ae1ecea7721",
+        "86f48122-8972-5a03-be61-da98f10bdd14",
+        "76b52522-9fb2-52c9-8154-ff63ec38c6d3",
+        "f32b825f-5177-5bb9-b272-a448b72ea87a",
+        "41284cae-7906-5b2c-89b8-435b56e9648b",
+        "5b7dcc76-449b-5a26-be50-8c8f91df87fe",
+        "ef68c08b-4603-5012-b746-1aa4136050a0",
+        "75686721-8aed-575c-9000-93717f8655dd",
+        "f62cbdcb-f410-51ef-91b6-e066e07afdd1",
+        "19194e56-f4cb-5283-84c6-c1dbafc5fb0c",
+        "97c68ebe-0ea9-5446-9b1d-1fc1ab4a8b35",
+        "62416834-da15-5bf0-b42f-0e8a8d881c2c",
+        "86916848-1551-5852-aa1e-21d2016fa8ad",
+        "453fbede-d363-57f5-92e5-dd244e1494ea",
+        "8cc6d138-2693-5315-839c-3f4f3fb3e465",
+        "425d0598-a3a4-5689-ac54-9194e9205daa",
+        "37b78fb0-e218-5cd0-8cbd-117b239985c1",
+        "8ffa388c-0665-5648-9b2b-62d0f4c5a7ca",
+        "de462cde-5525-5339-9032-303751b3cdc9",
+        "a00b5273-e4e1-5cbf-82c5-8d9d8fd79b7b",
+        "b30c45b3-df68-596b-9203-f9cd56bfa0ba",
+        "b17d1b8f-9209-5f8c-8132-23a83bb7f279",
+        "26b3d508-a2a5-5d64-925d-ae0984d4d31c",
+        "4d8b2f2a-8fd1-56ec-bcc6-34e33a70f184",
+        "3f2cd871-c9d4-5149-85d0-6661c5241834",
+        "7ae652e6-4874-59e0-98c0-97c96546613a",
+        "005c56ba-0efd-5030-b9a7-e91e85aa0f02",
+        "85362610-cef0-5ba6-84ba-7e6e5ca281f4",
+        "4a62890e-efee-5a07-9b84-921ef342d818",
+        "2ddc4261-e73f-59e1-8820-eda407585a9d",
+        "0425a7c2-ee28-5f37-bd3e-15669d86da2a",
+        "55cdae6b-97fe-5e0b-8e56-8d8db1787ff5",
+        "bd60aeae-20bb-581b-9b6c-50f533e9b373",
+        "5a6b7dce-4842-5711-96b1-c42cfb926718",
+        "0d3b9778-6c90-543b-b6f3-9423c2ec9c46",
+        "f71b1fe5-fc74-5c0d-8a20-0214fe7c03d9",
+        "00808c10-43e8-5e31-a472-06b6a70199d9",
+        "2c114692-e8ca-5d4e-b596-7094d39d21c0",
+        "94e44dbe-576b-5a77-b83c-6a8063152ce7",
+        "2307f625-9658-58c8-a238-bdfdb0aca972",
+        "6f910a27-882e-5994-8ded-3e282a7f1804",
+        "57e1e9d3-992c-5a9d-b199-6c77ba14ccaa",
+        "6cc479f7-d691-5a10-a0d2-364612428417",
+        "c047bc37-17cb-5863-938b-1fcb001549e4",
+        "377c6e6f-74ee-5fc4-8152-8af946cf2630",
+        "df3e8495-8084-5f40-b0d1-76d61a083450"
+      ],
+      "progress": {
+        "waiting": false,
+        "n": 167,
+        "c": 0,
+        "total": 167,
+        "res": "better",
+        "average_rating_after": 4.24
+      }
+    }
+  ],
+  "processing": "Local OPUS translation and MiniLM classification via shared review_pipeline; no topic overrides.",
+  "future_dates": "Full simulated year; future dates are deliberate demo records, not real visitor submissions."
+}

@@ -1,0 +1,106 @@
+{
+  "sample_count": 1500,
+  "topic_review_matches": {
+    "staff_service": 438,
+    "price_value": 148,
+    "accessibility": 24,
+    "coffee_tasting": 107,
+    "facilities": 129,
+    "guide_quality": 190,
+    "scenery": 109,
+    "information_signage": 21,
+    "transportation": 162,
+    "coffee_roasting": 20,
+    "farm_tour_content": 13,
+    "local_culture": 25,
+    "timing_pacing": 29,
+    "souvenirs": 10,
+    "group_size": 37,
+    "tour_difficulty": 22,
+    "coffee_education": 5
+  },
+  "top_categories": [
+    [
+      "Arts & Entertainment",
+      598
+    ],
+    [
+      "Food",
+      539
+    ],
+    [
+      "Local Flavor",
+      505
+    ],
+    [
+      "Restaurants",
+      402
+    ],
+    [
+      "Active Life",
+      399
+    ],
+    [
+      "Hotels & Travel",
+      383
+    ],
+    [
+      "Nightlife",
+      346
+    ],
+    [
+      "Tours",
+      333
+    ],
+    [
+      "Event Planning & Services",
+      280
+    ],
+    [
+      "Bars",
+      275
+    ],
+    [
+      "Museums",
+      214
+    ],
+    [
+      "Venues & Event Spaces",
+      182
+    ],
+    [
+      "Shopping",
+      181
+    ],
+    [
+      "Parks",
+      160
+    ],
+    [
+      "Wineries",
+      137
+    ],
+    [
+      "American (New)",
+      132
+    ],
+    [
+      "Coffee & Tea",
+      125
+    ],
+    [
+      "American (Traditional)",
+      112
+    ],
+    [
+      "Public Services & Government",
+      103
+    ],
+    [
+      "Amusement Parks",
+      99
+    ]
+  ],
+  "method": "Case-insensitive whole-phrase review counts; no raw text retained. Thresholds are application defaults, not calibrated probabilities.",
+  "taxonomy_decisions": "Coffee-farm specialization requested for Noor's demo: 17 active topics distinguish education, roasting, tasting, farm content, scenery and culture. Four legacy topic names retain read-time aliases. Yelp counts assess phrase coverage; coffee-specific categories and advice are business requirements, not inferred training labels."
+}

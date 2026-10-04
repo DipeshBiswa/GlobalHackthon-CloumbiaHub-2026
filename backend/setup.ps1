@@ -21,5 +21,8 @@ if (-not (Test-Path (Join-Path $VenvDir "Scripts\python.exe"))) {
 $VenvPython = Join-Path $VenvDir "Scripts\python.exe"
 & $VenvPython -m pip install --upgrade pip
 & $VenvPython -m pip install -r (Join-Path $ProjectDir "requirements.txt")
+if ($LASTEXITCODE -ne 0) { throw "Dependency installation failed." }
+& $VenvPython (Join-Path $ProjectDir "tools\prepare_offline.py")
+if ($LASTEXITCODE -ne 0) { throw "Offline model preparation failed." }
 
-Write-Host "Environment ready. Run .\download_model.ps1 while online, then .\run_offline.ps1."
+Write-Host "Echo ready. Run .\run_offline.ps1, then open http://127.0.0.1:8000."

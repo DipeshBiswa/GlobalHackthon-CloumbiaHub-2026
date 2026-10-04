@@ -2,6 +2,12 @@
 
 from dataclasses import dataclass
 from pathlib import Path
+import os
+import re
+
+os.environ["HF_HUB_OFFLINE"] = "1"
+os.environ["TRANSFORMERS_OFFLINE"] = "1"
+from knowledge import RULES
 
 import torch
 from transformers import AutoModel, AutoTokenizer
@@ -22,6 +28,7 @@ TOPICS = {
     "accessibility": "accessibility, mobility, seating, shade, or restroom needs",
     "souvenirs": "buying products or souvenirs to take home",
 }
+TOPICS = {key: rule["description"] for key, rule in RULES["topics"].items()}
 
 
 @dataclass(frozen=True)
@@ -73,3 +80,54 @@ class InsightModel:
             topic=list(TOPICS)[index],
             score=float(scores[0, index].item()),
         )
+
+    def classify_review(self, favorite, improvement, rating):
+        """Clause-level multi-topic evidence on original English, never translated text.
+
+        Cosine similarity is a score, not a calibrated probability. Exact phrase
+        evidence supplements MiniLM; ambiguous semantic-only matches abstain.
+        """
+        predictions = []
+        uncertain = []
+        for field, text in [("favorite", favorite), ("better", improvement)]:
+            clauses = [c.strip() for c in re.split(r"[.!?;]|\bbut\b|\bhowever\b|,|\band\b", text, flags=re.I) if c.strip()]
+            if not clauses:
+                continue
+            vectors = self._embed(clauses) @ self.topic_vectors.T
+            for clause, scores in zip(clauses, vectors):
+                ranked = sorted(zip(TOPICS, scores.tolist()), key=lambda x: -x[1])
+                matches = []
+                for topic, rule in RULES["topics"].items():
+                    phrase = next((p for p in rule["phrases"] if re.search(r"\b" + re.escape(p) + r"\b", clause, re.I)), None)
+                    score = float(scores[list(TOPICS).index(topic)])
+                    if phrase and score >= RULES["phrase_threshold"]:
+                        matches.append((topic, score, phrase, "phrase+minilm"))
+                if not matches and ranked[0][1] >= RULES["semantic_threshold"] and ranked[0][1] - ranked[1][1] >= RULES["semantic_margin"]:
+                    matches = [(ranked[0][0], ranked[0][1], "", "minilm")]
+                if not matches:
+                    uncertain.append({"text": clause, "field": field, "topic": ranked[0][0], "classifier_score": round(ranked[0][1], 4)})
+                for topic, score, phrase, method in matches:
+                    sentiment = sentiment_of(clause, rating, field)
+                    predictions.append({"topic": topic, "sentiment": sentiment, "classifier_score": round(score, 4), "phrase": phrase, "field": field, "evidence": clause, "method": method})
+        unique = {}
+        for p in predictions:
+            key = (p["topic"], p["sentiment"])
+            if key not in unique or p["classifier_score"] > unique[key]["classifier_score"]:
+                unique[key] = p
+        return {"topics": list(unique.values()), "uncertain": uncertain,
+                "classification_status": "classified" if unique else "not_sure"}
+
+
+def sentiment_of(text, rating, field):
+    lower = text.lower()
+    if re.search(r"\b(no|without) (crowds|trash|wait|waiting)\b", lower):
+        return "positive"
+    if re.search(r"\b(not|never) (good|great|friendly|clean|helpful|worth)\b|too steep|too long|not enough|couldn't|\b(rushed|tiring|dirty|rude|overpriced|expensive|pricey|slippery|broken|bad|poor|hard|difficult)\b", lower):
+        return "negative"
+    if re.search(r"\b(please|wish|wanted|need|add|offer)\b|would love|more time", lower):
+        return "request"
+    if re.search(r"\b(great|excellent|wonderful|friendly|knowledgeable|kind|beautiful|delicious|helpful|clean|loved|liked|enjoyed|amazing|good|comfortable|personal|welcoming|welcomed|relaxed|perfectly|thoughtful|worth|easy|appreciated|peaceful|lovely)\b|like being invited", lower):
+        return "positive"
+    if field == "better":
+        return "negative"
+    return "positive" if rating >= 4 else "negative" if rating <= 2 else "neutral"

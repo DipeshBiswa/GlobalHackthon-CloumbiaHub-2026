@@ -24,6 +24,7 @@ function reviewFromBackend(review) {
     translationEn: null,
     translationSw: { favorite: review.favorite, improvement: review.improvement },
     synthetic: Boolean(review.is_demo),
+    forceNotSure: Boolean(review.force_not_sure),
   };
 }
 

@@ -44,6 +44,7 @@ class TranslatedReview:
     improvement: str
     original_favorite: str = ""
     original_improvement: str = ""
+    force_not_sure: bool = False
 
     def __post_init__(self) -> None:
         if self.language != "sw":

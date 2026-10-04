@@ -70,6 +70,7 @@ class TranslatedReviewPayload(BaseModel):
     improvement: str
     original_favorite: str = ""
     original_improvement: str = ""
+    force_not_sure: bool = False
     is_demo: bool = False
 
     @classmethod
@@ -82,6 +83,7 @@ class TranslatedReviewPayload(BaseModel):
             improvement=review.improvement,
             original_favorite=review.original_favorite,
             original_improvement=review.original_improvement,
+            force_not_sure=review.force_not_sure,
         )
 
 

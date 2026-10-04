@@ -54,4 +54,5 @@ def review_to_dict(review: TranslatedReview) -> dict[str, Any]:
         "improvement": review.improvement,
         "original_favorite": review.original_favorite,
         "original_improvement": review.original_improvement,
+        "force_not_sure": review.force_not_sure,
     }

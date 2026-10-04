@@ -312,6 +312,7 @@ function findKeyword(text, kws) {
 function classify(r) {
   const out = { ...r };
   if (r.manualLabels) { out.labels = r.manualLabels; out.status = "analyzed"; return out; }
+  if (r.forceNotSure) { out.labels = []; out.status = "not_sure"; out.reason = "unclear_feedback"; return out; }
   if (r.lang === "other") { out.labels = []; out.status = r.checked ? "checked" : "not_sure"; out.reason = "unsupported_language"; return out; }
   const labels = [];
   for (const [topic, kws] of Object.entries(KEYWORDS)) {

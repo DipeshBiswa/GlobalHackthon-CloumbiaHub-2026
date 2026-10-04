@@ -1,5 +1,10 @@
+import os
 from pathlib import Path
 from time import perf_counter
+
+# Prevent Transformers from attempting any Hub or network access.
+os.environ.setdefault("HF_HUB_OFFLINE", "1")
+os.environ.setdefault("TRANSFORMERS_OFFLINE", "1")
 
 import torch
 from transformers import MarianMTModel, MarianTokenizer
@@ -8,6 +13,14 @@ from review import Review, TranslatedReview
 
 MODEL_DIR = Path(__file__).resolve().parent / "models" / "opus-en-sw"
 DEVICE = "mps" if torch.backends.mps.is_available() else "cpu"
+
+if not (MODEL_DIR / "config.json").is_file() or not (
+    MODEL_DIR / "model.safetensors"
+).is_file():
+    raise FileNotFoundError(
+        f"Offline translation model is missing from {MODEL_DIR}. "
+        "Run download_opus.py while online before using the API offline."
+    )
 
 print(f"Loading English → Kiswahili model on: {DEVICE}")
 

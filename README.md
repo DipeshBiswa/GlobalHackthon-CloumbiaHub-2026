@@ -65,6 +65,8 @@ English text. Insights classify the original English text, avoiding the
 language mismatch between translated review content and English topic labels.
 The Noor frontend also loads those original fields for its local topic
 labels, while displaying the Kiswahili fields as translations.
+Monthly performance uses the current calendar year, so reviews submitted in
+the current year appear in the month picker and review table.
 
 To reset the local test store, replace `backend/translated_reviews.json` with
 an empty JSON array (`[]`) and submit new reviews through the frontend or the

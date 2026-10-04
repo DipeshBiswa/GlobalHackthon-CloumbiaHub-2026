@@ -9,6 +9,7 @@ const SEED=[{"id": "h1_0", "date": "2025-01-04", "lang": "en", "stars": 4, "favo
 /* ===== Echo prototype: data, i18n and simulated on-device AI ===== */
 const todayDate = new Date();
 const TODAY = todayDate.toISOString().slice(0, 10);
+const REPORT_YEAR = TODAY.slice(0, 4);
 const weekStartDate = new Date(todayDate);
 weekStartDate.setDate(todayDate.getDate() - 6);
 const WEEK_START = weekStartDate.toISOString().slice(0, 10);
@@ -964,8 +965,8 @@ function Perf({ ctx }) {
 function PerfBody({ ctx }) {
   const { t, L, reviews, db, monthIdx } = ctx;
   const mm = String(monthIdx + 1).padStart(2, "0");
-  const list = reviews.filter((r) => r.date.startsWith("2025-" + mm)).sort((a, b) => (b.date > a.date ? 1 : -1));
-  const prevList = reviews.filter((r) => r.date.startsWith("2025-" + String(monthIdx).padStart(2, "0")));
+  const list = reviews.filter((r) => r.date.startsWith(`${REPORT_YEAR}-${mm}`)).sort((a, b) => (b.date > a.date ? 1 : -1));
+  const prevList = reviews.filter((r) => r.date.startsWith(`${REPORT_YEAR}-${String(monthIdx).padStart(2, "0")}`));
   const avg = list.length ? list.reduce((a, r) => a + r.stars, 0) / list.length : 0;
   const pavg = prevList.length ? prevList.reduce((a, r) => a + r.stars, 0) / prevList.length : null;
   const mName = MONTHS[L][monthIdx]; const pName = MONTHS[L][(monthIdx + 11) % 12];
@@ -979,7 +980,7 @@ function PerfBody({ ctx }) {
   const diff = pavg != null && list.length ? Math.round((avg - pavg) * 10) / 10 : null;
   return html`<${Inner} title=${t("perf")} back=${t("home")} onBack=${() => ctx.go("home", {}, "back")}>
     <div class="field"><span class="lbl" id="ml">${t("month")}</span>
-      <button class="input datefield" aria-labelledby="ml" onClick=${() => ctx.setSheet({ type: "month" })}><span>${mName} 2025</span><${Icon} n="chevron-down" /></button></div>
+      <button class="input datefield" aria-labelledby="ml" onClick=${() => ctx.setSheet({ type: "month" })}><span>${mName} ${REPORT_YEAR}</span><${Icon} n="chevron-down" /></button></div>
     <div key=${monthIdx} class="fadein stack24" style=${{ marginTop: 24 }}>
     ${!list.length ? html`<${Empty} title=${t("noMonth")} body=${t("pickAnother")} />` : html`
       <div class="perf-top"><span class="sec">${t("perfWas")}</span>
@@ -1031,12 +1032,12 @@ function DateSheet({ ctx, close }) {
   const title = first.toLocaleDateString(s.locale, { month: "long", year: "numeric" });
   const wd = [...Array(7)].map((_, i) => new Date(2026, 5, 1 + i).toLocaleDateString(s.locale, { weekday: "narrow" }));
   const shift = (n) => { const d = new Date(y, m - 1 + n, 1); setYm(d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0")); };
-  const canNext = ym < "2025-12"; const canPrev = ym > "2025-01";
+  const canNext = ym < `${REPORT_YEAR}-12`; const canPrev = ym > `${REPORT_YEAR}-01`;
   return html`<${Sheet} title=${s.date} close=${close} foot=${html`<button class="btn btn-primary" onClick=${() => { ctx.setForm((f) => ({ ...f, date: pick })); close(); }}>${s.ok}</button>`}>
     <div class="cal-head"><button class="icon-btn" aria-label="Previous month" disabled=${!canPrev} onClick=${() => shift(-1)}><${Icon} n="chevron-left" /></button><span class="h3">${title}</span>
       <button class="icon-btn" aria-label="Next month" disabled=${!canNext} onClick=${() => shift(1)}><${Icon} n="chevron-right" /></button></div>
     <div class="cal">${wd.map((w, i) => html`<span key=${"w" + i} class="cal-wd">${w}</span>`)}${[...Array(offset)].map((_, i) => html`<span key=${"e" + i}></span>`)}
-      ${[...Array(days)].map((_, i) => { const iso = `${ym}-${String(i + 1).padStart(2, "0")}`; const fut = !iso.startsWith("2025-");
+      ${[...Array(days)].map((_, i) => { const iso = `${ym}-${String(i + 1).padStart(2, "0")}`; const fut = !iso.startsWith(`${REPORT_YEAR}-`);
         return html`<button key=${iso} class=${"cal-day" + (iso === pick ? " sel" : "") + (iso === TODAY ? " today" : "")} disabled=${fut} onClick=${() => setPick(iso)} aria-pressed=${iso === pick}>${i + 1}</button>`; })}</div>
   </${Sheet}>`;
 }
@@ -1046,9 +1047,9 @@ function SheetHost({ sheet, ctx, close }) {
   if (sheet.type === "discard") { const s = V[ctx.form.lang] || V.en;
     return html`<${Sheet} title=${s.discardTitle} close=${close} foot=${html`<div class="stack8"><button class="btn btn-primary" onClick=${close}>${s.keep}</button><button class="btn-text danger center" onClick=${() => { close(); sheet.onDiscard(); }}>${s.discard}</button></div>`}><p class="sec">${s.discardBody}</p></${Sheet}>`; }
   if (sheet.type === "month") { return html`<${Sheet} title=${t("chooseMonth")} close=${close}><div class="monthlist">${MONTHS[L].map((m, i) => {
-      const n = ctx.reviews.filter((r) => r.date.startsWith("2025-" + String(i + 1).padStart(2, "0"))).length;
+      const n = ctx.reviews.filter((r) => r.date.startsWith(`${REPORT_YEAR}-${String(i + 1).padStart(2, "0")}`)).length;
       return html`<button key=${i} class=${"monthrow" + (i === ctx.monthIdx ? " on" : "")} onClick=${() => { ctx.setMonthIdx(i); close(); }}>
-        <span class="grow"><span class="h4">${m} 2025</span><span class=${"cap" + (n ? "" : " tertiary")}>${n ? t("nReviews", { n }) : t("noRev")}</span></span>${i === ctx.monthIdx ? html`<${Icon} n="check" cls="brand" />` : null}</button>`; })}</div></${Sheet}>`; }
+      <span class="grow"><span class="h4">${m} ${REPORT_YEAR}</span><span class=${"cap" + (n ? "" : " tertiary")}>${n ? t("nReviews", { n }) : t("noRev")}</span></span>${i === ctx.monthIdx ? html`<${Icon} n="check" cls="brand" />` : null}</button>`; })}</div></${Sheet}>`; }
   if (sheet.type === "review") { const r = ctx.reviews.find((x) => x.id === sheet.id); if (!r) return null;
     return html`<${Sheet} title=${t("review")} close=${close} foot=${html`<button class="btn btn-primary" onClick=${close}>${t("done")}</button>`}><${ReviewCard} r=${r} ctx=${ctx} menu=${false} /></${Sheet}>`; }
   if (sheet.type === "delete") return html`<${Sheet} title=${t("delTitle")} close=${close} foot=${html`<div class="stack8"><button class="btn btn-primary" onClick=${close}>${t("keep")}</button>

@@ -4,6 +4,7 @@ from datetime import date
 from typing import Annotated
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, field_validator
 
 from review import Review, TranslatedReview
@@ -16,6 +17,12 @@ app = FastAPI(
     title="Review Translation API",
     description="Translate English tour reviews into Kiswahili.",
     version="1.0.0",
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 insight_model = None
 

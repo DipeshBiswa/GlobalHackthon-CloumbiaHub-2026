@@ -474,8 +474,33 @@ function App() {
 
   /* ---------- mutations ---------- */
   const upd = (fn) => setDb((d) => fn(structuredClone(d)));
-  function addReview(f) {
-    upd((d) => { d.seq += 1; d.reviews.push({ id: "v" + d.seq, seq: d.seq, date: f.date, lang: f.lang, stars: f.stars, favorite: f.fav.trim(), better: f.better.trim(), shareConsent: f.share, translationEn: null }); d.pending += 1; return d; });
+  async function addReview(f) {
+    const translated = await translateReviewWithBackend({
+      stars: f.stars,
+      date: f.date,
+      favorite: f.fav.trim(),
+      better: f.better.trim(),
+    });
+    upd((d) => {
+      d.seq += 1;
+      d.reviews.push({
+        id: "v" + d.seq,
+        seq: d.seq,
+        date: f.date,
+        lang: f.lang,
+        stars: f.stars,
+        favorite: f.fav.trim(),
+        better: f.better.trim(),
+        shareConsent: f.share,
+        translationEn: null,
+        translationSw: {
+          favorite: translated.favorite,
+          improvement: translated.improvement,
+        },
+      });
+      d.pending += 1;
+      return d;
+    });
   }
   function planDecision(key, status) {
     const g = weekGroups[key] || [];
@@ -577,7 +602,21 @@ function Form({ ctx }) {
       return;
     }
     setForm((f) => ({ ...f, saving: true }));
-    setTimeout(() => { ctx.addReview(form); ctx.setThanksLang(form.lang); setForm(blankForm()); ctx.setKb(false); ctx.go("thanks", {}, "fade"); }, 400);
+    ctx.addReview(form)
+      .then(() => {
+        ctx.setThanksLang(form.lang);
+        setForm(blankForm());
+        ctx.setKb(false);
+        ctx.go("thanks", {}, "fade");
+      })
+      .catch((error) => {
+        console.error(error);
+        setForm((f) => ({
+          ...f,
+          saving: false,
+          errors: { ...f.errors, backend: "Could not save your review. Please try again." },
+        }));
+      });
   }
   const grow = (el) => { el.style.height = "auto"; el.style.height = Math.min(el.scrollHeight + 2, 6 * 24 + 30) + "px"; };
   const back = () => { const doIt = () => { setForm(blankForm()); ctx.go("language", {}, "back"); }; if (ctx.form.stars || ctx.form.fav.trim() || ctx.form.better.trim() || ctx.form.share) ctx.setSheet({ type: "discard", onDiscard: doIt }); else doIt(); };
@@ -982,4 +1021,3 @@ function SheetHost({ sheet, ctx, close }) {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(html`<${App} />`);
-

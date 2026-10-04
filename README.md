@@ -39,6 +39,11 @@ cd backend
 The two download commands require Wi-Fi only the first time. The server runs
 locally at `http://127.0.0.1:8000`.
 
+Open `frontend/index.html` in a browser while the backend is running. The
+visitor review form sends submissions to the local translation API, and the
+backend saves the translated result in `backend/translated_reviews.json`.
+The frontend includes a local API helper in `frontend/api.js`.
+
 ## API endpoints
 
 - `GET /health`

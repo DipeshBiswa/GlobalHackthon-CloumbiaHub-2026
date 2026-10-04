@@ -26,9 +26,7 @@ virtual environments are machine-specific.
 Windows PowerShell:
 
 ```powershell
-py -m venv .venv
-.venv\Scripts\python -m pip install --upgrade pip
-.venv\Scripts\python -m pip install -r requirements.txt
+.\setup.ps1
 ```
 
 ### 3. Download the model once while online
@@ -45,7 +43,7 @@ macOS/Linux:
 Windows PowerShell:
 
 ```powershell
-.venv\Scripts\python download_opus.py
+.\download_model.ps1
 ```
 
 This creates `models/opus-en-sw/`. Keep that directory on the computer; it is
@@ -62,9 +60,7 @@ macOS/Linux:
 Windows PowerShell:
 
 ```powershell
-$env:HF_HUB_OFFLINE="1"
-$env:TRANSFORMERS_OFFLINE="1"
-.venv\Scripts\uvicorn.exe --app-dir . api:app --host 127.0.0.1 --port 8000
+.\run_offline.ps1
 ```
 
 The API is available at `http://127.0.0.1:8000`. Open
@@ -78,12 +74,29 @@ The API is available at `http://127.0.0.1:8000`. Open
 - `GET /reviews/translated` reads saved translations from
   `translated_reviews.json`.
 
-Example request:
+Example request on macOS/Linux:
 
 ```bash
 curl -X POST http://127.0.0.1:8000/reviews/translate \
   -H "Content-Type: application/json" \
   -d '{"rating":5,"language":"en","date":"2026-10-03","favorite":"The guide was friendly.","improvement":"Add more time."}'
+```
+
+Example request in Windows PowerShell:
+
+```powershell
+$body = @{
+  rating = 5
+  language = "en"
+  date = "2026-10-03"
+  favorite = "The guide was friendly."
+  improvement = "Add more time."
+} | ConvertTo-Json
+
+Invoke-RestMethod -Method Post `
+  -Uri http://127.0.0.1:8000/reviews/translate `
+  -ContentType "application/json" `
+  -Body $body
 ```
 
 The translated reviews are stored locally in `translated_reviews.json`.

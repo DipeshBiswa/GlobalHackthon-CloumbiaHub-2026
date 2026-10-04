@@ -68,6 +68,8 @@ class TranslatedReviewPayload(BaseModel):
     date: date
     favorite: str
     improvement: str
+    original_favorite: str = ""
+    original_improvement: str = ""
 
     @classmethod
     def from_review(cls, review: TranslatedReview) -> "TranslatedReviewPayload":
@@ -77,6 +79,8 @@ class TranslatedReviewPayload(BaseModel):
             date=review.date,
             favorite=review.favorite,
             improvement=review.improvement,
+            original_favorite=review.original_favorite,
+            original_improvement=review.original_improvement,
         )
 
 

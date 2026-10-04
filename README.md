@@ -63,6 +63,8 @@ Translated reviews are saved in `backend/translated_reviews.json`.
 Each new saved review keeps both the Kiswahili translation and the original
 English text. Insights classify the original English text, avoiding the
 language mismatch between translated review content and English topic labels.
+The Noor frontend also loads those original fields for its local topic
+labels, while displaying the Kiswahili fields as translations.
 
 ## Example request
 

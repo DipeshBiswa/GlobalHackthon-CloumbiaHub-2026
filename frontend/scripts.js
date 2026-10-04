@@ -435,10 +435,10 @@ function App() {
           id: `backend-${index + 1}`,
           seq: index + 1,
           date: review.date,
-          lang: "sw",
+          lang: review.original_favorite ? "en" : "sw",
           stars: review.rating,
-          favorite: review.favorite,
-          better: review.improvement,
+          favorite: review.original_favorite || review.favorite,
+          better: review.original_improvement || review.improvement,
           shareConsent: false,
           translationEn: null,
           translationSw: {

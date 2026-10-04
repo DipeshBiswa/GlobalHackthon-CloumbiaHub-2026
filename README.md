@@ -1,5 +1,9 @@
 # Echo — offline visitor feedback
 
+Echo is a **working design prototype for an app**. It demonstrates the intended
+interface, visitor feedback workflows, and local AI processing through a
+phone-style browser interface running on a computer.
+
 Echo helps Noor understand feedback about her coffee farm. Visitors submit a rating,
 their favorite part, and what could improve. Local OPUS translates English into
 Kiswahili, and local MiniLM classifies the original English into coffee-farm topics.
@@ -8,7 +12,14 @@ advice library. It includes bilingual reviews, manual corrections, monthly
 performance, and plans with before/after tracking.
 
 A local FastAPI server serves the frontend and API. SQLite saves each account's
-reviews and plans. **Normal use works offline after the one-time online setup.**
+reviews and plans. **Local use works offline after the one-time online setup.**
+
+## Online published prototype
+
+Try the [published Echo prototype on Replit](https://global-hackthon-cloumbia-hub-2026--db4048.replit.app/).
+
+The hosted prototype requires an internet connection. To use Echo without Wi-Fi,
+follow the local setup instructions below.
 
 ## One-time online setup
 
@@ -371,5 +382,3 @@ store. Echo's frontend uses the SQLite `/api/` routes.
 See [the offline implementation report](docs/OFFLINE_IMPLEMENTATION.md) for rules,
 thresholds, provenance and limitations, and [the demo documentation](docs/SYNTHETIC_DEMO.md)
 for the fictional full-year data.
-
-FOr testing purposes 

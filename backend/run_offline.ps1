@@ -4,6 +4,10 @@ $ProjectDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $Uvicorn = Join-Path $ProjectDir ".venv\Scripts\uvicorn.exe"
 
 if (-not (Test-Path $Uvicorn)) {
+    $Uvicorn = Join-Path $ProjectDir "..\.venv\Scripts\uvicorn.exe"
+}
+
+if (-not (Test-Path $Uvicorn)) {
     throw "No .venv found. Run .\setup.ps1 first."
 }
 

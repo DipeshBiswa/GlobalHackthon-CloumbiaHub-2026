@@ -7,8 +7,12 @@ export TRANSFORMERS_OFFLINE=1
 
 if [ -x "$PROJECT_DIR/.venv/bin/uvicorn" ]; then
     UVICORN="$PROJECT_DIR/.venv/bin/uvicorn"
+elif [ -x "$PROJECT_DIR/../.venv/bin/uvicorn" ]; then
+    UVICORN="$PROJECT_DIR/../.venv/bin/uvicorn"
 elif [ -x "$PROJECT_DIR/myenv/bin/uvicorn" ]; then
     UVICORN="$PROJECT_DIR/myenv/bin/uvicorn"
+elif [ -x "$PROJECT_DIR/../myenv/bin/uvicorn" ]; then
+    UVICORN="$PROJECT_DIR/../myenv/bin/uvicorn"
 else
     echo "No virtual environment found. Run ./setup.sh first." >&2
     exit 1

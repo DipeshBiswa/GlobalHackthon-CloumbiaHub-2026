@@ -70,6 +70,7 @@ class TranslatedReviewPayload(BaseModel):
     improvement: str
     original_favorite: str = ""
     original_improvement: str = ""
+    is_demo: bool = False
 
     @classmethod
     def from_review(cls, review: TranslatedReview) -> "TranslatedReviewPayload":

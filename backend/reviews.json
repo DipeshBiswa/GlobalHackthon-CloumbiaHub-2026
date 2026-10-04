@@ -348,5 +348,1045 @@
     "date": "2026-07-19",
     "favorite": "The experience felt authentic rather than touristy.",
     "improvement": "I would love an option for an even smaller group."
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-01-01",
+    "favorite": "The guide was friendly and very knowledgeable.",
+    "improvement": "The tour could include a short rest break.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-01-03",
+    "favorite": "The museum collection was interesting.",
+    "improvement": "The tour felt rushed and started late.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-01-07",
+    "favorite": "The architecture tour was informative and well organized.",
+    "improvement": "A map of the route would be useful.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-01-09",
+    "favorite": "The historic building was impressive.",
+    "improvement": "The guide should speak more slowly and use a microphone.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-01-11",
+    "favorite": "The storytelling made the legends feel alive.",
+    "improvement": "A short booklet with the stories would be a great souvenir.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-01-13",
+    "favorite": "The sunset photography session was memorable.",
+    "improvement": "Please send weather updates before the session.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-01-15",
+    "favorite": "The tour was accessible and the staff were considerate.",
+    "improvement": "Please publish accessibility details in advance.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-01-17",
+    "favorite": "The experience felt authentic rather than touristy.",
+    "improvement": "I would love an option for an even smaller group.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-02-01",
+    "favorite": "The guide answered every question with patience.",
+    "improvement": "Nothing major needs improvement.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-02-03",
+    "favorite": "The photography stops were perfectly chosen.",
+    "improvement": "The tour could offer a professional photography option.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-02-05",
+    "favorite": "The botanical garden had an amazing variety of plants.",
+    "improvement": "The plant names could be displayed more clearly.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-02-07",
+    "favorite": "The community members were generous and welcoming.",
+    "improvement": "I would enjoy a longer conversation with the hosts.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-02-09",
+    "favorite": "The boat ride offered a different view of the city.",
+    "improvement": "The boat engine was noisy during the explanations.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-02-11",
+    "favorite": "The guide gave us a detailed explanation of the local ecosystem.",
+    "improvement": "The route could have clearer signs.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-02-13",
+    "favorite": "The walking route showed us places we would not have found alone.",
+    "improvement": "Please provide the route details before the tour.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-02-15",
+    "favorite": "The wildlife walk gave us several great sightings.",
+    "improvement": "Binoculars should be available for every guest.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-03-03",
+    "favorite": "The beach was peaceful and the guide was excellent.",
+    "improvement": "Please provide reusable water bottles.",
+    "is_demo": true
+  },
+  {
+    "rating": 1,
+    "language": "en",
+    "date": "2026-03-07",
+    "favorite": "The final viewpoint was beautiful.",
+    "improvement": "The tour was canceled late and the replacement was poorly organized.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-03-11",
+    "favorite": "The traditional dance performance was vibrant and exciting.",
+    "improvement": "The venue could have better visibility from the back.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-03-15",
+    "favorite": "The destination itself was worth visiting.",
+    "improvement": "The schedule changed without enough notice.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-03-19",
+    "favorite": "The guide shared fascinating stories about the community.",
+    "improvement": "The tour should start a little earlier.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-03-23",
+    "favorite": "The cultural explanations were thoughtful.",
+    "improvement": "There should be more seating along the route.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-03-27",
+    "favorite": "The guide was welcoming and made us feel safe.",
+    "improvement": "Adding a brief introduction about safety would help.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-04-01",
+    "favorite": "The guide remembered everyone's name and made the group feel connected.",
+    "improvement": "The check-in process could be faster.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-04-03",
+    "favorite": "The evening atmosphere and live music were wonderful.",
+    "improvement": "The event could include a few more tables.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-04-05",
+    "favorite": "The local food tasting was delicious.",
+    "improvement": "The meeting point was difficult to find.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-04-07",
+    "favorite": "The cooking demonstration was personal and engaging.",
+    "improvement": "I would have liked a printed recipe.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-04-09",
+    "favorite": "The music performance was the highlight of our evening.",
+    "improvement": "The seating arrangement could be more comfortable.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-04-11",
+    "favorite": "The craft workshop was creative and enjoyable.",
+    "improvement": "The materials ran out before everyone finished.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-04-13",
+    "favorite": "The guide gave excellent recommendations for the rest of our trip.",
+    "improvement": "A list of recommendations would be useful afterward.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-05-01",
+    "favorite": "The views from the lookout were incredible.",
+    "improvement": "More time for photos would be helpful.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-05-03",
+    "favorite": "The sunset over the river was beautiful.",
+    "improvement": "The transport pickup instructions could be clearer.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-05-05",
+    "favorite": "I enjoyed the visit to the community garden.",
+    "improvement": "The tour needed better organization between stops.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-05-07",
+    "favorite": "The river cruise was relaxing and scenic.",
+    "improvement": "A few more shade areas on the boat would be helpful.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-05-09",
+    "favorite": "The cycling route was scenic and enjoyable.",
+    "improvement": "The bicycles need more comfortable seats.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-05-11",
+    "favorite": "The tour gave us a meaningful connection to the local culture.",
+    "improvement": "Please offer this experience on more days.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-05-13",
+    "favorite": "Every stop was interesting and the pacing was excellent.",
+    "improvement": "The tour was excellent as it was.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-05-15",
+    "favorite": "I loved learning about the history of the old town.",
+    "improvement": "The group was a little too large.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-06-03",
+    "favorite": "The waterfall hike was challenging but rewarding.",
+    "improvement": "Please describe the hike difficulty more clearly.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-06-07",
+    "favorite": "I appreciated the small group size.",
+    "improvement": "The confirmation email should include parking information.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-06-11",
+    "favorite": "The local snacks were my favorite part.",
+    "improvement": "The tour should have more time at the food stops.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-06-15",
+    "favorite": "The guide had a great sense of humor.",
+    "improvement": "The itinerary should be shared at the beginning.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-06-19",
+    "favorite": "The handmade souvenir was a lovely reminder of the visit.",
+    "improvement": "More souvenir designs would be interesting.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-06-23",
+    "favorite": "The guide was friendly and very knowledgeable.",
+    "improvement": "The tour could include a short rest break.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-06-27",
+    "favorite": "The museum collection was interesting.",
+    "improvement": "The tour felt rushed and started late.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-07-01",
+    "favorite": "The storytelling made the legends feel alive.",
+    "improvement": "A short booklet with the stories would be a great souvenir.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-07-05",
+    "favorite": "The sunset photography session was memorable.",
+    "improvement": "Please send weather updates before the session.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-07-09",
+    "favorite": "The tour was accessible and the staff were considerate.",
+    "improvement": "Please publish accessibility details in advance.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-07-13",
+    "favorite": "The experience felt authentic rather than touristy.",
+    "improvement": "I would love an option for an even smaller group.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-07-17",
+    "favorite": "I enjoyed meeting local artists at the market.",
+    "improvement": "The audio system could be louder.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-07-21",
+    "favorite": "The guide answered every question with patience.",
+    "improvement": "Nothing major needs improvement.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-07-23",
+    "favorite": "The photography stops were perfectly chosen.",
+    "improvement": "The tour could offer a professional photography option.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-07-25",
+    "favorite": "The botanical garden had an amazing variety of plants.",
+    "improvement": "The plant names could be displayed more clearly.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-07-27",
+    "favorite": "The community members were generous and welcoming.",
+    "improvement": "I would enjoy a longer conversation with the hosts.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-07-02",
+    "favorite": "The boat ride offered a different view of the city.",
+    "improvement": "The boat engine was noisy during the explanations.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-08-01",
+    "favorite": "The boat ride offered a different view of the city.",
+    "improvement": "The boat engine was noisy during the explanations.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-03",
+    "favorite": "The guide gave us a detailed explanation of the local ecosystem.",
+    "improvement": "The route could have clearer signs.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-08-05",
+    "favorite": "The walking route showed us places we would not have found alone.",
+    "improvement": "Please provide the route details before the tour.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-07",
+    "favorite": "The wildlife walk gave us several great sightings.",
+    "improvement": "Binoculars should be available for every guest.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-09",
+    "favorite": "The market tour gave us a great taste of local life.",
+    "improvement": "More vegetarian tasting options would be nice.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-08-11",
+    "favorite": "The beach was peaceful and the guide was excellent.",
+    "improvement": "Please provide reusable water bottles.",
+    "is_demo": true
+  },
+  {
+    "rating": 1,
+    "language": "en",
+    "date": "2026-08-13",
+    "favorite": "The final viewpoint was beautiful.",
+    "improvement": "The tour was canceled late and the replacement was poorly organized.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-15",
+    "favorite": "The traditional dance performance was vibrant and exciting.",
+    "improvement": "The venue could have better visibility from the back.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-08-17",
+    "favorite": "The destination itself was worth visiting.",
+    "improvement": "The schedule changed without enough notice.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-19",
+    "favorite": "The guide shared fascinating stories about the community.",
+    "improvement": "The tour should start a little earlier.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-08-21",
+    "favorite": "The cultural explanations were thoughtful.",
+    "improvement": "There should be more seating along the route.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-08-23",
+    "favorite": "The guide was welcoming and made us feel safe.",
+    "improvement": "Adding a brief introduction about safety would help.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-25",
+    "favorite": "The neighborhood history was presented in an engaging way.",
+    "improvement": "The tour should include more historical photographs.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-08-27",
+    "favorite": "The small historical sites were hidden gems.",
+    "improvement": "The route should include more restroom breaks.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-08-02",
+    "favorite": "The guide remembered everyone's name and made the group feel connected.",
+    "improvement": "The check-in process could be faster.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-09-01",
+    "favorite": "The guide shared fascinating stories about the community.",
+    "improvement": "The tour should start a little earlier.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-09-03",
+    "favorite": "The cultural explanations were thoughtful.",
+    "improvement": "There should be more seating along the route.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-09-05",
+    "favorite": "The guide was welcoming and made us feel safe.",
+    "improvement": "Adding a brief introduction about safety would help.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-09-07",
+    "favorite": "The neighborhood history was presented in an engaging way.",
+    "improvement": "The tour should include more historical photographs.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-09-09",
+    "favorite": "The small historical sites were hidden gems.",
+    "improvement": "The route should include more restroom breaks.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-09-11",
+    "favorite": "The guide remembered everyone's name and made the group feel connected.",
+    "improvement": "The check-in process could be faster.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-09-13",
+    "favorite": "The evening atmosphere and live music were wonderful.",
+    "improvement": "The event could include a few more tables.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-09-15",
+    "favorite": "The local food tasting was delicious.",
+    "improvement": "The meeting point was difficult to find.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-09-17",
+    "favorite": "The cooking demonstration was personal and engaging.",
+    "improvement": "I would have liked a printed recipe.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-09-19",
+    "favorite": "The music performance was the highlight of our evening.",
+    "improvement": "The seating arrangement could be more comfortable.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-09-21",
+    "favorite": "The craft workshop was creative and enjoyable.",
+    "improvement": "The materials ran out before everyone finished.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-09-23",
+    "favorite": "The guide gave excellent recommendations for the rest of our trip.",
+    "improvement": "A list of recommendations would be useful afterward.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-09-25",
+    "favorite": "The forest walk was calm and beautiful.",
+    "improvement": "More information about the local plants would be welcome.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-09-27",
+    "favorite": "The guide explained the traditions respectfully.",
+    "improvement": "A translation handout would help international visitors.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-09-02",
+    "favorite": "The views from the lookout were incredible.",
+    "improvement": "More time for photos would be helpful.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-10-01",
+    "favorite": "The music performance was the highlight of our evening.",
+    "improvement": "The seating arrangement could be more comfortable.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-10-03",
+    "favorite": "The craft workshop was creative and enjoyable.",
+    "improvement": "The materials ran out before everyone finished.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-05",
+    "favorite": "The guide gave excellent recommendations for the rest of our trip.",
+    "improvement": "A list of recommendations would be useful afterward.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-10-07",
+    "favorite": "The forest walk was calm and beautiful.",
+    "improvement": "More information about the local plants would be welcome.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-10-09",
+    "favorite": "The guide explained the traditions respectfully.",
+    "improvement": "A translation handout would help international visitors.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-11",
+    "favorite": "The views from the lookout were incredible.",
+    "improvement": "More time for photos would be helpful.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-10-13",
+    "favorite": "The sunset over the river was beautiful.",
+    "improvement": "The transport pickup instructions could be clearer.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-10-15",
+    "favorite": "I enjoyed the visit to the community garden.",
+    "improvement": "The tour needed better organization between stops.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-17",
+    "favorite": "The river cruise was relaxing and scenic.",
+    "improvement": "A few more shade areas on the boat would be helpful.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-10-19",
+    "favorite": "The cycling route was scenic and enjoyable.",
+    "improvement": "The bicycles need more comfortable seats.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-21",
+    "favorite": "The tour gave us a meaningful connection to the local culture.",
+    "improvement": "Please offer this experience on more days.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-23",
+    "favorite": "Every stop was interesting and the pacing was excellent.",
+    "improvement": "The tour was excellent as it was.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-10-25",
+    "favorite": "I loved learning about the history of the old town.",
+    "improvement": "The group was a little too large.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-27",
+    "favorite": "Our guide made the entire experience fun for the children.",
+    "improvement": "A family discount would be appreciated.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-10-02",
+    "favorite": "The waterfall hike was challenging but rewarding.",
+    "improvement": "Please describe the hike difficulty more clearly.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-11-01",
+    "favorite": "The cycling route was scenic and enjoyable.",
+    "improvement": "The bicycles need more comfortable seats.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-11-03",
+    "favorite": "The tour gave us a meaningful connection to the local culture.",
+    "improvement": "Please offer this experience on more days.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-11-05",
+    "favorite": "Every stop was interesting and the pacing was excellent.",
+    "improvement": "The tour was excellent as it was.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-11-07",
+    "favorite": "I loved learning about the history of the old town.",
+    "improvement": "The group was a little too large.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-11-09",
+    "favorite": "Our guide made the entire experience fun for the children.",
+    "improvement": "A family discount would be appreciated.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-11-11",
+    "favorite": "The waterfall hike was challenging but rewarding.",
+    "improvement": "Please describe the hike difficulty more clearly.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-11-13",
+    "favorite": "I appreciated the small group size.",
+    "improvement": "The confirmation email should include parking information.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-11-15",
+    "favorite": "The local snacks were my favorite part.",
+    "improvement": "The tour should have more time at the food stops.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-11-17",
+    "favorite": "The guide had a great sense of humor.",
+    "improvement": "The itinerary should be shared at the beginning.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-11-19",
+    "favorite": "The handmade souvenir was a lovely reminder of the visit.",
+    "improvement": "More souvenir designs would be interesting.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-11-21",
+    "favorite": "The guide was friendly and very knowledgeable.",
+    "improvement": "The tour could include a short rest break.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-11-23",
+    "favorite": "The museum collection was interesting.",
+    "improvement": "The tour felt rushed and started late.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-11-25",
+    "favorite": "The architecture tour was informative and well organized.",
+    "improvement": "A map of the route would be useful.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-11-27",
+    "favorite": "The historic building was impressive.",
+    "improvement": "The guide should speak more slowly and use a microphone.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-11-02",
+    "favorite": "The storytelling made the legends feel alive.",
+    "improvement": "A short booklet with the stories would be a great souvenir.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-12-01",
+    "favorite": "The handmade souvenir was a lovely reminder of the visit.",
+    "improvement": "More souvenir designs would be interesting.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-03",
+    "favorite": "The guide was friendly and very knowledgeable.",
+    "improvement": "The tour could include a short rest break.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-12-05",
+    "favorite": "The museum collection was interesting.",
+    "improvement": "The tour felt rushed and started late.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-12-07",
+    "favorite": "The architecture tour was informative and well organized.",
+    "improvement": "A map of the route would be useful.",
+    "is_demo": true
+  },
+  {
+    "rating": 2,
+    "language": "en",
+    "date": "2026-12-09",
+    "favorite": "The historic building was impressive.",
+    "improvement": "The guide should speak more slowly and use a microphone.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-11",
+    "favorite": "The storytelling made the legends feel alive.",
+    "improvement": "A short booklet with the stories would be a great souvenir.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-12-13",
+    "favorite": "The sunset photography session was memorable.",
+    "improvement": "Please send weather updates before the session.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-15",
+    "favorite": "The tour was accessible and the staff were considerate.",
+    "improvement": "Please publish accessibility details in advance.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-17",
+    "favorite": "The experience felt authentic rather than touristy.",
+    "improvement": "I would love an option for an even smaller group.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-12-19",
+    "favorite": "I enjoyed meeting local artists at the market.",
+    "improvement": "The audio system could be louder.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-21",
+    "favorite": "The guide answered every question with patience.",
+    "improvement": "Nothing major needs improvement.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-23",
+    "favorite": "The photography stops were perfectly chosen.",
+    "improvement": "The tour could offer a professional photography option.",
+    "is_demo": true
+  },
+  {
+    "rating": 4,
+    "language": "en",
+    "date": "2026-12-25",
+    "favorite": "The botanical garden had an amazing variety of plants.",
+    "improvement": "The plant names could be displayed more clearly.",
+    "is_demo": true
+  },
+  {
+    "rating": 5,
+    "language": "en",
+    "date": "2026-12-27",
+    "favorite": "The community members were generous and welcoming.",
+    "improvement": "I would enjoy a longer conversation with the hosts.",
+    "is_demo": true
+  },
+  {
+    "rating": 3,
+    "language": "en",
+    "date": "2026-12-02",
+    "favorite": "The boat ride offered a different view of the city.",
+    "improvement": "The boat engine was noisy during the explanations.",
+    "is_demo": true
   }
 ]

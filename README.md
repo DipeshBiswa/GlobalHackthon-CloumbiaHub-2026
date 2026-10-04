@@ -70,6 +70,36 @@ the current year appear in the month picker and review table.
 The frontend topic vocabulary covers the same major tourism themes as the
 backend insights classifier, reducing unnecessary "Not sure" results.
 
+## Fine-tune the local insight model
+
+The optional Yelp fine-tuning workflow trains only a small linear topic head
+over the frozen local MiniLM encoder. It reads the Yelp archive as a stream,
+uses tourism-business reviews with explainable keyword labels, and does not
+extract or copy the archive.
+
+Run it from the repository root after the insight model has been downloaded:
+
+```bash
+cd backend
+../.venv/bin/python train_insight_model.py \
+  "../Yelp JSON/yelp_dataset.tar" \
+  --limit 2000 \
+  --epochs 20 \
+  --batch-size 8
+```
+
+The reusable artifact is written to
+`backend/models/insight-model/topic_head.pt`, with training metadata in
+`topic_head.json`. The API automatically loads the head when both files are
+present; without them it continues using the original embedding classifier.
+Another local repository can reuse the artifact by pointing its insight-model
+directory at this same model directory or copying the two topic-head files
+alongside the matching MiniLM model.
+
+The Yelp archive is intentionally ignored by Git because of its size and
+dataset terms. The generated model files are also ignored through the
+`models/` rule.
+
 To reset the local test store, replace `backend/translated_reviews.json` with
 an empty JSON array (`[]`) and submit new reviews through the frontend or the
 batch endpoint.
